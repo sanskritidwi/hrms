@@ -18,7 +18,7 @@ function App() {
       <Modalpopup
         show={modalShow}
         onHide={() => setModalShow(false)}
-        title='Add Event'
+        titlemain='Add Event'
       />
     </div>
   );
