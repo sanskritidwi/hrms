@@ -3,7 +3,8 @@ import "./App.css";
 import "./styles/css/all.css";
 import { SansCanvas } from "./common/SansCanvas";
 import axios from "axios";
-import {SideMenu} from "./common/SideMenu";
+import SideMenu from "./common/SideMenu";
+import  Input  from "./common/FormFields/Input";
 import {
 	BrowserRouter as Router,
 	Switch,
@@ -14,6 +15,9 @@ import {
 	useLocation,
 } from "react-router-dom";
 import Layout from "./common/Layout";
+import { Switches } from "./common/Switches";
+
+
 
 
 function App() {
@@ -29,9 +33,10 @@ function App() {
         <Route path="/blogs" element={<SansCanvas/>}/>
 					</Routes>
 				</Router> */}
-			<SansCanvas/>
+			{/* <SansCanvas/>
 			<SideMenu/>
-		
+		 */}
+		 <Input placeholder="new"/>
 			</div>
 		</>
 	);

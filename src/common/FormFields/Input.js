@@ -30,3 +30,6 @@ export const Input = ({placeholder, maxLength, minLength, isRequired}) => {
     </div>
   )
 }
+
+
+export default Input;
