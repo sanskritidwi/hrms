@@ -1,3 +1,15 @@
+h4 {
+  font-size: 32px;
+}
+
+.form-label {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+}
+
 ul {
   margin: 0;
   padding: 0;
@@ -22,8 +34,17 @@ body {
   transition: all 0.3s;
   overflow-x: hidden;
 }
+.SideMenuWrapper aside .subMenuIcon {
+  position: absolute;
+  right: 10px;
+  top: 18px;
+}
 .SideMenuWrapper aside.collapse {
   max-width: 70px;
+}
+.SideMenuWrapper aside.collapse li span {
+  position: relative;
+  z-index: -1;
 }
 .SideMenuWrapper .toggle {
   background-color: #19BD98;
@@ -36,6 +57,9 @@ body {
 .SideMenuWrapper .menuItems {
   margin-top: 40px;
 }
+.SideMenuWrapper .menuItems li {
+  position: relative;
+}
 .SideMenuWrapper .menuItems li a {
   padding: 16px 24px;
   column-gap: 32px;
@@ -43,10 +67,25 @@ body {
   color: #111111;
   column-gap: 24px;
 }
+.SideMenuWrapper .menuItems li ul.menuItems {
+  margin-top: 0;
+}
+.SideMenuWrapper .menuItems li ul.menuItems.animated {
+  transition: all 0.5s;
+}
 .SideMenuWrapper .menuItems li ul li a {
   padding: 16px 24px;
   column-gap: 32px;
   display: flex;
   color: #111111;
   column-gap: 24px;
+}
+.SideMenuWrapper .menuItems li:hover {
+  background-color: #05454E;
+}
+.SideMenuWrapper .menuItems li:hover a {
+  color: #ffffff;
+}
+.SideMenuWrapper .menuItems li:hover a svg {
+  fill: #ffffff;
 }/*# sourceMappingURL=all.css.map */

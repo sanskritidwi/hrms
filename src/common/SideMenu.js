@@ -1,7 +1,44 @@
 import '../styles/css/all.css'
-import icon from '../assets/images/item.png'
+import icon from '../assets/images/item.svg'
+import arrow from '../assets/images/arrow.svg'
 import { useState } from 'react'
 // import icon from ''
+const MenuIteams = ({ data, index}) => {
+    const [openSubMenu, setOpenSubMenu] = useState(false)
+    return (
+        <>
+            <li key={index} onClick={()=> setOpenSubMenu(!openSubMenu)}>
+                <a href="javascript:;">
+                    <img src={data?.icon} />
+                    <span>{data?.title}</span>
+                </a>
+                {data?.child && <>
+                    <img className='subMenuIcon' src={arrow} />
+                    {openSubMenu && <MenuList classVal={openSubMenu}  menuList={data?.child} />}
+                </>}
+            </li>
+        </>
+    )
+}
+
+const MenuList = ({ menuList ,classVal}) => {
+    return (
+        <>
+            <ul className={!classVal? "menuItems" : "menuItems animated"} >
+                {menuList.map((data, index) => {
+                    return (
+                        <MenuIteams
+                            data={data}
+                            index={index}
+                        />
+                    )
+                })
+                }
+            </ul>
+        </>
+    )
+}
+
 function SideMenu() {
     const [sideMenu, setSIdeMenu] = useState(false);
     const sideItem = [
@@ -11,17 +48,17 @@ function SideMenu() {
             path: '',
             child: [
                 {
-                    title: 'Dashboard',
+                    title: 'Dashboard1',
                     icon: icon,
                     path: '',
                 },
                 {
-                    title: 'Dashboard',
+                    title: 'Dashboard2',
                     icon: icon,
                     path: '',
                 },
                 {
-                    title: 'Dashboard',
+                    title: 'Dashboard3',
                     icon: icon,
                     path: '',
                 }
@@ -31,7 +68,29 @@ function SideMenu() {
             title: 'About',
             icon: icon,
             path: ''
-        }
+        },
+        {
+            title: 'Service',
+            icon: icon,
+            path: '',
+            child: [
+                {
+                    title: 'Service1',
+                    icon: icon,
+                    path: '',
+                },
+                {
+                    title: 'Service2',
+                    icon: icon,
+                    path: '',
+                },
+                {
+                    title: 'Service3',
+                    icon: icon,
+                    path: '',
+                }
+            ]
+        },
     ]
 
     const handleToggle = () => {
@@ -43,52 +102,15 @@ function SideMenu() {
         }
 
     }
-    const renderSubMenu = (subMenuItemArray) => {
-        console.log(subMenuItemArray)
-        return(
-            <>
-               
-                    {
-                        subMenuItemArray?.map((item, index) => <li>
-                            <a href='javascript:;'>
-                                <img src={item.icon} />
-                                <span>{item.title}</span>    
-                            </a>
-                        </li>
-                        )
-                    }
-               
-            </>
-        )
-    }
+
     const renderMenuIcon = () => {
-      return(
-        <>
-            <div className='toggle'>
-                <button onClick={handleToggle}>
-                    <img src={icon} />
-                </button>
-            </div>
-        </>
-      )
-    }
-    const renderMenu = () => {
-        return(
+        return (
             <>
-                <ul className='menuItems'>
-                    {sideItem.map((data) => {
-                        return (
-                            <li>
-                                <a href="javascript:;">
-                                    <img src={data.icon} />
-                                    <span>{data.title}</span>
-                                </a>
-                                {data.child?renderSubMenu(data.child):null}
-                            </li>
-                        )
-                    })
-                }
-                </ul>
+                <div className='toggle'>
+                    <button onClick={handleToggle}>
+                        <img src={icon} />
+                    </button>
+                </div>
             </>
         )
     }
@@ -98,14 +120,12 @@ function SideMenu() {
             <div className='SideMenuWrapper'>
                 <aside className={sideMenu ? 'collapse' : ''}>
                     {renderMenuIcon()}
-                    {renderMenu()}
+                    {<MenuList menuList={sideItem} />}
                 </aside>
 
             </div>
         </>
     )
 }
-
-
 
 export default SideMenu;
