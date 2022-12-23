@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo } from "react";
+import { MonthWiseAttendance } from "../services/employee/Attendance/MonthWiseAttendance";
 import { Calendar } from "./Calendar";
 import { CollectionList } from "./CollectionList";
 import { EventCard } from "./EventCard";
@@ -65,10 +66,11 @@ const renderBody=()=>{
 }
 	return (
 		<div>
-			<CollectionList fields={["name", "place", "animal", "thing"]} />
+			{/* <CollectionList fields={["name", "place", "animal", "thing"]} />
 			{/* <Calendar /> */}
-            <EventCard title="UpcomingEvents" renderBody={renderBody}/>
-            <FormProcessor submitEnable={true} submitText="Submit"/>
+            {/* <EventCard title="UpcomingEvents" renderBody={renderBody}/>
+            <FormProcessor submitEnable={true} submitText="Submit"/>  */}
+            <MonthWiseAttendance/>
 		</div>
 	);
 };

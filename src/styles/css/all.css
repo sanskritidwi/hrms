@@ -24,4 +24,17 @@
   border-radius: 16px 16px 0px 0px;
 }
 
+.PageHeaderWrapper {
+  font-size: 32px;
+}
+
+.MonthWiseAttendanceWrapper {
+  margin-top: 16px;
+  margin-left: 16px;
+}
+.MonthWiseAttendanceWrapper .filtersRow {
+  display: flex;
+  padding: 8px 0px;
+}
+
 /*# sourceMappingURL=all.css.map */
