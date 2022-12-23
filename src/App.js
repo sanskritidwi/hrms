@@ -1,3 +1,4 @@
+
 import "./App.css";
 import "./styles/css/all.css";
 import { SansCanvas } from "./common/SansCanvas";
@@ -30,9 +31,9 @@ function App() {
 				</Router> */}
 			<SansCanvas/>
 			<SideMenu/>
+		
 			</div>
 		</>
 	);
-}
-
+			}
 export default App;

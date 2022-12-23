@@ -106,6 +106,59 @@ h4 {
   color: #000000;
 }
 
+/* modal-start */
+.modal-wrap .modal-content {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 680px;
+}
+.modal-wrap .modal-content .modal-header {
+  text-align: center;
+  border-bottom: 2px solid #05454E;
+}
+.modal-wrap .modal-content .btn-close {
+  position: absolute;
+  top: 25px;
+  right: 26px;
+  font-size: 12px;
+}
+.modal-wrap .modal-content .popup-label {
+  display: flex;
+}
+.modal-wrap .modal-content .popup-label .form-label {
+  margin-right: 25px;
+}
+.modal-wrap .modal-content .popup-label .check-input {
+  margin-top: 6px;
+}
+.modal-wrap .modal-content .popup-label .check-input:first-child {
+  margin-top: 0;
+}
+.modal-wrap .modal-content .popup-label .check-input input {
+  margin-right: 10px;
+}
+.modal-wrap .modal-content .date-wrap label {
+  display: block;
+}
+.modal-wrap .modal-content .date-wrap input {
+  width: 150px;
+  height: 50px;
+  border: 1px solid #777777;
+  border-radius: 5px;
+}
+
+h4 {
+  font-size: 32px;
+}
+
+.form-label {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+}
+
 ul {
   margin: 0;
   padding: 0;
@@ -175,6 +228,166 @@ body {
   display: flex;
   color: #111111;
   column-gap: 24px;
+}
+h4 {
+  font-size: 32px;
+}
+
+.form-label {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+}
+
+.CollectionListWrapper table {
+  border: 1px solid black;
+}
+.CollectionListWrapper table tr {
+  border: 1px solid black;
+  padding: 2px;
+}
+.CollectionListWrapper table tr td {
+  border: 1px solid black;
+  padding: 2px;
+}
+
+.EventCardWrapper {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25), 0px 1px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  min-width: 320px;
+  max-width: 320px;
+  min-height: 240px;
+}
+.EventCardWrapper .heading {
+  color: white;
+  background-color: #05454E;
+  padding: 12px;
+  border-radius: 16px 16px 0px 0px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.SideMenuWrapper aside {
+  background-color: #EDEEEE;
+  max-width: 320px;
+  height: 100vh;
+  transition: all 0.3s;
+  overflow-x: hidden;
+}
+.SideMenuWrapper aside .subMenuIcon {
+  position: absolute;
+  right: 10px;
+  top: 18px;
+}
+.SideMenuWrapper aside.collapse {
+  max-width: 70px;
+}
+.SideMenuWrapper aside.collapse li span {
+  position: relative;
+  z-index: -1;
+}
+.SideMenuWrapper .toggle {
+  background-color: #19BD98;
+  padding: 16px 24px;
+}
+.SideMenuWrapper .toggle button {
+  display: inline-block;
+  all: unset;
+}
+.SideMenuWrapper .menuItems {
+  margin-top: 40px;
+}
+.SideMenuWrapper .menuItems li {
+  position: relative;
+}
+.SideMenuWrapper .menuItems li a {
+  padding: 16px 24px;
+  column-gap: 32px;
+  display: flex;
+  color: #111111;
+  column-gap: 24px;
+}
+.SideMenuWrapper .menuItems li ul.menuItems {
+  margin-top: 0;
+}
+.SideMenuWrapper .menuItems li ul.menuItems.animated {
+  transition: all 0.5s;
+}
+.SideMenuWrapper .menuItems li ul li a {
+  padding: 16px 24px;
+  column-gap: 32px;
+  display: flex;
+  color: #111111;
+  column-gap: 24px;
+}
+h4 {
+  font-size: 32px;
+}
+
+.form-label {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+}
+
+/* modal-start */
+.modal-wrap .modal-content {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 680px;
+}
+.modal-wrap .modal-content .modal-header {
+  text-align: center;
+  border-bottom: 2px solid #05454E;
+}
+.modal-wrap .modal-content .btn-close {
+  position: absolute;
+  top: 25px;
+  right: 26px;
+  font-size: 12px;
+}
+.modal-wrap .modal-content .popup-label {
+  display: flex;
+}
+.modal-wrap .modal-content .popup-label .form-label {
+  margin-right: 25px;
+}
+.modal-wrap .modal-content .popup-label .check-input {
+  margin-top: 6px;
+}
+.modal-wrap .modal-content .popup-label .check-input:first-child {
+  margin-top: 0;
+}
+.modal-wrap .modal-content .popup-label .check-input input {
+  margin-right: 10px;
+}
+.modal-wrap .modal-content .date-wrap label {
+  display: block;
+}
+.modal-wrap .modal-content .date-wrap input {
+  width: 150px;
+  height: 50px;
+  border: 1px solid #777777;
+  border-radius: 5px;
 }
 
 /*# sourceMappingURL=all.css.map */
