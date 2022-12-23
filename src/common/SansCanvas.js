@@ -8,17 +8,19 @@ import OutsideClickHandler from "./OutsideClickHandler";
 export const SansCanvas = () => {
 	const data = [
 		{
-			date: "1january",
-			employees: [
-				{ id: "One", name: "sanskriti", status: "present" },
-				{ id: "One", name: "dwivedi", status: "present" },
-			],
-		},
-		{
-			date: "2january",
-			employees: [
-				{ id: "One", name: "cubexo", status: "present" },
-				{ id: "One", name: "ioi", status: "present" },
+			day: "Jan 1, 22",
+			status: "working day",
+			employee: [
+				{
+					employeeId: "1",
+					name: "sanskriti",
+					status: "Present",
+				},
+				{
+					employeeId: "1",
+					name: "sanskriti",
+					status: "Present",
+				},
 			],
 		},
 	];

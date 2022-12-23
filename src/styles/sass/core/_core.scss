@@ -1,0 +1,25 @@
+// fonts
+$x-large-heading: 64px;
+$large-heading: 32px;
+$medium-heading: 24px;
+$small-heading: 16px;
+$x-small-heading: 14px;
+
+// color
+$black-color: #000000;
+$white-color: #ffffff;
+$main-color: #05454E;
+$action-color: #18A0FB;
+$prime-color: #1CBA0E;
+$gray-color: #777777;
+
+h4{
+    font-size: $large-heading;
+}
+.form-label{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+}

@@ -1,0 +1,52 @@
+/* modal-start */
+
+.modal-wrap {
+  .modal-content {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 680px;
+
+    .modal-header {
+      text-align: center;
+      border-bottom: 2px solid $main-color;
+    }
+
+    .btn-close {
+      position: absolute;
+      top: 25px;
+      right: 26px;
+      font-size: 12px;
+    }
+
+    .popup-label {
+      display: flex;
+
+      .form-label {
+        margin-right: 25px;
+      }
+
+      .check-input {
+        margin-top: 6px;
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        input {
+          margin-right: 10px;
+        }
+      }
+    }
+    .date-wrap{
+      label{
+        display: block;
+      }
+      input{
+        width: 150px;
+        height: 50px;
+        border: 1px solid $gray-color;
+        border-radius: 5px;
+      }
+    }
+  }
+}
