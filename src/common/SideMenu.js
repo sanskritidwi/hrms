@@ -2,14 +2,19 @@ import '../styles/css/all.css'
 import icon from '../assets/images/item.svg'
 import arrow from '../assets/images/arrow.svg'
 import { useState } from 'react'
+// import {sideItem} from './data'
 // import icon from ''
 const MenuIteams = ({ data, index}) => {
     const [openSubMenu, setOpenSubMenu] = useState(false)
+    const [icon, setIcon] = useState(false)
     return (
         <>
-            <li key={index} onClick={()=> setOpenSubMenu(!openSubMenu)}>
-                <a href="javascript:;">
-                    <img src={data?.icon} />
+            <li key={index} >
+                <a href="javascript:;" onClick={()=> {
+                setOpenSubMenu(!openSubMenu)
+                setIcon(!icon)
+            }}>
+                    <img src={!icon ? data.activeicon : data.defaulticon} />
                     <span>{data?.title}</span>
                 </a>
                 {data?.child && <>
@@ -39,75 +44,15 @@ const MenuList = ({ menuList ,classVal}) => {
     )
 }
 
-function SideMenu() {
-    const [sideMenu, setSIdeMenu] = useState(false);
-    const sideItem = [
-        {
-            title: 'Dashboard',
-            icon: icon,
-            path: '',
-            child: [
-                {
-                    title: 'Dashboard1',
-                    icon: icon,
-                    path: '',
-                },
-                {
-                    title: 'Dashboard2',
-                    icon: icon,
-                    path: '',
-                },
-                {
-                    title: 'Dashboard3',
-                    icon: icon,
-                    path: '',
-                }
-            ]
-        },
-        {
-            title: 'About',
-            icon: icon,
-            path: ''
-        },
-        {
-            title: 'Service',
-            icon: icon,
-            path: '',
-            child: [
-                {
-                    title: 'Service1',
-                    icon: icon,
-                    path: '',
-                },
-                {
-                    title: 'Service2',
-                    icon: icon,
-                    path: '',
-                },
-                {
-                    title: 'Service3',
-                    icon: icon,
-                    path: '',
-                }
-            ]
-        },
-    ]
+function SideMenu({listMenu}) {
+    const [sideMenu, setSideMenu] = useState(false);
 
-    const handleToggle = () => {
-        if (!sideMenu) {
-            setSIdeMenu(true)
-        }
-        else {
-            setSIdeMenu(false)
-        }
-
-    }
-
+    // console.log(prop.menuList, "list Item")
     const renderMenuIcon = () => {
         return (
             <>
                 <div className='toggle'>
-                    <button onClick={handleToggle}>
+                    <button onClick={()=> setSideMenu(!sideMenu)}>
                         <img src={icon} />
                     </button>
                 </div>
@@ -120,7 +65,7 @@ function SideMenu() {
             <div className='SideMenuWrapper'>
                 <aside className={sideMenu ? 'collapse' : ''}>
                     {renderMenuIcon()}
-                    {<MenuList menuList={sideItem} />}
+                    {<MenuList menuList={listMenu} />}
                 </aside>
 
             </div>

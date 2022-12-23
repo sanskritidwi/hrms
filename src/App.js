@@ -1,10 +1,10 @@
 import './App.css';
-import SideMenu from './common/SideMenu';
+import KaviCanvas from './common/KaviCanvas';
 
 function App() {
   return (
     <div className="App">
-    <SideMenu />
+        <KaviCanvas />
     </div>
   );
 }

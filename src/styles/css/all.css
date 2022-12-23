@@ -46,6 +46,9 @@ body {
   position: relative;
   z-index: -1;
 }
+.SideMenuWrapper aside.collapse .subMenuIcon {
+  display: none;
+}
 .SideMenuWrapper .toggle {
   background-color: #19BD98;
   padding: 16px 24px;
@@ -67,6 +70,13 @@ body {
   color: #111111;
   column-gap: 24px;
 }
+.SideMenuWrapper .menuItems li a:hover {
+  background-color: #05454E;
+  color: #ffffff;
+}
+.SideMenuWrapper .menuItems li a:hover svg {
+  fill: #ffffff;
+}
 .SideMenuWrapper .menuItems li ul.menuItems {
   margin-top: 0;
 }
@@ -81,11 +91,5 @@ body {
   column-gap: 24px;
 }
 .SideMenuWrapper .menuItems li:hover {
-  background-color: #05454E;
-}
-.SideMenuWrapper .menuItems li:hover a {
-  color: #ffffff;
-}
-.SideMenuWrapper .menuItems li:hover a svg {
-  fill: #ffffff;
+  background-color: #ffffff;
 }/*# sourceMappingURL=all.css.map */
