@@ -32,12 +32,13 @@ export const OutsideClickHandler = ({ children, callbackFunction }) => {
 	return (
 		<div ref={parentRef}>
 			{children}
+            
 		</div>
 	);
 };
 
-OutsideClickHandler.protoTypes = {
-	callbackFunction: PropTypes.func.isRequired,
-};
+OutsideClickHandler.propTypes = {
+    callbackFunction:PropTypes.func.isRequired,
+}
 
 export default OutsideClickHandler;
