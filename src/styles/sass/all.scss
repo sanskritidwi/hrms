@@ -1,3 +1,6 @@
-@import '../sass/core/core';
-@import '../sass/common/allCommon';
-
+// @import "./core/core";
+@import "./core/allCore";
+@import "./common/allCommon";
+@import "./services/employee/allEmployee";
+@import "./services/hradmin/allHrAdmin";
+@import "./common/sideMenu";

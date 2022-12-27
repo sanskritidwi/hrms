@@ -1,9 +1,13 @@
-import '../styles/css/all.css'
+import React from 'react'
 import icon from '../assets/images/item.svg'
 import arrow from '../assets/images/arrow.svg'
 import { useState } from 'react'
-// import {sideItem} from './data'
-// import icon from ''
+
+// use like this
+// sideItem is api data or props value
+{/* <SideMenu listMenu={sideItem}/> */}
+
+
 const MenuIteams = ({ data, index}) => {
     const [openSubMenu, setOpenSubMenu] = useState(false)
     const [icon, setIcon] = useState(false)
@@ -13,13 +17,13 @@ const MenuIteams = ({ data, index}) => {
                 <a href="javascript:;" onClick={()=> {
                 setOpenSubMenu(!openSubMenu)
                 setIcon(!icon)
-            }}>
+                 }}>
                     <img src={!icon ? data.activeicon : data.defaulticon} />
-                    <span>{data?.title}</span>
+                    <span>{data.title}</span>
                 </a>
-                {data?.child && <>
+                {data.child && <>
                     <img className='subMenuIcon' src={arrow} />
-                    {openSubMenu && <MenuList classVal={openSubMenu}  menuList={data?.child} />}
+                    {openSubMenu && <MenuList classVal={openSubMenu}  menuList={data.child} />}
                 </>}
             </li>
         </>
