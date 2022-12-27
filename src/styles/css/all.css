@@ -36,5 +36,11 @@
   display: flex;
   padding: 8px 0px;
 }
+.MonthWiseAttendanceWrapper .calendarSelect {
+  display: flex;
+}
+.MonthWiseAttendanceWrapper .calendarSelect .head {
+  display: flex;
+}
 
 /*# sourceMappingURL=all.css.map */

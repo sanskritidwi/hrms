@@ -1,3 +1,9 @@
+@mixin btn{
+    
+}
+
+
+
 .MonthWiseAttendanceWrapper{
     margin-top: 16px;
     margin-left: 16px;
@@ -6,6 +12,9 @@
         padding: 8px 0px;
     }
     .calendarSelect{
-        
+        display: flex;
+        .head{
+            display: flex;
+        }
     }
 }
