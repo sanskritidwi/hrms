@@ -1,10 +1,7 @@
-
 import "./App.css";
 import "./styles/css/all.css";
 import { SansCanvas } from "./common/SansCanvas";
 import axios from "axios";
-import SideMenu from "./common/SideMenu";
-import  Input  from "./common/FormFields/Input";
 import {
 	BrowserRouter as Router,
 	Switch,
@@ -15,30 +12,29 @@ import {
 	useLocation,
 } from "react-router-dom";
 import Layout from "./common/Layout";
-import { Switches } from "./common/Switches";
-
-
-
+import { KavitaCanvas } from "./common/KavitaCanvas";
+import { NishaCanvas } from "./common/NishaCanvas";
 
 function App() {
-	
 	return (
 		<>
 			<div className="App">
-				{/* <Router>
+				HRM Cubexo
+				<Router>
 					<Layout />
 					<Routes>
 						<Route path="/" element={<SansCanvas />} />
-						<Route path="/contact" element={<SansCanvas/>}/>
-        <Route path="/blogs" element={<SansCanvas/>}/>
+						<Route path="/sans" element={<SansCanvas />} />
+						<Route path="/kavi" element={<KavitaCanvas />} />
+						<Route path="/nisha" element={<NishaCanvas />} />
+
 					</Routes>
-				</Router> */}
-			{/* <SansCanvas/>
+				</Router>
+				{/* <SansCanvas/>
 			<SideMenu/>
 		 */}
-		 <Input placeholder="new"/>
 			</div>
 		</>
 	);
-			}
+}
 export default App;
