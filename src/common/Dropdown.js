@@ -31,11 +31,11 @@ const Dropdown = ({notificationItem}) => {
         if(!notification) return null;
             return(
                 <>
-                    <OutsideClickHandler callbackFunction={() => setNotification(false)}>
+                   
                         <div className='dropdown-list'>
                             {renderList()}
                         </div>
-                    </OutsideClickHandler>
+                 
                     
                 </>
             )
@@ -73,13 +73,14 @@ const Dropdown = ({notificationItem}) => {
     }    
     return(
         <>
+         <OutsideClickHandler callbackFunction={() => setNotification(false)}>
             <div className="Dropdown-wrapper">
                 <button style={{all : "unset"}} onClick={() => setNotification(!notification)}>
                     <img src={Notification} />
                 </button>
                 {renderDropdown()}
             </div>
-            
+        </OutsideClickHandler>
         </>
     )
 }
