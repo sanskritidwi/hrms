@@ -1,23 +1,10 @@
-.Dropdown-wrapper{
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 0;
     background-color: $white-color;
-    box-shadow: 0 0 10px #d7d5d5;
-    padding: 8px 0;
-    width: fit-content;
-    border-radius: 8px;
-    max-width: 300px;
-    position: relative;
-    transition: all 0.5s;
-    // transform: translateY(50px);
-    // opacity: 0;
-    // &.show{
-    //     transform: translateY(0);
-    //     opacity: 1;
-    // }
-    ul{
-        li{
-            padding: 8px 32px 8px 24px;
-            @include btn;
-        }
+    .col-20{
+        column-gap: 20px;
     }
 }
-

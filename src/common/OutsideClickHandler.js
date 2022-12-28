@@ -18,9 +18,9 @@ export const OutsideClickHandler = ({ children, callbackFunction }) => {
 
 	useEffect(() => {
 		const handleClickOutside = (e) => {
-			// if (callbackFunction && !parentRef?.current?.contains(e.target)) {
-			// 	callbackFunction();
-			// }
+			if (callbackFunction && !parentRef.current.contains(e.target)) {
+				callbackFunction();
+			}
 		};
 
 		document.addEventListener("mousedown", handleClickOutside);

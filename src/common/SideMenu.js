@@ -5,6 +5,195 @@ import { useState } from 'react'
 
 // use like this
 // sideItem is api data or props value
+// for Employee
+// const sideItem = [
+//     {
+//         title: 'Dashboard',
+//         activeicon: arrow,
+//         defaulticon: icon,
+//         path: '',
+//         child: [
+//             {
+//                 title: 'Dashboard1',
+//                 activeicon: arrow,
+//                 defaulticon: icon,
+//                 path: '',
+//             },
+//             {
+//                 title: 'Dashboard2',
+//                 activeicon: arrow,
+//                 defaulticon: icon,
+//                 path: '',
+//             }
+//         ]
+//     },
+//     {
+//         title: 'Attendance',
+//         activeicon: arrow,
+//         defaulticon: icon,
+//         path: ''
+//     },
+//     {
+//         title: 'Leaves',
+//         activeicon: arrow,
+//         defaulticon: icon,
+//         path: ''
+//     },
+//     {
+//         title: 'Team Tree',
+//         activeicon: arrow,
+//         defaulticon: icon,
+//         path: ''
+//     },
+//     {
+//         title: 'Payslips',
+//         activeicon: arrow,
+//         defaulticon: icon,
+//         path: ''
+//     },
+//     {
+//         title: 'Reimbursements',
+//         activeicon: arrow,
+//         defaulticon: icon,
+//         path: ''
+//     },
+//     {
+//         title: 'Rewards ',
+//         activeicon: arrow,
+//         defaulticon: icon,
+//         path: ''
+//     },
+//     {
+//         title: 'HR Help Desk',
+//         activeicon: arrow,
+//         defaulticon: icon,
+//         path: ''
+//     },
+//     {
+//         title: 'Organisation Calendar',
+//         activeicon: arrow,
+//         defaulticon: icon,
+//         path: ''
+//     },
+//     {
+//         title: 'My Details',
+//         activeicon: arrow,
+//         defaulticon: icon,
+//         path: ''
+//     },
+//     {
+//         title: 'Company Policies',
+//         activeicon: arrow,
+//         defaulticon: icon,
+//         path: ''
+//     },
+//   ]
+// for Admin
+// const sideItem = [
+//     {
+//         title: 'Dashboard',
+//         activeicon: arrow,
+//         defaulticon: icon,
+//         path: ''
+//     },
+//     {
+//         title: 'people',
+//         activeicon: arrow,
+//         defaulticon: icon,
+//         path: '',
+//         child: [
+//             {
+//                 title: 'Current Employees',
+//                 activeicon: arrow,
+//                 defaulticon: icon,
+//                 path: '',
+//             },
+//             {
+//                 title: 'New Employees Requests',
+//                 activeicon: arrow,
+//                 defaulticon: icon,
+//                 path: '',
+//             },
+//             {
+//                 title: 'team tree',
+//                 activeicon: arrow,
+//                 defaulticon: icon,
+//                 path: '',
+//             },
+//             {
+//                 title: 'Archieved Records',
+//                 activeicon: arrow,
+//                 defaulticon: icon,
+//                 path: '',
+//             },
+//         ]
+//     },
+//     {
+//         title: 'attendance',
+//         activeicon: arrow,
+//         defaulticon: icon,
+//         path: '',
+//         child: [
+//             {
+//                 title: 'attendance',
+//                 activeicon: arrow,
+//                 defaulticon: icon,
+//                 path: '',
+//             },
+//             {
+//                 title: 'Leave Requests',
+//                 activeicon: arrow,
+//                 defaulticon: icon,
+//                 path: '',
+//             },
+//             {
+//                 title: 'WFH Requests',
+//                 activeicon: arrow,
+//                 defaulticon: icon,
+//                 path: '',
+//             },
+//         ]
+//     },
+//     {
+//         title: 'financials',
+//         activeicon: arrow,
+//         defaulticon: icon,
+//         path: '',
+//         child: [
+//             {
+//                 title: 'payroll',
+//                 activeicon: arrow,
+//                 defaulticon: icon,
+//                 path: '',
+//             },
+//             {
+//                 title: 'Expenses',
+//                 activeicon: arrow,
+//                 defaulticon: icon,
+//                 path: '',
+//             },
+//             {
+//                 title: 'Reimbursements',
+//                 activeicon: arrow,
+//                 defaulticon: icon,
+//                 path: '',
+//             },
+//         ]
+//     },
+//     {
+//         title: 'Help desk',
+//         activeicon: arrow,
+//         defaulticon: icon,
+//         path: ''
+//     },
+//     {
+//         title: 'Calendar',
+//         activeicon: arrow,
+//         defaulticon: icon,
+//         path: ''
+//     },
+//   ]
+
 {/* <SideMenu listMenu={sideItem}/> */}
 
 
@@ -48,10 +237,8 @@ const MenuList = ({ menuList ,classVal}) => {
     )
 }
 
-function SideMenu({listMenu}) {
+const SideMenu =({listMenu}) => {
     const [sideMenu, setSideMenu] = useState(false);
-
-    // console.log(prop.menuList, "list Item")
     const renderMenuIcon = () => {
         return (
             <>
