@@ -1,0 +1,27 @@
+
+@mixin icon24{
+    background-repeat: no-repeat;
+    height: 24px;
+    width: 24px;
+    margin: 0px 8px;
+}
+
+.iconBlackArrowLeft{
+    @include icon24;
+    background-image: url("../../assets/images/arrowRight.svg");
+}
+
+.iconBlackArrowRight{
+    @include icon24;
+    background-image: url("../../assets/images/arrowLeft.svg");
+}
+
+.iconBlackArrowDown{
+    @include icon24;
+    background-image: url("../../assets/images/arrowDown.svg");
+}
+
+.iconBlackSearch{
+    @include icon24;
+    background-image: url("../../assets/images/searchBlack.svg");
+}

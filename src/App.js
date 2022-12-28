@@ -12,25 +12,27 @@ import {
 	useLocation,
 } from "react-router-dom";
 import Layout from "./common/Layout";
-
+import { KavitaCanvas } from "./common/KavitaCanvas";
+import { NishaCanvas } from "./common/NishaCanvas";
 
 function App() {
-	
 	return (
 		<>
 			<div className="App">
-				{/* <Router>
+				HRM Cubexo
+				<Router>
 					<Layout />
 					<Routes>
 						<Route path="/" element={<SansCanvas />} />
-						<Route path="/contact" element={<SansCanvas/>}/>
-        <Route path="/blogs" element={<SansCanvas/>}/>
+						<Route path="/sans" element={<SansCanvas />} />
+						<Route path="/kavi" element={<KavitaCanvas />} />
+						<Route path="/nisha" element={<NishaCanvas />} />
+
 					</Routes>
-				</Router> */}
-			<SansCanvas/>
+				</Router>
+			
 			</div>
 		</>
 	);
 }
-
 export default App;

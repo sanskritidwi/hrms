@@ -1,3 +1,24 @@
+h4 {
+  font-size: 32px;
+}
+
+.form-label {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+}
+
+.defaultButton {
+  border: 1px solid #777777;
+  border-radius: 8px;
+  padding: 16px 16px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+}
+
 .CollectionListWrapper table {
   border: 1px solid black;
 }
@@ -28,6 +49,330 @@
   font-size: 32px;
 }
 
+.CollectionListWrapper table {
+  border: 1px solid black;
+}
+.CollectionListWrapper table tr {
+  border: 1px solid black;
+  padding: 2px;
+}
+.CollectionListWrapper table tr td {
+  border: 1px solid black;
+  padding: 2px;
+}
+
+.EventCardWrapper {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25), 0px 1px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  min-width: 320px;
+  max-width: 320px;
+  min-height: 240px;
+}
+.EventCardWrapper .heading {
+  color: white;
+  background-color: #05454E;
+  padding: 12px;
+  border-radius: 16px 16px 0px 0px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.SideMenuWrapper aside {
+  background-color: #EDEEEE;
+  max-width: 320px;
+  height: 100vh;
+  transition: all 0.3s;
+  overflow-x: hidden;
+}
+.SideMenuWrapper aside .subMenuIcon {
+  position: absolute;
+  right: 10px;
+  top: 18px;
+}
+.SideMenuWrapper aside.collapse {
+  max-width: 70px;
+}
+.SideMenuWrapper aside.collapse li span {
+  position: relative;
+  z-index: -1;
+}
+.SideMenuWrapper .toggle {
+  background-color: #19BD98;
+  padding: 16px 24px;
+}
+.SideMenuWrapper .toggle button {
+  display: inline-block;
+  all: unset;
+}
+.SideMenuWrapper .menuItems {
+  margin-top: 40px;
+}
+.SideMenuWrapper .menuItems li {
+  position: relative;
+}
+.SideMenuWrapper .menuItems li a {
+  padding: 16px 24px;
+  column-gap: 32px;
+  display: flex;
+  color: #111111;
+  column-gap: 24px;
+}
+.SideMenuWrapper .menuItems li ul.menuItems {
+  margin-top: 0;
+}
+.SideMenuWrapper .menuItems li ul.menuItems.animated {
+  transition: all 0.5s;
+}
+.SideMenuWrapper .menuItems li ul li a {
+  padding: 16px 24px;
+  column-gap: 32px;
+  display: flex;
+  color: #111111;
+  column-gap: 24px;
+}
+.defaultButton {
+  border: 1px solid #777777;
+  border-radius: 8px;
+  padding: 16px 16px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+}
+
+h4 {
+  font-size: 32px;
+}
+
+.form-label {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+}
+
+.iconBlackArrowLeft {
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+  margin: 0px 8px;
+  background-image: url("../../assets/images/arrowRight.svg");
+}
+
+.iconBlackArrowRight {
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+  margin: 0px 8px;
+  background-image: url("../../assets/images/arrowLeft.svg");
+}
+
+.iconBlackArrowDown {
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+  margin: 0px 8px;
+  background-image: url("../../assets/images/arrowDown.svg");
+}
+
+.iconBlackSearch {
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+  margin: 0px 8px;
+  background-image: url("../../assets/images/searchBlack.svg");
+}
+
+/* modal-start */
+.modal-wrap .modal-content {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 680px;
+}
+.modal-wrap .modal-content .modal-header {
+  text-align: center;
+  border-bottom: 2px solid #05454E;
+}
+.modal-wrap .modal-content .btn-close {
+  position: absolute;
+  top: 25px;
+  right: 26px;
+  font-size: 12px;
+}
+.modal-wrap .modal-content .popup-label {
+  display: flex;
+}
+.modal-wrap .modal-content .popup-label .form-label {
+  margin-right: 25px;
+}
+.modal-wrap .modal-content .popup-label .check-input {
+  margin-top: 6px;
+}
+.modal-wrap .modal-content .popup-label .check-input:first-child {
+  margin-top: 0;
+}
+.modal-wrap .modal-content .popup-label .check-input input {
+  margin-right: 10px;
+}
+.modal-wrap .modal-content .date-wrap label {
+  display: block;
+}
+.modal-wrap .modal-content .date-wrap input {
+  width: 150px;
+  height: 50px;
+  border: 1px solid #777777;
+  border-radius: 5px;
+}
+
+.defaultButton {
+  border: 1px solid #777777;
+  border-radius: 8px;
+  padding: 16px 16px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+}
+
+h4 {
+  font-size: 32px;
+}
+
+.form-label {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+}
+
+.iconBlackArrowLeft {
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+  margin: 0px 8px;
+  background-image: url("../../assets/images/arrowRight.svg");
+}
+
+.iconBlackArrowRight {
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+  margin: 0px 8px;
+  background-image: url("../../assets/images/arrowLeft.svg");
+}
+
+.iconBlackArrowDown {
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+  margin: 0px 8px;
+  background-image: url("../../assets/images/arrowDown.svg");
+}
+
+.iconBlackSearch {
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+  margin: 0px 8px;
+  background-image: url("../../assets/images/searchBlack.svg");
+}
+
+.SearchBarWrapper {
+  border: 1px solid #777777;
+  border-radius: 8px;
+  padding: 16px 16px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+}
+.SearchBarWrapper input {
+  outline: none;
+  border: unset;
+  min-width: 420px;
+}
+
+.DropDownWrapper .dropHeader {
+  position: relative;
+}
+.DropDownWrapper .options {
+  position: absolute;
+  border: 1px solid #777777;
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.DropDownWrapper .options .option {
+  padding: 8px;
+}
+
+.defaultButton {
+  border: 1px solid #777777;
+  border-radius: 8px;
+  padding: 16px 16px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+}
+
+h4 {
+  font-size: 32px;
+}
+
+.form-label {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+}
+
+.iconBlackArrowLeft {
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+  margin: 0px 8px;
+  background-image: url("../../assets/images/arrowRight.svg");
+}
+
+.iconBlackArrowRight {
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+  margin: 0px 8px;
+  background-image: url("../../assets/images/arrowLeft.svg");
+}
+
+.iconBlackArrowDown {
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+  margin: 0px 8px;
+  background-image: url("../../assets/images/arrowDown.svg");
+}
+
+.iconBlackSearch {
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+  margin: 0px 8px;
+  background-image: url("../../assets/images/searchBlack.svg");
+}
+
 .MonthWiseAttendanceWrapper {
   margin-top: 16px;
   margin-left: 16px;
@@ -35,12 +380,160 @@
 .MonthWiseAttendanceWrapper .filtersRow {
   display: flex;
   padding: 8px 0px;
+  align-items: center;
 }
 .MonthWiseAttendanceWrapper .calendarSelect {
   display: flex;
+  flex-direction: column;
 }
 .MonthWiseAttendanceWrapper .calendarSelect .head {
   display: flex;
+  border: 1px solid #777777;
+  border-radius: 8px;
+  padding: 16px 16px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+}
+.MonthWiseAttendanceWrapper .calendarSelect .head .year {
+  padding: 0px 8px;
+}
+.MonthWiseAttendanceWrapper .calendarSelect .months {
+  border: 1px solid #777777;
+  border-radius: 8px;
+  padding: 16px 16px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 250px;
+  padding: 4px;
+}
+.MonthWiseAttendanceWrapper .calendarSelect .months .month {
+  border: 1px solid #777777;
+  border-radius: 8px;
+  padding: 8px 16px;
+  display: flex;
+  cursor: pointer;
+  margin: 4px;
+}
+.MonthWiseAttendanceWrapper .calendarSelect .months .month :hover {
+  background-color: #05454E;
+  color: white;
+}
+.MonthWiseAttendanceWrapper table {
+  margin-top: 32px;
+}
+.MonthWiseAttendanceWrapper table tr th {
+  border: 1px solid #777777;
+  border-radius: 8px;
+  padding: 8px 16px;
+  background-color: rgba(25, 189, 152, 0.5);
+  font-weight: normal;
+  height: 64px;
+}
+.MonthWiseAttendanceWrapper table tr th.employeeHead {
+  min-width: 200px;
+  background-color: unset;
+  border: 1px solid #777777;
+  border-radius: 8px;
+  padding: 16px 16px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  text-align: left;
+}
+.MonthWiseAttendanceWrapper table tr td {
+  padding: 8px;
+  text-align: center;
+}
+.MonthWiseAttendanceWrapper table tr td.employeeName {
+  text-align: left;
+}
+.MonthWiseAttendanceWrapper table .RenderStatusInfoWrapper {
+  position: relative;
+}
+.MonthWiseAttendanceWrapper table .RenderStatusInfoWrapper .hoverInfoBox {
+  background-color: #05454E;
+  color: white;
+  padding: 16px;
+  position: absolute;
+  top: 5%;
+  left: 100%;
+  z-index: 100;
+  min-width: 160px;
+  text-align: left;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.SideMenuWrapper aside {
+  background-color: #EDEEEE;
+  max-width: 320px;
+  height: 100vh;
+  transition: all 0.3s;
+  overflow-x: hidden;
+}
+.SideMenuWrapper aside .subMenuIcon {
+  position: absolute;
+  right: 10px;
+  top: 18px;
+}
+.SideMenuWrapper aside.collapse {
+  max-width: 70px;
+}
+.SideMenuWrapper aside.collapse li span {
+  position: relative;
+  z-index: -1;
+}
+.SideMenuWrapper .toggle {
+  background-color: #19BD98;
+  padding: 16px 24px;
+}
+.SideMenuWrapper .toggle button {
+  display: inline-block;
+  all: unset;
+}
+.SideMenuWrapper .menuItems {
+  margin-top: 40px;
+}
+.SideMenuWrapper .menuItems li {
+  position: relative;
+}
+.SideMenuWrapper .menuItems li a {
+  padding: 16px 24px;
+  column-gap: 32px;
+  display: flex;
+  color: #111111;
+  column-gap: 24px;
+}
+.SideMenuWrapper .menuItems li ul.menuItems {
+  margin-top: 0;
+}
+.SideMenuWrapper .menuItems li ul.menuItems.animated {
+  transition: all 0.5s;
+}
+.SideMenuWrapper .menuItems li ul li a {
+  padding: 16px 24px;
+  column-gap: 32px;
+  display: flex;
+  color: #111111;
+  column-gap: 24px;
 }
 
 /*# sourceMappingURL=all.css.map */
