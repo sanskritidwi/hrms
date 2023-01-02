@@ -1,0 +1,17 @@
+.AttendanceEmployee{
+    span{
+        font-size: 16px;
+        font-weight: 400;
+        text-transform: capitalize;
+    }
+    .col-30{
+        column-gap: 30px;
+    }
+    .dayStatus-btn{
+        background-color: $main-color;
+        border-color:$main-color;
+        // &:hover{
+        //     color: $main-color;
+        // }
+    }
+}

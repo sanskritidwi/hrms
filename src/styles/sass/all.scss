@@ -1,4 +1,7 @@
-@import "./core/core";
+// @import "./core/core";
+@import "./core/allCore";
+@import "./core/variables";
+@import "./core/mixins";
 @import "./common/allCommon";
 @import "./services/employee/allEmployee";
 @import "./services/hradmin/allHrAdmin";

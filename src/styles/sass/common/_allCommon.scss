@@ -1,6 +1,13 @@
+@import "./collectionList";
+@import "./eventCard";
+@import "./pageHeader";
 @import "collectionList";
 @import "eventCard";
 @import 'sideMenu';
 @import 'popup';
 @import 'dropdown';
-@import 'navbar'
+@import 'navbar';
+@import "./searchBar";
+@import "./formComponents";
+@import './attendanceEmployee';
+@import './progress'

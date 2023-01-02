@@ -24,16 +24,13 @@ function App() {
 				HRM Cubexo
 				<Router>
 					<Layout />
-					<Routes>
+				 <Routes>
 						<Route path="/" element={<SansCanvas />} />
 						<Route path="/sans" element={<SansCanvas />} />
 						<Route path="/kavi" element={<KavitaCanvas />} />
 						<Route path="/nisha" element={<NishaCanvas />} />
-
 					</Routes>
-				</Router>
-				{/* <SansCanvas/>
-			<SideMenu/> */}
+				</Router> 
 		
 			</div>
 		</>

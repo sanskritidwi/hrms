@@ -1,0 +1,53 @@
+@mixin btn {
+	border: 1px solid #777777;
+	border-radius: 8px;
+	padding: 8px 16px;
+    display: flex;
+    cursor: pointer;
+    & :hover{
+        background-color: $main-color;
+        color: white;
+    }
+}
+
+
+
+@mixin defaultButton {
+	border: 1px solid #777777;
+	border-radius: 8px;
+	padding: 16px 16px;
+    display: flex;
+    cursor: pointer;
+	align-items: center;
+ 
+}
+
+
+.defaultButton {
+	border: 1px solid #777777;
+	border-radius: 8px;
+	padding: 16px 16px;
+    display: flex;
+    cursor: pointer;
+	align-items: center;
+ 
+}
+
+
+
+@mixin defaultButtonClickable {
+	@include defaultButton;
+    & :hover{
+        background-color: $main-color;
+        color: white;
+    }
+}
+
+
+@mixin tableHeader{
+	border: 1px solid #777777;
+	border-radius: 8px;
+	padding: 8px 16px;
+	background-color:rgba(25, 189, 152, 0.5);
+}
+
