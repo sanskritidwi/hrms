@@ -1,20 +1,218 @@
-import '../styles/css/all.css'
+import React from 'react'
 import icon from '../assets/images/item.svg'
 import arrow from '../assets/images/arrow.svg'
 import { useState } from 'react'
-// import icon from ''
+
+// use like this
+// sideItem is api data or props value
+// for Employee
+// const sideItem = [
+//     {
+//         title: 'Dashboard',
+//         activeicon: arrow,
+//         defaulticon: icon,
+//         path: '',
+//         child: [
+//             {
+//                 title: 'Dashboard1',
+//                 activeicon: arrow,
+//                 defaulticon: icon,
+//                 path: '',
+//             },
+//             {
+//                 title: 'Dashboard2',
+//                 activeicon: arrow,
+//                 defaulticon: icon,
+//                 path: '',
+//             }
+//         ]
+//     },
+//     {
+//         title: 'Attendance',
+//         activeicon: arrow,
+//         defaulticon: icon,
+//         path: ''
+//     },
+//     {
+//         title: 'Leaves',
+//         activeicon: arrow,
+//         defaulticon: icon,
+//         path: ''
+//     },
+//     {
+//         title: 'Team Tree',
+//         activeicon: arrow,
+//         defaulticon: icon,
+//         path: ''
+//     },
+//     {
+//         title: 'Payslips',
+//         activeicon: arrow,
+//         defaulticon: icon,
+//         path: ''
+//     },
+//     {
+//         title: 'Reimbursements',
+//         activeicon: arrow,
+//         defaulticon: icon,
+//         path: ''
+//     },
+//     {
+//         title: 'Rewards ',
+//         activeicon: arrow,
+//         defaulticon: icon,
+//         path: ''
+//     },
+//     {
+//         title: 'HR Help Desk',
+//         activeicon: arrow,
+//         defaulticon: icon,
+//         path: ''
+//     },
+//     {
+//         title: 'Organisation Calendar',
+//         activeicon: arrow,
+//         defaulticon: icon,
+//         path: ''
+//     },
+//     {
+//         title: 'My Details',
+//         activeicon: arrow,
+//         defaulticon: icon,
+//         path: ''
+//     },
+//     {
+//         title: 'Company Policies',
+//         activeicon: arrow,
+//         defaulticon: icon,
+//         path: ''
+//     },
+//   ]
+// for Admin
+// const sideItem = [
+//     {
+//         title: 'Dashboard',
+//         activeicon: arrow,
+//         defaulticon: icon,
+//         path: ''
+//     },
+//     {
+//         title: 'people',
+//         activeicon: arrow,
+//         defaulticon: icon,
+//         path: '',
+//         child: [
+//             {
+//                 title: 'Current Employees',
+//                 activeicon: arrow,
+//                 defaulticon: icon,
+//                 path: '',
+//             },
+//             {
+//                 title: 'New Employees Requests',
+//                 activeicon: arrow,
+//                 defaulticon: icon,
+//                 path: '',
+//             },
+//             {
+//                 title: 'team tree',
+//                 activeicon: arrow,
+//                 defaulticon: icon,
+//                 path: '',
+//             },
+//             {
+//                 title: 'Archieved Records',
+//                 activeicon: arrow,
+//                 defaulticon: icon,
+//                 path: '',
+//             },
+//         ]
+//     },
+//     {
+//         title: 'attendance',
+//         activeicon: arrow,
+//         defaulticon: icon,
+//         path: '',
+//         child: [
+//             {
+//                 title: 'attendance',
+//                 activeicon: arrow,
+//                 defaulticon: icon,
+//                 path: '',
+//             },
+//             {
+//                 title: 'Leave Requests',
+//                 activeicon: arrow,
+//                 defaulticon: icon,
+//                 path: '',
+//             },
+//             {
+//                 title: 'WFH Requests',
+//                 activeicon: arrow,
+//                 defaulticon: icon,
+//                 path: '',
+//             },
+//         ]
+//     },
+//     {
+//         title: 'financials',
+//         activeicon: arrow,
+//         defaulticon: icon,
+//         path: '',
+//         child: [
+//             {
+//                 title: 'payroll',
+//                 activeicon: arrow,
+//                 defaulticon: icon,
+//                 path: '',
+//             },
+//             {
+//                 title: 'Expenses',
+//                 activeicon: arrow,
+//                 defaulticon: icon,
+//                 path: '',
+//             },
+//             {
+//                 title: 'Reimbursements',
+//                 activeicon: arrow,
+//                 defaulticon: icon,
+//                 path: '',
+//             },
+//         ]
+//     },
+//     {
+//         title: 'Help desk',
+//         activeicon: arrow,
+//         defaulticon: icon,a
+//         path: ''
+//     },
+//     {
+//         title: 'Calendar',
+//         activeicon: arrow,
+//         defaulticon: icon,
+//         path: ''
+//     },
+//   ]
+
+{/* <SideMenu listMenu={sideItem}/> */}
+
+
 const MenuIteams = ({ data, index}) => {
     const [openSubMenu, setOpenSubMenu] = useState(false)
+    const [icon, setIcon] = useState(false)
     return (
         <>
-            <li key={index} onClick={()=> setOpenSubMenu(!openSubMenu)}>
-                <a href="javascript:;">
-                    <img src={data?.icon} />
-                    <span>{data?.title}</span>
+            <li key={index} >
+                <a href="javascript:;" onClick={()=> {
+                setOpenSubMenu(!openSubMenu)
+                setIcon(!icon)
+                 }}>
+                    <img src={!icon ? data.activeicon : data.defaulticon} />
+                    <span>{data.title}</span>
                 </a>
-                {data?.child && <>
+                {data.child && <>
                     <img className='subMenuIcon' src={arrow} />
-                    {openSubMenu && <MenuList classVal={openSubMenu}  menuList={data?.child} />}
+                    {openSubMenu && <MenuList classVal={openSubMenu}  menuList={data.child} />}
                 </>}
             </li>
         </>
@@ -39,81 +237,18 @@ const MenuList = ({ menuList ,classVal}) => {
     )
 }
 
-function SideMenu() {
-    const [sideMenu, setSIdeMenu] = useState(false);
-    const sideItem = [
-        {
-            title: 'Dashboard',
-            icon: icon,
-            path: '',
-            child: [
-                {
-                    title: 'Dashboard1',
-                    icon: icon,
-                    path: '',
-                },
-                {
-                    title: 'Dashboard2',
-                    icon: icon,
-                    path: '',
-                },
-                {
-                    title: 'Dashboard3',
-                    icon: icon,
-                    path: '',
-                }
-            ]
-        },
-        {
-            title: 'About',
-            icon: icon,
-            path: ''
-        },
-        {
-            title: 'Service',
-            icon: icon,
-            path: '',
-            child: [
-                {
-                    title: 'Service1',
-                    icon: icon,
-                    path: '',
-                },
-                {
-                    title: 'Service2',
-                    icon: icon,
-                    path: '',
-                },
-                {
-                    title: 'Service3',
-                    icon: icon,
-                    path: '',
-                }
-            ]
-        },
-    ]
-
- 
-
+const SideMenu =({listMenu}) => {
+    const [sideMenu, setSideMenu] = useState(false);
     const renderMenuIcon = () => {
         return (
             <>
                 <div className='toggle'>
-                    <button >
+                    <button onClick={()=> setSideMenu(!sideMenu)}>
                         <img src={icon} />
                     </button>
                 </div>
             </>
         )
-    }
-    const handleToggle = () => {
-        if (!sideMenu) {
-            setSIdeMenu(true)
-        }
-        else {
-            setSIdeMenu(false)
-        }
-
     }
 
     return (
@@ -121,15 +256,12 @@ function SideMenu() {
             <div className='SideMenuWrapper'>
                 <aside className={sideMenu ? 'collapse' : ''}>
                     {renderMenuIcon()}
-                    {<MenuList menuList={sideItem} />}
+                    {<MenuList menuList={listMenu} />}
                 </aside>
 
             </div>
         </>
     )
 }
-
-
-
 
 export default SideMenu;

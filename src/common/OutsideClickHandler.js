@@ -18,7 +18,7 @@ export const OutsideClickHandler = ({ children, callbackFunction }) => {
 
 	useEffect(() => {
 		const handleClickOutside = (e) => {
-			if (callbackFunction && !parentRef?.current?.contains(e.target)) {
+			if (callbackFunction && !parentRef.current.contains(e.target)) {
 				callbackFunction();
 			}
 		};

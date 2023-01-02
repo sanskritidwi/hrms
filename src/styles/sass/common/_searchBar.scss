@@ -1,0 +1,13 @@
+@import "../core/allCore";
+
+.SearchBarWrapper{
+@include defaultButton;
+
+input{
+    outline: none;
+    border: unset;
+    min-width: 420px;
+
+}
+
+}

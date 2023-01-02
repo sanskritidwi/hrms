@@ -1,12 +1,16 @@
 ul{
-    margin:0;
-    padding: 0;
+    margin:0 !important;
+    padding: 0 !important;
     li{
         list-style: none;
     }
   }
   a{
-    text-decoration: none;
+    text-decoration: none !important;
+  }
+  p{
+    margin:0 !important;
+    padding: 0 !important;
   }
   body{
     padding: 0;
@@ -32,6 +36,9 @@ ul{
                     z-index: -1;
                 }
             }
+            .subMenuIcon{
+                display: none;
+            }
         }
     }
     .toggle{
@@ -52,7 +59,13 @@ ul{
                 display: flex;
                 color: #111111;
                 column-gap: 24px;
-                
+                &:hover{
+                    background-color: $main-color;
+                    color: $white-color;
+                    svg{
+                        fill: $white-color;
+                    }
+                }
             }
             ul{
                 &.menuItems{
@@ -73,15 +86,9 @@ ul{
                     }
                 }
             }
-            &:hover{
-                // background-color: $main-color;
-                a{
-                    // color: $white-color;
-                    svg{
-                        // fill: $white-color;
-                    }
-                }
-            }
+            // &:hover{
+            //     background-color: $white-color;
+            // }
         }
     }
 }
