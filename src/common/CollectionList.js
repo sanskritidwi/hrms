@@ -9,7 +9,7 @@ Caller
 export const CollectionList = ({ schema}) => {
 
 
-  const {customRender} = schema;
+  const {customRender,title} = schema;
    
       
   return (
@@ -24,6 +24,7 @@ export const CollectionList = ({ schema}) => {
       <tr></tr>
       </tbody>
     </table> */}
+    {title}
 
     {customRender}
   </div>

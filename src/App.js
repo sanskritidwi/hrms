@@ -14,6 +14,7 @@ import {
 import Layout from "./common/Layout";
 import { KavitaCanvas } from "./common/KavitaCanvas";
 import { NishaCanvas } from "./common/NishaCanvas";
+import { Leave } from "./services/employee/leave/Leave";
 
 function App() {
 	return (
@@ -22,13 +23,22 @@ function App() {
 				HRM Cubexo
 				<Router>
 					<Layout />
-				 <Routes>
+					<Routes>
 						<Route path="/" element={<SansCanvas />} />
-						<Route path="/sans" element={<SansCanvas />} />
-						<Route path="/kavi" element={<KavitaCanvas />} />
-						<Route path="/nisha" element={<NishaCanvas />} />
+						<Route path="employee">
+							<Route path="attendance" element={<SansCanvas />} />
+							<Route path="leave" element={<Leave />} />
+						</Route>
+						<Route path="admin">
+							<Route path="attendance" element={<SansCanvas />} />
+							<Route path="leave" element={<Leave />} />
+						</Route>
+						<Route path="canvas">
+							<Route path="sans" element={<SansCanvas />} />
+							<Route path="kavi" element={<KavitaCanvas />} />
+							<Route path="nisha" element={<NishaCanvas />} />
+						</Route>
 					</Routes>
-				
 				</Router>
 			</div>
 		</>
