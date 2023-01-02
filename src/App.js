@@ -1,3 +1,5 @@
+import React from 'react';
+import ReactDOM from 'react-dom'
 import "./App.css";
 import "./styles/css/all.css";
 import { SansCanvas } from "./common/SansCanvas";
@@ -20,7 +22,6 @@ function App() {
 	return (
 		<>
 			<div className="App">
-				HRM Cubexo
 				<Router>
 					<Layout />
 					<Routes>

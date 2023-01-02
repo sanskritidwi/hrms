@@ -202,7 +202,7 @@ export const MonthWiseAttendance = () => {
 	};
 
 	return (
-		<div className="MonthWiseAttendanceWrapper">
+		<div className="MonthWiseAttendanceWrapper pageBody">
 			<PageHeader pageheading="Attendance" />
 			{renderFiltersRow()}
 			{renderTable(newMonth)}

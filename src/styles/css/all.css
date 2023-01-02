@@ -10,6 +10,10 @@ h4 {
   color: #000000;
 }
 
+.pageBody {
+  margin: 24px;
+}
+
 .defaultButton {
   border: 1px solid #777777;
   border-radius: 8px;
@@ -17,6 +21,67 @@ h4 {
   display: flex;
   cursor: pointer;
   align-items: center;
+  background-color: #05454E;
+  color: white;
+}
+
+.defaultButton {
+  border: 1px solid #777777;
+  border-radius: 8px;
+  padding: 16px 16px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  background-color: #05454E;
+  color: white;
+}
+
+h4 {
+  font-size: 32px;
+}
+
+.form-label {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+}
+
+.pageBody {
+  margin: 24px;
+}
+
+.iconBlackArrowLeft {
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+  margin: 0px 8px;
+  background-image: url("../../assets/images/arrowRight.svg");
+}
+
+.iconBlackArrowRight {
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+  margin: 0px 8px;
+  background-image: url("../../assets/images/arrowLeft.svg");
+}
+
+.iconBlackArrowDown {
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+  margin: 0px 8px;
+  background-image: url("../../assets/images/arrowDown.svg");
+}
+
+.iconBlackSearch {
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+  margin: 0px 8px;
+  background-image: url("../../assets/images/searchBlack.svg");
 }
 
 .CollectionListWrapper table {
@@ -43,6 +108,7 @@ h4 {
   background-color: #05454E;
   padding: 12px;
   border-radius: 16px 16px 0px 0px;
+  text-align: center;
 }
 
 .PageHeaderWrapper {
@@ -73,18 +139,24 @@ h4 {
   background-color: #05454E;
   padding: 12px;
   border-radius: 16px 16px 0px 0px;
+  text-align: center;
 }
 
 ul {
-  margin: 0;
-  padding: 0;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 ul li {
   list-style: none;
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
+}
+
+p {
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 body {
@@ -111,6 +183,9 @@ body {
   position: relative;
   z-index: -1;
 }
+.SideMenuWrapper aside.collapse .subMenuIcon {
+  display: none;
+}
 .SideMenuWrapper .toggle {
   background-color: #19BD98;
   padding: 16px 24px;
@@ -132,6 +207,13 @@ body {
   color: #111111;
   column-gap: 24px;
 }
+.SideMenuWrapper .menuItems li a:hover {
+  background-color: #05454E;
+  color: #ffffff;
+}
+.SideMenuWrapper .menuItems li a:hover svg {
+  fill: #ffffff;
+}
 .SideMenuWrapper .menuItems li ul.menuItems {
   margin-top: 0;
 }
@@ -145,6 +227,7 @@ body {
   color: #111111;
   column-gap: 24px;
 }
+
 .defaultButton {
   border: 1px solid #777777;
   border-radius: 8px;
@@ -152,6 +235,8 @@ body {
   display: flex;
   cursor: pointer;
   align-items: center;
+  background-color: #05454E;
+  color: white;
 }
 
 h4 {
@@ -164,6 +249,10 @@ h4 {
   font-size: 16px;
   font-weight: 400;
   color: #000000;
+}
+
+.pageBody {
+  margin: 24px;
 }
 
 .iconBlackArrowLeft {
@@ -246,6 +335,8 @@ h4 {
   display: flex;
   cursor: pointer;
   align-items: center;
+  background-color: #05454E;
+  color: white;
 }
 
 h4 {
@@ -258,6 +349,10 @@ h4 {
   font-size: 16px;
   font-weight: 400;
   color: #000000;
+}
+
+.pageBody {
+  margin: 24px;
 }
 
 .iconBlackArrowLeft {
@@ -299,6 +394,8 @@ h4 {
   display: flex;
   cursor: pointer;
   align-items: center;
+  background-color: #05454E;
+  color: white;
 }
 .SearchBarWrapper input {
   outline: none;
@@ -320,6 +417,63 @@ h4 {
   padding: 8px;
 }
 
+.Dropdown-wrapper {
+  position: relative;
+}
+.Dropdown-wrapper .dropdown-list {
+  background-color: #ffffff;
+  box-shadow: 0 0 10px #d7d5d5;
+  width: fit-content;
+  border-radius: 8px;
+  width: 260px;
+  position: absolute;
+  top: 50px;
+  right: 0;
+}
+.Dropdown-wrapper ul li {
+  padding: 16px 24px;
+  border-bottom: 1px solid #dfdfdf;
+}
+.Dropdown-wrapper ul li .icon {
+  height: 35px;
+  width: 35px;
+  padding: 8px;
+  border-radius: 50px;
+  box-shadow: 0 0 5px rgba(17, 17, 17, 0.4117647059);
+  background-color: #ffffff;
+}
+.Dropdown-wrapper ul li:last-child {
+  border-bottom: 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 0;
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+header .col-20 {
+  column-gap: 20px;
+}
+
+.LeaveWrapper .NumCardsWrapper {
+  display: flex;
+}
+.LeaveWrapper .NumCardsWrapper .card {
+  min-width: 100px;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 12px;
+  margin-right: 24px;
+}
+.LeaveWrapper .NumCardsWrapper .card .num {
+  font-size: 24px;
+}
+
 .defaultButton {
   border: 1px solid #777777;
   border-radius: 8px;
@@ -327,6 +481,8 @@ h4 {
   display: flex;
   cursor: pointer;
   align-items: center;
+  background-color: #05454E;
+  color: white;
 }
 
 h4 {
@@ -339,6 +495,10 @@ h4 {
   font-size: 16px;
   font-weight: 400;
   color: #000000;
+}
+
+.pageBody {
+  margin: 24px;
 }
 
 .iconBlackArrowLeft {
@@ -394,6 +554,8 @@ h4 {
   display: flex;
   cursor: pointer;
   align-items: center;
+  background-color: #05454E;
+  color: white;
 }
 .MonthWiseAttendanceWrapper .calendarSelect .head .year {
   padding: 0px 8px;
@@ -405,6 +567,8 @@ h4 {
   display: flex;
   cursor: pointer;
   align-items: center;
+  background-color: #05454E;
+  color: white;
   flex-wrap: wrap;
   max-width: 250px;
   padding: 4px;
@@ -441,6 +605,8 @@ h4 {
   display: flex;
   cursor: pointer;
   align-items: center;
+  background-color: #05454E;
+  color: white;
   text-align: left;
 }
 .MonthWiseAttendanceWrapper table tr td {
@@ -466,15 +632,20 @@ h4 {
 }
 
 ul {
-  margin: 0;
-  padding: 0;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 ul li {
   list-style: none;
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
+}
+
+p {
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 body {
@@ -501,6 +672,9 @@ body {
   position: relative;
   z-index: -1;
 }
+.SideMenuWrapper aside.collapse .subMenuIcon {
+  display: none;
+}
 .SideMenuWrapper .toggle {
   background-color: #19BD98;
   padding: 16px 24px;
@@ -522,6 +696,13 @@ body {
   color: #111111;
   column-gap: 24px;
 }
+.SideMenuWrapper .menuItems li a:hover {
+  background-color: #05454E;
+  color: #ffffff;
+}
+.SideMenuWrapper .menuItems li a:hover svg {
+  fill: #ffffff;
+}
 .SideMenuWrapper .menuItems li ul.menuItems {
   margin-top: 0;
 }
@@ -534,6 +715,10 @@ body {
   display: flex;
   color: #111111;
   column-gap: 24px;
+}
+
+.pageBody {
+  margin: 24px;
 }
 
 /*# sourceMappingURL=all.css.map */

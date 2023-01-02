@@ -1,0 +1,17 @@
+.LeaveWrapper{
+    .NumCardsWrapper{
+        display: flex;
+        .card{
+            min-width: 100px;
+            min-height: 100px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            padding: 12px;
+            margin-right: 24px;
+            .num{
+                font-size: 24px;
+            }
+        }
+    }
+}

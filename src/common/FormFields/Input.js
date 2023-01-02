@@ -4,7 +4,6 @@ export const Input = ({placeholder, maxLength, minLength, isRequired}) => {
 
     const [userInput, setUserInput] = useState();
     const [error, setError] = useState("");
-
     const handleInput=(e)=>{
         if(e.target.value===""){
             console.log("is req");

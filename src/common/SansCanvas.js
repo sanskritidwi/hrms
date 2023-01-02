@@ -23,7 +23,7 @@ export const SansCanvas = () => {
 			{/* <Calendar /> */}
 			{/* <EventCard title="UpcomingEvents" renderBody={renderBody}/>
             <FormProcessor submitEnable={true} submitText="Submit"/>  */}
-			<MonthWiseAttendance />
+			{/* <MonthWiseAttendance /> */}
 			{/* <OutsideClickHandler
 				callbackFunction={() => {
 					console.log("out");
