@@ -9,5 +9,5 @@ export function Dateform(props) {
                 </div>
             </div>
         </>
-    )
+    );
 }

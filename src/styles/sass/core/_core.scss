@@ -26,3 +26,6 @@ a{
     font-weight: 400;
     color: #000000;
 }
+button, .btn-close:focus {
+    box-shadow: none;
+}

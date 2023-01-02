@@ -14,66 +14,87 @@ a {
   color: #000000;
 }
 
+button, .btn-close:focus {
+  box-shadow: none;
+}
+
 /* modal-start */
-.modal-wrap .modal-content {
+.modal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal .modal-content {
   margin: 0 auto;
   max-width: 680px;
+  background-color: #ffffff;
 }
-.modal-wrap .modal-content .modal-title {
+.modal .modal-content .modal-title {
   font-size: 32px;
   font-weight: 400;
 }
-.modal-wrap .modal-content .modal-header {
-  text-align: center;
+.modal .modal-content .modal-header {
   border-bottom: 4px solid #05454E;
   margin: 0 55px;
+  padding: 10px;
+  justify-content: center;
 }
-.modal-wrap .modal-content .modal-body {
-  padding: 15px 70px;
+.modal .modal-body {
+  padding: 30px 40px;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
 }
-.modal-wrap .modal-content .btn-close {
+.modal .btn-close {
   position: absolute;
-  top: 25px;
-  right: 26px;
+  top: 24px;
+  right: 25px;
   font-size: 6px;
   border: 1px solid #000000;
   border-radius: 50px;
   color: #000000;
   padding: 5px;
 }
-.modal-wrap .modal-content .popup-label .row {
-  row-gap: 40px;
+.modal .popup-label .row {
+  row-gap: 30px;
 }
-.modal-wrap .modal-content .popup-label .form-label {
+.modal .popup-label .form-label {
   margin-right: 25px;
 }
-.modal-wrap .modal-content .popup-label .check-input {
+.modal .popup-label .check-input {
   margin-top: 6px;
 }
-.modal-wrap .modal-content .popup-label .check-input:first-child {
+.modal .popup-label .check-input:first-child {
   margin-top: 0;
 }
-.modal-wrap .modal-content .popup-label .check-input input {
+.modal .popup-label .check-input input {
   margin-right: 10px;
 }
-.modal-wrap .modal-content .popup-label textarea {
+.modal .popup-label textarea {
   width: 100%;
   height: 130px;
   border: 1px solid #777777;
   border-radius: 8px;
   margin-top: 15px;
+  padding: 10px;
 }
-.modal-wrap .modal-content .popup-label textarea:focus {
+.modal .popup-label textarea:focus {
   outline: none;
 }
-.modal-wrap .modal-content .date-wrap .main-label {
+.modal .date-wrap .main-label {
   margin-top: 20px;
   display: flex;
+  align-items: center;
 }
-.modal-wrap .modal-content .date-wrap .form-label {
+.modal .date-wrap .form-label {
   color: #777777;
 }
-.modal-wrap .modal-content .date-wrap input {
+.modal .date-wrap input {
   width: 100%;
   height: 50px;
   border: 1px solid #777777;
@@ -83,6 +104,9 @@ a {
 
 .common-btn {
   column-gap: 30px;
+  flex-wrap: wrap;
+  row-gap: 15px;
+  padding: 0 40px 20px;
 }
 
 .main-btn {
