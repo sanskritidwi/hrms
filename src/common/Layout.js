@@ -9,6 +9,7 @@ const Layout = () => {
           <li>
             <Link to="/">Home</Link>
             <Link to="kavi">Sidebar</Link>
+            
           </li>
         </ul>
       </nav>

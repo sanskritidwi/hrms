@@ -31,24 +31,20 @@ const Dropdown = ({notificationItem}) => {
         if(!notification) return null;
             return(
                 <>
-                   
-                        <div className='dropdown-list'>
-                            {renderList()}
-                        </div>
-                 
-                    
+                    <div className='dropdown-list'>
+                        {renderList()}
+                    </div>   
                 </>
             )
     }
     const renderList = () => {
         const renderNotification = (notification) => {
-               switch(notification.type){
-                    case "reminder" :
-                        return  <img src={Reminder} className="icon"/>
-                    case "update" : 
-                        return <img src={Event} className="icon"/>
-                }
-            
+            switch(notification.type){
+                case "reminder" :
+                    return  <img src={Reminder} className="icon"/>
+                case "update" : 
+                    return <img src={Event} className="icon"/>
+            }
         }
         return(
             <>
