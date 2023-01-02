@@ -7,10 +7,19 @@ import { FormProcessor } from "./FormFields/FormProcessor";
 import OutsideClickHandler from "./OutsideClickHandler";
 
 export const SansCanvas = () => {
+
+	const customRenderList = ()=>{
+		return <>HIII</>
+	}
+
+	const collectionSchema = {
+		customRender : customRenderList(),
+		title:"hiii"
+
+	}
 	
 	return (
 		<div>
-			{/* <CollectionList fields={["name", "place", "animal", "thing"]} />
 			{/* <Calendar /> */}
 			{/* <EventCard title="UpcomingEvents" renderBody={renderBody}/>
             <FormProcessor submitEnable={true} submitText="Submit"/>  */}
@@ -23,6 +32,7 @@ export const SansCanvas = () => {
 					SansCanvas
 				</div>
 			</OutsideClickHandler> */}
+			{/* <CollectionList schema={collectionSchema}/> */}
 		</div>
 	);
 };
