@@ -5,9 +5,7 @@ const Input = ()=>{
     <input
                 type="text"
                 onBlur={(e) => {
-                    // handleIpValue(e);
                 }}
-                // defaultValue={ipVal}
             />
     </>)
 }

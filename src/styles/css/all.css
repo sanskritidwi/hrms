@@ -10,10 +10,6 @@ h4 {
   color: #000000;
 }
 
-.pageBody {
-  margin: 24px;
-}
-
 .defaultButton {
   border: 1px solid #777777;
   border-radius: 8px;
@@ -46,10 +42,6 @@ h4 {
   font-size: 16px;
   font-weight: 400;
   color: #000000;
-}
-
-.pageBody {
-  margin: 24px;
 }
 
 .iconBlackArrowLeft {
@@ -251,10 +243,6 @@ h4 {
   color: #000000;
 }
 
-.pageBody {
-  margin: 24px;
-}
-
 .iconBlackArrowLeft {
   background-repeat: no-repeat;
   height: 24px;
@@ -288,44 +276,129 @@ h4 {
 }
 
 /* modal-start */
-.modal-wrap .modal-content {
-  margin: 0 auto;
-  text-align: center;
-  max-width: 680px;
-}
-.modal-wrap .modal-content .modal-header {
-  text-align: center;
-  border-bottom: 2px solid #05454E;
-}
-.modal-wrap .modal-content .btn-close {
-  position: absolute;
-  top: 25px;
-  right: 26px;
-  font-size: 12px;
-}
-.modal-wrap .modal-content .popup-label {
+.modal-wrapper {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.modal-wrap .modal-content .popup-label .form-label {
+.modal-wrapper .modal-content {
+  margin: 0 auto;
+  max-width: 680px;
+  background-color: #ffffff;
+}
+.modal-wrapper .modal-content .modal-title {
+  font-size: 32px;
+  font-weight: 400;
+}
+.modal-wrapper .modal-content .modal-header {
+  border-bottom: 4px solid #05454E;
+  margin: 0 55px;
+  padding: 10px;
+  justify-content: center;
+}
+.modal-wrapper .modal-body {
+  padding: 30px 40px;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+}
+.modal-wrapper .btn-close {
+  position: absolute;
+  top: 24px;
+  right: 25px;
+  font-size: 6px;
+  border: 1px solid #000000;
+  border-radius: 50px;
+  color: #000000;
+  padding: 5px;
+}
+.modal-wrapper .popup-label .row {
+  row-gap: 30px;
+}
+.modal-wrapper .popup-label .form-label {
   margin-right: 25px;
 }
-.modal-wrap .modal-content .popup-label .check-input {
+.modal-wrapper .popup-label .check-input {
   margin-top: 6px;
 }
-.modal-wrap .modal-content .popup-label .check-input:first-child {
+.modal-wrapper .popup-label .check-input:first-child {
   margin-top: 0;
 }
-.modal-wrap .modal-content .popup-label .check-input input {
+.modal-wrapper .popup-label .check-input input {
   margin-right: 10px;
 }
-.modal-wrap .modal-content .date-wrap label {
-  display: block;
+.modal-wrapper .popup-label textarea {
+  width: 100%;
+  height: 130px;
+  border: 1px solid #777777;
+  border-radius: 8px;
+  margin-top: 15px;
+  padding: 10px;
 }
-.modal-wrap .modal-content .date-wrap input {
-  width: 150px;
+.modal-wrapper .popup-label textarea:focus {
+  outline: none;
+}
+.modal-wrapper .date-wrap .main-label {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+.modal-wrapper .date-wrap .form-label {
+  color: #777777;
+}
+.modal-wrapper .date-wrap input {
+  width: 100%;
   height: 50px;
   border: 1px solid #777777;
   border-radius: 5px;
+  padding: 10px;
+}
+
+.common-btn {
+  column-gap: 30px;
+  flex-wrap: wrap;
+  row-gap: 15px;
+  padding: 0 40px 20px;
+}
+
+.main-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  min-width: 130px;
+  height: 50px;
+  color: #ffffff;
+  border: 1px solid #05454E;
+  background-color: #05454E;
+  border-radius: 10px;
+  font-size: 24px;
+  transition: all 0.5s;
+}
+.main-btn:hover {
+  color: #05454E;
+  background-color: #ffffff;
+}
+
+.main-cancel-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  min-width: 130px;
+  height: 50px;
+  color: #000000;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  font-size: 24px;
+}
+.main-cancel-btn:hover {
+  color: #05454E;
 }
 
 .defaultButton {
@@ -349,10 +422,6 @@ h4 {
   font-size: 16px;
   font-weight: 400;
   color: #000000;
-}
-
-.pageBody {
-  margin: 24px;
 }
 
 .iconBlackArrowLeft {
@@ -495,10 +564,6 @@ h4 {
   font-size: 16px;
   font-weight: 400;
   color: #000000;
-}
-
-.pageBody {
-  margin: 24px;
 }
 
 .iconBlackArrowLeft {
