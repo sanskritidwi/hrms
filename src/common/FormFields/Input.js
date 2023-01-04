@@ -1,17 +1,7 @@
 import React, { useState } from 'react'
 
-export const Input = ({placeholder, maxLength, minLength, isRequired, submitEnable, submitText, changeHandler}) => {
-    // const [userInput, setUserInput] = useState("");
+export const Input = ({changeHandler}) => {
     const [error, setError] = useState("");
-    // const handleInput=(e)=>{
-    //     if(e.target.value===""){
-    //         console.log("is req");
-    //         setError("Required Field");
-    //     }else{
-    //         console.log(e.target.value);
-    //         setUserInput(e.target.value);
-    //     }
-    // }
 
 
     const renderError=()=>{
@@ -20,19 +10,12 @@ export const Input = ({placeholder, maxLength, minLength, isRequired, submitEnab
             <div>{error}</div>
         )
     }
-    // const renderSubmit = () => {
-    //     if (!submitEnable) return null;
-    //     return (
-    //         <button type='submit' onClick={send}>{submitText}</button>
-    //     );
-    // }
+
   
 
   return (
     <div>
-        <input type="text" placeholder={placeholder} onChange={changeHandler}  maxLength={maxLength} minLength={minLength}/>
-        {/* <button onClick={send}>send</button> */}
-        {/* {renderSubmit()} */}
+        <input type="text"  onChange={changeHandler}/>
         {renderError()}
     </div>
   )
