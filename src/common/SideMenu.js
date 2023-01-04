@@ -203,7 +203,7 @@ const MenuIteams = ({ data, index}) => {
     return (
         <>
             <li key={index} >
-                <a href="javascript:;" onClick={()=> {
+                <a href="#" onClick={()=> {
                 setOpenSubMenu(!openSubMenu)
                 setIcon(!icon)
                  }}>

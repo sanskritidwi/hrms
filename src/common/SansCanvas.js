@@ -17,12 +17,14 @@ export const SansCanvas = () => {
 		title:"modalCanvas"
 
 	}
-	
+	const formfield = {
+		input: 'text',
+	}
 	return (
 		<div>
 			{/* <Calendar /> */}
-			{/* <EventCard title="UpcomingEvents" renderBody={renderBody}/>
-            <FormProcessor submitEnable={true} submitText="Submit"/>  */}
+			{/* <EventCard title="UpcomingEvents" renderBody={renderBody}/> */}
+            <FormProcessor schema={formfield} submitEnable={true} submitText="Submit"/> 
 			{/* <MonthWiseAttendance /> */}
 			{/* <OutsideClickHandler
 				callbackFunction={() => {
@@ -33,7 +35,7 @@ export const SansCanvas = () => {
 				</div>
 			</OutsideClickHandler> */}
 			{/* <CollectionList schema={collectionSchema}/> */}
-			<FormProcessor />
+			{/* <FormProcessor /> */}
 			{/* <CollectionList fields={["name", "place", "animal", "thing"]} /> */}
 			{/* <Calendar /> */}
             {/* <EventCard title="UpcomingEvents" renderBody={renderBody}/> */}

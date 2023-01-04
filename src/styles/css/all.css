@@ -10,6 +10,10 @@ h4 {
   color: #000000;
 }
 
+button, .btn-close:focus {
+  box-shadow: none;
+}
+
 .defaultButton {
   border: 1px solid #777777;
   border-radius: 8px;
@@ -42,6 +46,10 @@ h4 {
   font-size: 16px;
   font-weight: 400;
   color: #000000;
+}
+
+button, .btn-close:focus {
+  box-shadow: none;
 }
 
 .iconBlackArrowLeft {
@@ -243,6 +251,10 @@ h4 {
   color: #000000;
 }
 
+button, .btn-close:focus {
+  box-shadow: none;
+}
+
 .iconBlackArrowLeft {
   background-repeat: no-repeat;
   height: 24px;
@@ -291,6 +303,7 @@ h4 {
   margin: 0 auto;
   max-width: 680px;
   background-color: #ffffff;
+  border-radius: 8px;
 }
 .modal-wrapper .modal-content .modal-title {
   font-size: 32px;
@@ -314,8 +327,8 @@ h4 {
   font-size: 6px;
   border: 1px solid #000000;
   border-radius: 50px;
-  color: #000000;
-  padding: 5px;
+  color: #000000 !important;
+  padding: 5px !important;
 }
 .modal-wrapper .popup-label .row {
   row-gap: 30px;
@@ -422,6 +435,10 @@ h4 {
   font-size: 16px;
   font-weight: 400;
   color: #000000;
+}
+
+button, .btn-close:focus {
+  box-shadow: none;
 }
 
 .iconBlackArrowLeft {
@@ -564,6 +581,10 @@ h4 {
   font-size: 16px;
   font-weight: 400;
   color: #000000;
+}
+
+button, .btn-close:focus {
+  box-shadow: none;
 }
 
 .iconBlackArrowLeft {
