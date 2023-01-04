@@ -300,7 +300,7 @@ button, .btn-close:focus {
 }
 
 /* modal-start */
-.modal {
+.modal-wrapper {
   position: fixed;
   left: 0;
   right: 0;
@@ -311,52 +311,53 @@ button, .btn-close:focus {
   justify-content: center;
   align-items: center;
 }
-.modal .modal-content {
+.modal-wrapper .modal-content {
   margin: 0 auto;
   max-width: 680px;
   background-color: #ffffff;
+  border-radius: 8px;
 }
-.modal .modal-content .modal-title {
+.modal-wrapper .modal-content .modal-title {
   font-size: 32px;
   font-weight: 400;
 }
-.modal .modal-content .modal-header {
+.modal-wrapper .modal-content .modal-header {
   border-bottom: 4px solid #05454E;
   margin: 0 55px;
   padding: 10px;
   justify-content: center;
 }
-.modal .modal-body {
+.modal-wrapper .modal-body {
   padding: 30px 40px;
   border-top: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
 }
-.modal .btn-close {
+.modal-wrapper .btn-close {
   position: absolute;
   top: 24px;
   right: 25px;
   font-size: 6px;
   border: 1px solid #000000;
   border-radius: 50px;
-  color: #000000;
-  padding: 5px;
+  color: #000000 !important;
+  padding: 5px !important;
 }
-.modal .popup-label .row {
+.modal-wrapper .popup-label .row {
   row-gap: 30px;
 }
-.modal .popup-label .form-label {
+.modal-wrapper .popup-label .form-label {
   margin-right: 25px;
 }
-.modal .popup-label .check-input {
+.modal-wrapper .popup-label .check-input {
   margin-top: 6px;
 }
-.modal .popup-label .check-input:first-child {
+.modal-wrapper .popup-label .check-input:first-child {
   margin-top: 0;
 }
-.modal .popup-label .check-input input {
+.modal-wrapper .popup-label .check-input input {
   margin-right: 10px;
 }
-.modal .popup-label textarea {
+.modal-wrapper .popup-label textarea {
   width: 100%;
   height: 130px;
   border: 1px solid #777777;
@@ -364,18 +365,18 @@ button, .btn-close:focus {
   margin-top: 15px;
   padding: 10px;
 }
-.modal .popup-label textarea:focus {
+.modal-wrapper .popup-label textarea:focus {
   outline: none;
 }
-.modal .date-wrap .main-label {
+.modal-wrapper .date-wrap .main-label {
   margin-top: 20px;
   display: flex;
   align-items: center;
 }
-.modal .date-wrap .form-label {
+.modal-wrapper .date-wrap .form-label {
   color: #777777;
 }
-.modal .date-wrap input {
+.modal-wrapper .date-wrap input {
   width: 100%;
   height: 50px;
   border: 1px solid #777777;

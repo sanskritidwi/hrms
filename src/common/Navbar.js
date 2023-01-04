@@ -22,7 +22,7 @@ export const Navbar = () => {
             <header>
                 <div className="container-fluid px-lg-4 px-md-2 px-sm-0 px-0">
                    <div className="d-flex align-items-center justify-content-between col-20">
-                        <a href="javascript:;"><img src={Logo} /></a> 
+                        <a href="#"><img src={Logo} /></a> 
                         <div className="d-flex align-items-center col-20">
                         <Dropdown notificationItem={notificationData}/>
                             <img src={User} />

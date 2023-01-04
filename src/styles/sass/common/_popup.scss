@@ -2,7 +2,7 @@
 
 /* modal-start */
 
-.modal {
+.modal-wrapper {
   position: fixed;
   left: 0;
   right: 0;
@@ -17,8 +17,9 @@
     margin: 0 auto;
     max-width: 680px;
     background-color: #ffffff;
+    border-radius: 8px;
 
-    .modal-title {
+    .modal-title {    
       font-size: $large-heading;
       font-weight: 400;
     }
@@ -44,8 +45,8 @@
     font-size: 6px;
     border: 1px solid $black-color;
     border-radius: 50px;
-    color: $black-color;
-    padding: 5px;
+    color: $black-color !important;
+    padding: 5px !important;
   }
 
   .popup-label {

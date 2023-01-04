@@ -24,8 +24,8 @@ export const PopupModal = ({ schema, show, onClose }) => {
                     <div className='row'>
                         <div className='col-lg-12'>
                             <div className='d-flex common-btn'>
-                                <a href="javascript:;" className='main-cancel-btn' onClick={onClose}>Cancel</a>
-                                <a href="javascript:;" className='main-btn'>Submit</a>
+                                <a href="#" className='main-cancel-btn' onClick={onClose}>Cancel</a>
+                                <a href="#" className='main-btn'>Submit</a>
                             </div>
                         </div>
                     </div>
@@ -35,7 +35,7 @@ export const PopupModal = ({ schema, show, onClose }) => {
     }
     return (
         <>
-            <div className="modal">
+            <div className="modal-wrapper">
                 <div className="modal-content">
                     {renderHeader()}
                     {customBody}
