@@ -33,6 +33,7 @@ export const SansCanvas = () => {
 				</div>
 			</OutsideClickHandler> */}
 			{/* <CollectionList schema={collectionSchema}/> */}
+			<FormProcessor />
 		</div>
 	);
 };

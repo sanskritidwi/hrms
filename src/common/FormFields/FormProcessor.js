@@ -1,29 +1,15 @@
-import React from 'react'
-import { Input } from './Input'
+import React, { useState, useRef } from "react";
+import  Input  from "./Input";
 
-export const FormProcessor = ({schema, submitEnable, submitText}) => {
+export const FormProcessor = ({schema}) => {
+	
 
-
-    const handleSubmit=(e)=>{
-        e.preventDefault();
-        console.log("form Submitted")
-    }
-
-    const renderSubmit = ()=>{
-        if(!submitEnable) return null;
-        return (
-            <button type='submit'>{submitText}</button>
-        )
-    }
-
-
-  return (
-    <div>
-        <form onSubmit={(e)=>handleSubmit(e)}>
-        <Input/>
-        {renderSubmit()}
-        </form>
-        </div>
-       
-  )
-}
+	return (
+		<div>
+			{/* <form onSubmit={(e) => handleSubmit(e)}>
+				<Input/>
+				<button type="submit" disabled={isDisabled}>Add</button>
+			</form> */}
+		</div>
+	);
+};
