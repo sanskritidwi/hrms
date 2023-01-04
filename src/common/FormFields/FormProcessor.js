@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Input } from './Input'
 
-export const FormProcessor = ({ schema, formfield }) => {
+export const FormProcessor = ({ schema, formfield, submitEnable, submitText }) => {
     const inputvalue = '';
     const [userInput, setUserInput] = useState("");
     // const [getValue, setgetValue] = useState("");
@@ -24,14 +24,20 @@ export const FormProcessor = ({ schema, formfield }) => {
         // setUserInput(inputvalue)
         inputvalue({setUserInput})
     }
-    // console.log(userInput)
-
-
+    console.log(userInput)
+    const renderSubmit = () => {
+        if (!submitEnable) return null;
+        return (
+            <button type='submit' onClick={send}>{submitText}</button>
+        );
+    }
+    
     return (
         <div>
             <form onSubmit={(e) => handleSubmit(e)} >
                 <Input changeHandler={changeHandler} send={send} />
-                <button onClick={send}>send</button>
+                {renderSubmit()}
+                {/* <button onClick={send}>send</button> */}
                 {/* {getValue} */}
             </form>
         </div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export const Input = ({placeholder, maxLength, minLength, isRequired, submitEnable, submitText, changeHandler}) => {
+export const Input = ({placeholder, maxLength, minLength, isRequired, changeHandler}) => {
     // const [userInput, setUserInput] = useState("");
     const [error, setError] = useState("");
     // const handleInput=(e)=>{
