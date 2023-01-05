@@ -1,44 +1,38 @@
 import React, { useState, useEffect, useMemo } from "react";
+import { MonthWiseAttendance } from "../services/hradmin/attendance/MonthWiseAttendance";
+import { Calendar } from "./Calendar";
 import { CollectionList } from "./CollectionList";
+import { EventCard } from "./EventCard";
+import { FormProcessor } from "./FormFields/FormProcessor";
 import OutsideClickHandler from "./OutsideClickHandler";
 
 export const SansCanvas = () => {
-	const data = [
-		{
-			day: "Jan 1, 22",
-			status: "working day",
-			employee: [
-				{
-					employeeId: "1",
-					name: "sanskriti",
-					status: "Present",
-				},
-				{
-					employeeId: "1",
-					name: "sanskriti",
-					status: "Present",
-				},
-			],
-		},
-	];
 
+	const customRenderList = ()=>{
+		return <></>
+	}
 
+	const collectionSchema = {
+		customRender : customRenderList(),
+		title:"modalCanvas"
 
-    const mapArray=(employee)=>{
-        employee.map((item,index)=>{
-           return item.employeeId;
-        })
-    }
-
-	const columns = useMemo(() => [{
-
-        Header: "Employees",
-        accessor:"sdfs"
-    }], []);
-
+	}
+	
 	return (
 		<div>
-			<CollectionList columns={columns} data={data} />
+			{/* <Calendar /> */}
+			{/* <EventCard title="UpcomingEvents" renderBody={renderBody}/>
+            <FormProcessor submitEnable={true} submitText="Submit"/>  */}
+			<MonthWiseAttendance />
+			{/* <OutsideClickHandler
+				callbackFunction={() => {
+					console.log("out");
+				}}>
+				<div style={{ border: "1px solid  black", padding: "25px" }}>
+					SansCanvas
+				</div>
+			</OutsideClickHandler> */}
+			{/* <CollectionList schema={collectionSchema}/> */}
 		</div>
 	);
 };

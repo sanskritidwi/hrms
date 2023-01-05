@@ -1,1 +1,22 @@
+@import '../../assets/fonts/fonts.css';
+@import "./collectionList";
+@import "./eventCard";
+@import "./pageHeader";
+@import "collectionList";
+@import "eventCard";
 @import 'sideMenu';
+@import 'popup';
+@import 'dropdown';
+@import 'navbar';
+@import "./searchBar";
+@import "./formComponents";
+@import './attendanceEmployee';
+@import './progress';
+@import "./searchBar";
+@import "./formComponents";
+@import 'dropdown';
+@import 'navbar';
+
+*, body{
+    font-family: 'Comfortaa';
+}

@@ -1,0 +1,15 @@
+.DropDownWrapper{
+    .dropHeader{
+        position: relative;
+    }
+    .options{
+        position: absolute;
+        border: 1px solid #777777;
+        padding: 8px;
+        border-radius: 8px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        .option{
+            padding: 8px;
+        }
+    }
+}

@@ -1,0 +1,79 @@
+@import "../../../core/allCore";
+
+
+
+.MonthWiseAttendanceWrapper {
+	margin-top: 16px;
+	margin-left: 16px;
+	.filtersRow {
+		display: flex;
+		padding: 8px 0px;
+		align-items: center;
+	}
+	.calendarSelect {
+		display: flex;
+		flex-direction: column;
+		.head {
+			display: flex;
+            @include defaultButton;
+			.year{
+				padding: 0px 8px;
+				& :hover{
+					
+				}
+			}
+		}
+		.months {
+            @include defaultButton;		
+			flex-wrap: wrap;
+			max-width: 250px;
+			padding: 4px;
+			.month {
+				@include btn;
+				margin: 4px;
+			}
+		}
+	}
+	table{
+		margin-top: 32px;
+		tr{
+			th{
+				@include tableHeader;
+				font-weight: normal;
+				height: 64px;
+				&.employeeHead{
+					min-width: 200px;
+					background-color: unset;
+					@include defaultButton;
+					text-align: left;
+				}
+			}
+		}
+		
+		tr{
+			td{
+				padding: 8px;
+				text-align: center;
+				&.employeeName{
+					text-align: left;
+				}
+			}
+			
+		}
+		.RenderStatusInfoWrapper{
+			position: relative;
+			.hoverInfoBox{
+				background-color: $main-color;
+				color: white;
+				padding: 16px;
+				position: absolute;
+				top: 5%;
+				left: 100%;
+				z-index: 100;
+				min-width: 160px;
+				text-align: left;
+				
+			}
+		}
+	}
+}
