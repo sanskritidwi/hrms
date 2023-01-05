@@ -92,11 +92,13 @@ const sideItem = [
 const Layout = () => {
   return (
     <>
-      
-         {/* <SideMenu listMenu={sideItem}/> */}
-         <Navbar/>
-          
-      <Outlet />
+          <Navbar/>
+            <div className='d-flex '>
+             <SideMenu listMenu={sideItem}/>
+             <div>
+                <Outlet />
+             </div>
+         </div>
     </>
   )
 };

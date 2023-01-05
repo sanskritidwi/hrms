@@ -13,7 +13,7 @@ const numArrSchema = [
 	},
 ];
 
-export const Leave = () => {
+const Leave = () => {
 
   const renderApplyNew = ()=>{
     return(<><PageHeader pageheading="Leave Application" /></>)
@@ -28,3 +28,6 @@ export const Leave = () => {
 		</div>
 	);
 };
+
+
+export default Leave;

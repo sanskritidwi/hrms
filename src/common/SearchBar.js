@@ -18,6 +18,6 @@ export const SearchBar = ({schema}) => {
     <div className='SearchBarWrapper defaultButtonWhite'>
         <input placeholder={placeHolder}/>
         <div className='iconBlackSearch'></div>
-        </div>
+    </div>
   )
 }

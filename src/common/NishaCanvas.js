@@ -45,3 +45,5 @@ export const NishaCanvas = () => {
     </div>
   );
 }
+
+export default NishaCanvas;

@@ -2,6 +2,16 @@ import React from "react";
 
 
 
+/* Table Component
+
+Caller 
+        <CollectionList columns={columns} data={data} />
+
+*/
+
+import React from "react";
+export const CollectionList = ({ schema}) => {
+
 export const CollectionList = ({schema}) => {
 
 const renderHeader = ()=>{
