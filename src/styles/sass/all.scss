@@ -1,8 +1,18 @@
-// @import "./core/core";
-@import "./core/allCore";
+/* using heading classes
+    for heading : class="h2"
+    for sub heading heading : class="h4"
+    for white text : class="text-light"
+
+*/
 @import "./core/variables";
 @import "./core/mixins";
+@import "./core/allCore";
 @import "./common/allCommon";
 @import "./services/employee/allEmployee";
 @import "./services/hradmin/allHrAdmin";
 @import "./common/sideMenu";
+
+
+.pageBody{
+    margin: 24px;
+}

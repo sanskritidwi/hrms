@@ -253,8 +253,8 @@ const SideMenu =({listMenu}) => {
 
     return (
         <>
-            <div className='SideMenuWrapper'>
-                <aside className={sideMenu ? 'collapse' : ''}>
+            <div className={sideMenu ? 'SideMenuWrapper custom-scroll wraped' : 'SideMenuWrapper custom-scroll'}>
+                <aside className={sideMenu ? 'collapsed' : ''}>
                     {renderMenuIcon()}
                     {<MenuList menuList={listMenu} />}
                 </aside>

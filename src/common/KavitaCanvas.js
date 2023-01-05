@@ -10,6 +10,10 @@ import { EventCard } from './EventCard';
 import Input from './FormFields/Input';
 import { AttendanceEmployee } from './AttendanceEmployee';
 import ProgressBar from './progressBar';
+import Employee1 from '../assets/images/em1.png'
+import Employee2 from '../assets/images/em2.png'
+import { EmpCard } from '../services/hradmin/detail/EmployeeCard';
+import { CurrentEmp } from '../services/hradmin/detail/CurrentEmployee';
 
 
 export const KavitaCanvas = () => {
@@ -25,13 +29,13 @@ return (
 <>
    {/* <Navbar /> */}
    {/* <SideMenu listMenu={sideItem}/> */}
-   <EventCard title="Upcoming Events" renderBody={renderBody}/>
-   <Input />
-   <AttendanceEmployee />
-
+   {/* <EventCard title="Upcoming Events" renderBody={renderBody}/>
+   <Input /> */}
+   {/* <AttendanceEmployee /> */}
    {/* <input id="start" value="10:00" />
     <input id="end" value="06:30" /> */}
-    <input id="diff" />
+    {/* <input id="diff" /> */}
+    <CurrentEmp />
 </>
 );
 }

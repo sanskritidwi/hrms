@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from "react";
-import { MonthWiseAttendance } from "../services/employee/attendance/MonthWiseAttendance";
+import { MonthWiseAttendance } from "../services/hradmin/attendance/MonthWiseAttendance";
 import { Calendar } from "./Calendar";
 import { CollectionList } from "./CollectionList";
 import { EventCard } from "./EventCard";
@@ -9,12 +9,12 @@ import OutsideClickHandler from "./OutsideClickHandler";
 export const SansCanvas = () => {
 
 	const customRenderList = ()=>{
-		return <>HIII</>
+		return <></>
 	}
 
 	const collectionSchema = {
 		customRender : customRenderList(),
-		title:"hiii"
+		title:"modalCanvas"
 
 	}
 	

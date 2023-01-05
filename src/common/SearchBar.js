@@ -6,6 +6,6 @@ export const SearchBar = ({schema}) => {
     <div className='SearchBarWrapper'>
         <input placeholder={placeHolder}/>
         <div className='iconBlackSearch'></div>
-        </div>
+    </div>
   )
 }
