@@ -54,6 +54,11 @@ export const SansCanvas = () => {
 				</div>
 			</OutsideClickHandler> */}
 			{/* <CollectionList schema={collectionSchema}/> */}
+			{/* <FormProcessor /> */}
+			{/* <CollectionList fields={["name", "place", "animal", "thing"]} /> */}
+			{/* <Calendar /> */}
+            {/* <EventCard title="UpcomingEvents" renderBody={renderBody}/> */}
+            {/* <FormProcessor submitEnable={true} submitText="Submit"/> */}
 		</div>
 	);
 };

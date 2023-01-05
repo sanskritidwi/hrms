@@ -1,9 +1,22 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+
 h4 {
   font-size: 32px;
 }
 
-a {
-  text-decoration: none;
+h5 {
+  font-size: 24px;
+}
+
+h6 {
+  font-size: 16px;
 }
 
 .form-label {
@@ -14,7 +27,8 @@ a {
   color: #000000;
 }
 
-button, .btn-close:focus {
+button,
+.btn-close:focus {
   box-shadow: none;
 }
 
@@ -40,12 +54,25 @@ button, .btn-close:focus {
   color: white;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+
 h4 {
   font-size: 32px;
 }
 
-a {
-  text-decoration: none;
+h5 {
+  font-size: 24px;
+}
+
+h6 {
+  font-size: 16px;
 }
 
 .form-label {
@@ -56,7 +83,8 @@ a {
   color: #000000;
 }
 
-button, .btn-close:focus {
+button,
+.btn-close:focus {
   box-shadow: none;
 }
 
@@ -247,12 +275,25 @@ body {
   color: white;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+
 h4 {
   font-size: 32px;
 }
 
-a {
-  text-decoration: none;
+h5 {
+  font-size: 24px;
+}
+
+h6 {
+  font-size: 16px;
 }
 
 .form-label {
@@ -263,7 +304,8 @@ a {
   color: #000000;
 }
 
-button, .btn-close:focus {
+button,
+.btn-close:focus {
   box-shadow: none;
 }
 
@@ -300,6 +342,10 @@ button, .btn-close:focus {
 }
 
 /* modal-start */
+button:focus-visible {
+  outline: none;
+}
+
 .modal-wrapper {
   position: fixed;
   left: 0;
@@ -316,6 +362,7 @@ button, .btn-close:focus {
   max-width: 680px;
   background-color: #ffffff;
   border-radius: 8px;
+  padding: 50px 55px;
 }
 .modal-wrapper .modal-content .modal-title {
   font-size: 32px;
@@ -328,9 +375,12 @@ button, .btn-close:focus {
   justify-content: center;
 }
 .modal-wrapper .modal-body {
-  padding: 30px 40px;
+  padding: 40px 0;
   border-top: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
+  max-width: 680px;
+  background-color: #ffffff;
+  border-radius: 8px;
 }
 .modal-wrapper .btn-close {
   position: absolute;
@@ -426,6 +476,63 @@ button, .btn-close:focus {
   color: #05454E;
 }
 
+.modal-btns {
+  display: flex;
+  justify-content: center;
+  column-gap: 20px;
+}
+
+.emp-wrapper {
+  background-color: #EDEEEE;
+  padding: 20px 20px 30px 20px;
+  border-radius: 8px;
+}
+.emp-wrapper .emp-head {
+  display: flex;
+  justify-content: space-between;
+}
+.emp-wrapper .emp-head h4 img {
+  width: 20px;
+  margin-left: 15px;
+}
+.emp-wrapper .emp-head img {
+  cursor: pointer;
+}
+.emp-wrapper .emp-detail-wrap {
+  display: flex;
+  align-items: center;
+  column-gap: 200px;
+}
+.emp-wrapper .emp-detail-wrap .emp-detail {
+  display: flex;
+  column-gap: 20px;
+  align-items: center;
+  padding: 40px 0 40px 0;
+}
+.emp-wrapper .emp-detail-wrap .emp-detail .emp-content p {
+  color: #777777;
+}
+.emp-wrapper .emp-detail-wrap .emp-document {
+  background-color: #ffffff;
+  width: 450px;
+  padding: 20px;
+  height: 100%;
+}
+.emp-wrapper .emp-detail-wrap .emp-document ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+.emp-wrapper .emp-detail-wrap .emp-document ul li {
+  color: #777777;
+}
+.emp-wrapper .emp-detail-wrap .emp-document ul li span {
+  padding-right: 20px;
+}
+.emp-wrapper .emp-detail-wrap .emp-document ul li a {
+  text-decoration: underline !important;
+}
+
 .defaultButton {
   border: 1px solid #777777;
   border-radius: 8px;
@@ -437,12 +544,25 @@ button, .btn-close:focus {
   color: white;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+
 h4 {
   font-size: 32px;
 }
 
-a {
-  text-decoration: none;
+h5 {
+  font-size: 24px;
+}
+
+h6 {
+  font-size: 16px;
 }
 
 .form-label {
@@ -453,7 +573,8 @@ a {
   color: #000000;
 }
 
-button, .btn-close:focus {
+button,
+.btn-close:focus {
   box-shadow: none;
 }
 
@@ -548,16 +669,27 @@ button, .btn-close:focus {
   border-bottom: 0;
 }
 
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 24px 0;
-  background-color: #ffffff;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+.tabs-wrapper .nav-tabs {
+  justify-content: center;
 }
-header .col-20 {
-  column-gap: 20px;
+.tabs-wrapper .nav-tabs .nav-item .nav-link {
+  min-width: 250px;
+  border-bottom: 4px solid transparent;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  color: #000000;
+  font-size: 16px;
+  transition: all 0.5s;
+  font-weight: 500;
+}
+.tabs-wrapper .nav-tabs .nav-item .nav-link.active {
+  border-color: #2CB99A;
+  color: #2CB99A;
+}
+.tabs-wrapper .nav-tabs .nav-item:hover .nav-link {
+  border-color: #2CB99A;
+  color: #2CB99A;
 }
 
 .LeaveWrapper .NumCardsWrapper {
@@ -587,12 +719,25 @@ header .col-20 {
   color: white;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+
 h4 {
   font-size: 32px;
 }
 
-a {
-  text-decoration: none;
+h5 {
+  font-size: 24px;
+}
+
+h6 {
+  font-size: 16px;
 }
 
 .form-label {
@@ -603,7 +748,8 @@ a {
   color: #000000;
 }
 
-button, .btn-close:focus {
+button,
+.btn-close:focus {
   box-shadow: none;
 }
 

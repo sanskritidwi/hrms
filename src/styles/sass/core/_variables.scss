@@ -13,20 +13,39 @@ $action-color: #18A0FB;
 $prime-color: #1CBA0E;
 $gray-color: #777777;
 $light-teal: #19BD98;
+$silver-color: #EDEEEE;
+$secondary-color: #2CB99A;
 
-h4{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
+}
+
+h4 {
     font-size: $large-heading;
 }
-a{
-    text-decoration: none;
+
+h5 {
+    font-size: $medium-heading;
 }
-.form-label{
+
+h6 {
+    font-size: $small-heading;
+}
+
+.form-label {
     margin: 0;
     padding: 0;
     font-size: 16px;
     font-weight: 400;
     color: #000000;
 }
-button, .btn-close:focus {
+
+button,
+.btn-close:focus {
     box-shadow: none;
 }
