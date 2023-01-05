@@ -1,6 +1,7 @@
 import React from "react"
 import { SearchBar } from "../../../common/SearchBar"
 import { EmpCard } from "./EmployeeCard"
+import { EventCard } from "../../../common/EventCard"
 import Employee1 from '../../../assets/images/em1.png'
 import Employee2 from '../../../assets/images/em2.png'
 export const CurrentEmp = () => {
@@ -57,10 +58,24 @@ export const CurrentEmp = () => {
           image : Employee2,
         },
     ]
+    // for event card object
+    const eventList = [
+      "Meaghan Cpmpigotto",
+      "Meaghan Cpmpigotto",
+      "Meaghan Cpmpigotto",
+      "Meaghan Cpmpigotto"
+    ]
+
     const renderBody=()=>{
       return(
         <>
-          
+          {
+           <ul className="eventList">
+              {
+                eventList.map((data)=> <li>{data}</li>)
+              }
+           </ul>
+          }
         </>
       )
   }

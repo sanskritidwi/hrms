@@ -48,7 +48,7 @@ export const EmpCard = ({empData}) => {
     }
     return(
         <>
-            <div className="CurrentEmployee mt-5">
+            <div className="EmpCard mt-5">
                 <div className="container-fluid">
                     <div className="row">
                         {
