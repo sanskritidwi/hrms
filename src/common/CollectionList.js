@@ -1,5 +1,3 @@
-import React from "react";
-
 
 
 /* Table Component
@@ -10,7 +8,7 @@ Caller
 */
 
 import React from "react";
-export const CollectionList = ({ schema}) => {
+
 
 export const CollectionList = ({schema}) => {
 
