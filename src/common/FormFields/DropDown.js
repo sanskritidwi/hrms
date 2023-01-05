@@ -24,7 +24,7 @@ export const DropDown = ({ schema }) => {
 	};
 	return (
 		<div className="DropDownWrapper">
-			<div className="dropHeader defaultButton">
+			<div className="dropHeader defaultButtonWhite">
 				{header}
 				<div
 					className={iconClass}

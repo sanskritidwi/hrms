@@ -36,9 +36,9 @@ export const FormProcessor = () => {
 				onSubmit={(e) => {
 					handleSubmit(e);
 				}}>
-				<Input name="username" />
+				{/* <Input name="username" />
 				<Input name="email" />
-				<Input name="pw" />
+				<Input name="pw" /> */}
 				<DropDown schema={dropSchema}/>
 
 				<button type="submit">Submit</button>

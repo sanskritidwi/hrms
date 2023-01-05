@@ -44,7 +44,7 @@ export const SansCanvas = () => {
 			</OutsideClickHandler> */}
 			{/* <CollectionList /> */}
 			<FormProcessor />
-<SearchBar schema={searchSchema}/>
+{/* <SearchBar schema={searchSchema}/> */}
 			{/* <CollectionList schema={schema} /> */}
 			{/* <Calendar /> */}
 			{/* <EventCard title="UpcomingEvents" renderBody={renderBody}/> */}
