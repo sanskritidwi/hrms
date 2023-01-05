@@ -5,21 +5,30 @@ import { CollectionList } from "./CollectionList";
 import { EventCard } from "./EventCard";
 import { FormProcessor } from "./FormFields/FormProcessor";
 import OutsideClickHandler from "./OutsideClickHandler";
+import { SearchBar } from "./SearchBar";
 
 export const SansCanvas = () => {
+	const schema = {
+		fields: ["Name", "Date applied", "Date Approved"],
+		schema: [
+			{ name: "sans", dateAp: "12/1/23", dateAr: "17/1/23" },
+			{ name: "sans2", dateAp: "12/1/234", dateAr: "17/1/24" },
+		],
+	};
 
-	const customRenderList = ()=>{
-		return <></>
-	}
-
+	const customRenderList = () => {
+		return <></>;
+	};
+	const searchSchema = {
+		placeHolder :"searchh"
+	  }
 	const collectionSchema = {
-		customRender : customRenderList(),
-		title:"modalCanvas"
-
-	}
+		customRender: customRenderList(),
+		title: "modalCanvas",
+	};
 	const formfield = {
-		input: 'text',
-	}
+		input: "text",
+	};
 	return (
 		<div>
 			{/* <Calendar /> */}
@@ -33,12 +42,13 @@ export const SansCanvas = () => {
 					SansCanvas
 				</div>
 			</OutsideClickHandler> */}
-			{/* <CollectionList schema={collectionSchema}/> */}
+			{/* <CollectionList /> */}
 			<FormProcessor />
-			{/* <CollectionList fields={["name", "place", "animal", "thing"]} /> */}
+<SearchBar schema={searchSchema}/>
+			{/* <CollectionList schema={schema} /> */}
 			{/* <Calendar /> */}
-            {/* <EventCard title="UpcomingEvents" renderBody={renderBody}/> */}
-            {/* <FormProcessor submitEnable={true} submitText="Submit"/> */}
+			{/* <EventCard title="UpcomingEvents" renderBody={renderBody}/> */}
+			{/* <FormProcessor submitEnable={true} submitText="Submit"/> */}
 		</div>
 	);
 };

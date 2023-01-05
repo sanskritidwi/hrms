@@ -14,7 +14,7 @@ button, .btn-close:focus {
   box-shadow: none;
 }
 
-.defaultButton {
+.defaultButtonPrimary {
   border: 1px solid #777777;
   border-radius: 8px;
   padding: 16px 16px;
@@ -25,7 +25,16 @@ button, .btn-close:focus {
   color: white;
 }
 
-.defaultButton {
+.defaultButtonWhite {
+  border: 1px solid #777777;
+  border-radius: 8px;
+  padding: 16px 16px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+}
+
+.defaultButtonPrimary {
   border: 1px solid #777777;
   border-radius: 8px;
   padding: 16px 16px;
@@ -34,6 +43,15 @@ button, .btn-close:focus {
   align-items: center;
   background-color: #05454E;
   color: white;
+}
+
+.defaultButtonWhite {
+  border: 1px solid #777777;
+  border-radius: 8px;
+  padding: 16px 16px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
 }
 
 h4 {
@@ -228,7 +246,7 @@ body {
   column-gap: 24px;
 }
 
-.defaultButton {
+.defaultButtonPrimary {
   border: 1px solid #777777;
   border-radius: 8px;
   padding: 16px 16px;
@@ -237,6 +255,15 @@ body {
   align-items: center;
   background-color: #05454E;
   color: white;
+}
+
+.defaultButtonWhite {
+  border: 1px solid #777777;
+  border-radius: 8px;
+  padding: 16px 16px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
 }
 
 h4 {
@@ -414,7 +441,7 @@ button, .btn-close:focus {
   color: #05454E;
 }
 
-.defaultButton {
+.defaultButtonPrimary {
   border: 1px solid #777777;
   border-radius: 8px;
   padding: 16px 16px;
@@ -423,6 +450,15 @@ button, .btn-close:focus {
   align-items: center;
   background-color: #05454E;
   color: white;
+}
+
+.defaultButtonWhite {
+  border: 1px solid #777777;
+  border-radius: 8px;
+  padding: 16px 16px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
 }
 
 h4 {
@@ -474,14 +510,7 @@ button, .btn-close:focus {
 }
 
 .SearchBarWrapper {
-  border: 1px solid #777777;
-  border-radius: 8px;
-  padding: 16px 16px;
-  display: flex;
-  cursor: pointer;
-  align-items: center;
-  background-color: #05454E;
-  color: white;
+  max-width: 495px;
 }
 .SearchBarWrapper input {
   outline: none;
@@ -560,7 +589,7 @@ header .col-20 {
   font-size: 24px;
 }
 
-.defaultButton {
+.defaultButtonPrimary {
   border: 1px solid #777777;
   border-radius: 8px;
   padding: 16px 16px;
@@ -569,6 +598,15 @@ header .col-20 {
   align-items: center;
   background-color: #05454E;
   color: white;
+}
+
+.defaultButtonWhite {
+  border: 1px solid #777777;
+  border-radius: 8px;
+  padding: 16px 16px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
 }
 
 h4 {

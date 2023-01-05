@@ -1,44 +1,48 @@
-import React, { useState , useRef} from "react";
+import React, { useState, useRef } from "react";
+import { DropDown } from "./DropDown";
 import { Input } from "./Input";
 
-const fromSchema = {
-	submitEnable: "true",
-	schema: [
-		{
-			component: "input",
-			placeholder: "YOur Name",
-			required: "true",
-		},
-	],
-};
+const dropSchema = {
+	header : "kjhkj",
+	iconClass: "DFSF",
+	options:["1","2"]
+}
 
-export const FormProcessor = ({ schema, formfield }) => {
-	// const inputvalue = "";
-	// const [userInput, setUserInput] = useState("");
+export const FormProcessor = () => {
+	const [form, setForm] = useState({});
+
+	const handleFormChange = (event) => {
+		const { name, value } = event.target;
+		const updatedForm = {
+			...form,
+			[name]: value,
+		};
+		setForm(updatedForm);
+	};
+
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		console.log("from submited : ", form);
+	};
 
 
-    const dataRef = useRef();
-    console.log(dataRef.current)
-
-	// const handleSubmit = (e) => {
-	// 	e.preventDefault();
-	// 	console.log("form Submitted");
-	// 	console.log(userInput);
-	// };
-
-	// const changeHandler = (e) => {
-	// 	setUserInput(e.target.value);
-	// };
-	// const send = () => {
-	// 	inputvalue({ setUserInput });
-	// };
 
 	return (
 		<div>
-			{/* <form onSubmit={(e) => handleSubmit(e)}> */}
-				{/* <Input changeHandler={changeHandler} send={send} /> */}
-				<button onClick={send}>send</button>{" "}
-			{/* </form> */}
+			<form
+				onChange={(e) => {
+					handleFormChange(e);
+				}}
+				onSubmit={(e) => {
+					handleSubmit(e);
+				}}>
+				<Input name="username" />
+				<Input name="email" />
+				<Input name="pw" />
+				<DropDown schema={dropSchema}/>
+
+				<button type="submit">Submit</button>
+			</form>
 		</div>
 	);
 };

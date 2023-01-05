@@ -1,22 +1,16 @@
 import React, { useState } from 'react'
 
-export const Input = ({changeHandler}) => {
-    const [error, setError] = useState("");
+export const Input = ({sendData, name}) => {
+    const [ipVal, setIpVal] = useState("");
 
-
-    const renderError=()=>{
-        if(error==="") return null;
-        return(
-            <div>{error}</div>
-        )
+    const handleChange = (e)=>{
+      setIpVal(e.target.value);
     }
-
   
 
   return (
     <div>
-        <input type="text"  onChange={changeHandler}/>
-        {renderError()}
+        <input type="text"  onBlur={(e)=>{handleChange(e)}} name={name}/>
     </div>
   )
 }

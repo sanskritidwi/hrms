@@ -26,7 +26,7 @@
 }
 
 
-.defaultButton {
+.defaultButtonPrimary {
 	border: 1px solid #777777;
 	border-radius: 8px;
 	padding: 16px 16px;
@@ -37,6 +37,15 @@
 	color: white
 
  
+}
+
+.defaultButtonWhite{
+	border: 1px solid #777777;
+	border-radius: 8px;
+	padding: 16px 16px;
+    display: flex;
+    cursor: pointer;
+	align-items: center;
 }
 
 
@@ -57,3 +66,6 @@
 	background-color:rgba(25, 189, 152, 0.5);
 }
 
+.FormProcessorWrapper{
+	
+}
