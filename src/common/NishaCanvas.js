@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import { Currentemp } from './current-emp';
+import EmployeeDetailPage from '../services/hradmin/detail/EmployeeDetailPage';
 import { Dateform } from './Date';
 import Popup from './Popup';
-import { Textarea } from './textarea';
-import { Tabcustom } from './tabs';
+import { Textarea } from './Textarea';
+import { Tabcustom } from './Tabs';
 
 export const NishaCanvas = () => {
   const [show, setShow] = useState(false);
@@ -60,8 +60,10 @@ export const NishaCanvas = () => {
       <button onClick={(e) => setShow(true)}>Show Modal</button>
       <Popup schema={modalschema} show={show} onClose={()=> setShow(false)} />
 
-      <Currentemp empschema={empschema} prsnlemp={prsnlemp} />
+      <EmployeeDetailPage empschema={empschema} prsnlemp={prsnlemp} />
       <Tabcustom />
     </div>
   );
 }
+
+export default NishaCanvas;

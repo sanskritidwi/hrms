@@ -1,3 +1,10 @@
+/* using heading classes
+    for heading : class="h2"
+    for sub heading heading : class="h4"
+    for white text : class="text-light"
+
+*/
+@import '../../assets/fonts/fonts.css';
 h1,
 h2,
 h3,
@@ -32,7 +39,7 @@ button,
   box-shadow: none;
 }
 
-.defaultButton {
+.defaultButtonPrimary {
   border: 1px solid #777777;
   border-radius: 8px;
   padding: 16px 16px;
@@ -43,7 +50,16 @@ button,
   color: white;
 }
 
-.defaultButton {
+.defaultButtonWhite {
+  border: 1px solid #777777;
+  border-radius: 8px;
+  padding: 16px 16px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+}
+
+.defaultButtonPrimary {
   border: 1px solid #777777;
   border-radius: 8px;
   padding: 16px 16px;
@@ -52,6 +68,15 @@ button,
   align-items: center;
   background-color: #05454E;
   color: white;
+}
+
+.defaultButtonWhite {
+  border: 1px solid #777777;
+  border-radius: 8px;
+  padding: 16px 16px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
 }
 
 h1,
@@ -118,6 +143,14 @@ button,
   width: 24px;
   margin: 0px 8px;
   background-image: url("../../assets/images/searchBlack.svg");
+}
+
+.iconBlackBack {
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
+  margin: 0px 8px;
+  background-image: url("../../assets/images/arrow_back_black.svg");
 }
 
 .CollectionListWrapper table {
@@ -178,6 +211,14 @@ button,
   text-align: center;
 }
 
+* {
+  transition: all 0.2s;
+}
+
+.App {
+  margin-top: 70px;
+}
+
 ul {
   margin: 0 !important;
   padding: 0 !important;
@@ -200,26 +241,36 @@ body {
   margin: 0;
 }
 
+.SideMenuWrapper {
+  max-width: 300px;
+  width: 100%;
+}
+.SideMenuWrapper.wraped {
+  width: 70px;
+  margin-right: 20px;
+}
 .SideMenuWrapper aside {
   background-color: #EDEEEE;
   max-width: 320px;
   height: 100vh;
   transition: all 0.3s;
   overflow-x: hidden;
+  position: fixed;
+  top: 70px;
 }
 .SideMenuWrapper aside .subMenuIcon {
   position: absolute;
   right: 10px;
   top: 18px;
 }
-.SideMenuWrapper aside.collapse {
+.SideMenuWrapper aside.collapsed {
   max-width: 70px;
 }
-.SideMenuWrapper aside.collapse li span {
+.SideMenuWrapper aside.collapsed li span {
   position: relative;
   z-index: -1;
 }
-.SideMenuWrapper aside.collapse .subMenuIcon {
+.SideMenuWrapper aside.collapsed .subMenuIcon {
   display: none;
 }
 .SideMenuWrapper .toggle {
@@ -250,6 +301,9 @@ body {
 .SideMenuWrapper .menuItems li a:hover svg {
   fill: #ffffff;
 }
+.SideMenuWrapper .menuItems li ul {
+  background-color: #ffffff;
+}
 .SideMenuWrapper .menuItems li ul.menuItems {
   margin-top: 0;
 }
@@ -264,7 +318,27 @@ body {
   column-gap: 24px;
 }
 
-.defaultButton {
+.custom-scroll ::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+.custom-scroll ::-webkit-scrollbar {
+  width: 5px;
+  background-color: #F5F5F5;
+  visibility: hidden;
+}
+.custom-scroll ::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #05454E;
+  visibility: hidden;
+}
+.custom-scroll:hover ::-webkit-scrollbar-thumb, .custom-scroll:hover ::-webkit-scrollbar, .custom-scroll:hover ::-webkit-scrollbar-track {
+  visibility: visible;
+}
+
+.defaultButtonPrimary {
   border: 1px solid #777777;
   border-radius: 8px;
   padding: 16px 16px;
@@ -273,6 +347,15 @@ body {
   align-items: center;
   background-color: #05454E;
   color: white;
+}
+
+.defaultButtonWhite {
+  border: 1px solid #777777;
+  border-radius: 8px;
+  padding: 16px 16px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
 }
 
 h1,
@@ -339,6 +422,14 @@ button,
   width: 24px;
   margin: 0px 8px;
   background-image: url("../../assets/images/searchBlack.svg");
+}
+
+.iconBlackBack {
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
+  margin: 0px 8px;
+  background-image: url("../../assets/images/arrow_back_black.svg");
 }
 
 /* modal-start */
@@ -485,6 +576,371 @@ button:focus-visible {
   column-gap: 20px;
 }
 
+.DropDownWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 16px 0px;
+}
+.DropDownWrapper select {
+  padding: 8px 8px;
+  border: 1px solid black;
+  border-radius: 8px;
+  background-color: white;
+  outline: none;
+  color: grey;
+}
+.DropDownWrapper select option {
+  padding: 8px;
+  border: 1px red solid;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+}
+header .col-20 {
+  column-gap: 20px;
+}
+
+.defaultButtonPrimary {
+  border: 1px solid #777777;
+  border-radius: 8px;
+  padding: 16px 16px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  background-color: #05454E;
+  color: white;
+}
+
+.defaultButtonWhite {
+  border: 1px solid #777777;
+  border-radius: 8px;
+  padding: 16px 16px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 32px;
+}
+
+h5 {
+  font-size: 24px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+.form-label {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+}
+
+button,
+.btn-close:focus {
+  box-shadow: none;
+}
+
+.iconBlackArrowLeft {
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+  margin: 0px 8px;
+  background-image: url("../../assets/images/arrowRight.svg");
+}
+
+.iconBlackArrowRight {
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+  margin: 0px 8px;
+  background-image: url("../../assets/images/arrowLeft.svg");
+}
+
+.iconBlackArrowDown {
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+  margin: 0px 8px;
+  background-image: url("../../assets/images/arrowDown.svg");
+}
+
+.iconBlackSearch {
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+  margin: 0px 8px;
+  background-image: url("../../assets/images/searchBlack.svg");
+}
+
+.iconBlackBack {
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
+  margin: 0px 8px;
+  background-image: url("../../assets/images/arrow_back_black.svg");
+}
+
+.SearchBarWrapper {
+  max-width: 495px;
+}
+.SearchBarWrapper input {
+  outline: none;
+  border: unset;
+  min-width: 420px;
+}
+
+.FormProcessorWrapper {
+  min-width: 300px;
+}
+.FormProcessorWrapper label {
+  margin: 8px 0px;
+}
+.FormProcessorWrapper .DropDownWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 16px 0px;
+}
+.FormProcessorWrapper .DropDownWrapper select {
+  padding: 8px 8px;
+  border: 1px solid black;
+  border-radius: 8px;
+  background-color: white;
+  outline: none;
+  color: grey;
+}
+.FormProcessorWrapper .DropDownWrapper select option {
+  padding: 8px;
+  border: 1px red solid;
+}
+.FormProcessorWrapper .InputWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 16px 0px;
+}
+.FormProcessorWrapper .InputWrapper input {
+  outline: none;
+  padding: 8px 8px;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.AttendanceEmployee span {
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.AttendanceEmployee .col-30 {
+  column-gap: 30px;
+}
+.AttendanceEmployee .dayStatus-btn {
+  background-color: #05454E;
+  border-color: #05454E;
+}
+
+.ProgressBar {
+  height: 13px;
+  width: 100%;
+  background-color: #e0e0de;
+  border-radius: 50px;
+  max-width: 380px;
+}
+
+.defaultButtonPrimary {
+  border: 1px solid #777777;
+  border-radius: 8px;
+  padding: 16px 16px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  background-color: #05454E;
+  color: white;
+}
+
+.defaultButtonWhite {
+  border: 1px solid #777777;
+  border-radius: 8px;
+  padding: 16px 16px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 32px;
+}
+
+h5 {
+  font-size: 24px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+.form-label {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+}
+
+button,
+.btn-close:focus {
+  box-shadow: none;
+}
+
+.iconBlackArrowLeft {
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+  margin: 0px 8px;
+  background-image: url("../../assets/images/arrowRight.svg");
+}
+
+.iconBlackArrowRight {
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+  margin: 0px 8px;
+  background-image: url("../../assets/images/arrowLeft.svg");
+}
+
+.iconBlackArrowDown {
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+  margin: 0px 8px;
+  background-image: url("../../assets/images/arrowDown.svg");
+}
+
+.iconBlackSearch {
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+  margin: 0px 8px;
+  background-image: url("../../assets/images/searchBlack.svg");
+}
+
+.iconBlackBack {
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
+  margin: 0px 8px;
+  background-image: url("../../assets/images/arrow_back_black.svg");
+}
+
+.SearchBarWrapper {
+  max-width: 495px;
+}
+.SearchBarWrapper input {
+  outline: none;
+  border: unset;
+  min-width: 420px;
+}
+
+.FormProcessorWrapper {
+  min-width: 300px;
+}
+.FormProcessorWrapper label {
+  margin: 8px 0px;
+}
+.FormProcessorWrapper .DropDownWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 16px 0px;
+}
+.FormProcessorWrapper .DropDownWrapper select {
+  padding: 8px 8px;
+  border: 1px solid black;
+  border-radius: 8px;
+  background-color: white;
+  outline: none;
+  color: grey;
+}
+.FormProcessorWrapper .DropDownWrapper select option {
+  padding: 8px;
+  border: 1px red solid;
+}
+.FormProcessorWrapper .InputWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 16px 0px;
+}
+.FormProcessorWrapper .InputWrapper input {
+  outline: none;
+  padding: 8px 8px;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.DropDownWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 16px 0px;
+}
+.DropDownWrapper select {
+  padding: 8px 8px;
+  border: 1px solid black;
+  border-radius: 8px;
+  background-color: white;
+  outline: none;
+  color: grey;
+}
+.DropDownWrapper select option {
+  padding: 8px;
+  border: 1px red solid;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+}
+header .col-20 {
+  column-gap: 20px;
+}
+
 .emp-wrapper {
   background-color: #EDEEEE;
   padding: 20px 20px 30px 20px;
@@ -536,7 +992,7 @@ button:focus-visible {
   text-decoration: underline !important;
 }
 
-.defaultButton {
+.defaultButtonPrimary {
   border: 1px solid #777777;
   border-radius: 8px;
   padding: 16px 16px;
@@ -545,6 +1001,15 @@ button:focus-visible {
   align-items: center;
   background-color: #05454E;
   color: white;
+}
+
+.defaultButtonWhite {
+  border: 1px solid #777777;
+  border-radius: 8px;
+  padding: 16px 16px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
 }
 
 h1,
@@ -613,15 +1078,16 @@ button,
   background-image: url("../../assets/images/searchBlack.svg");
 }
 
+.iconBlackBack {
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
+  margin: 0px 8px;
+  background-image: url("../../assets/images/arrow_back_black.svg");
+}
+
 .SearchBarWrapper {
-  border: 1px solid #777777;
-  border-radius: 8px;
-  padding: 16px 16px;
-  display: flex;
-  cursor: pointer;
-  align-items: center;
-  background-color: #05454E;
-  color: white;
+  max-width: 495px;
 }
 .SearchBarWrapper input {
   outline: none;
@@ -629,47 +1095,57 @@ button,
   min-width: 420px;
 }
 
-.DropDownWrapper .dropHeader {
-  position: relative;
+.FormProcessorWrapper {
+  min-width: 300px;
 }
-.DropDownWrapper .options {
-  position: absolute;
-  border: 1px solid #777777;
-  padding: 8px;
+.FormProcessorWrapper label {
+  margin: 8px 0px;
+}
+.FormProcessorWrapper .DropDownWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 16px 0px;
+}
+.FormProcessorWrapper .DropDownWrapper select {
+  padding: 8px 8px;
+  border: 1px solid black;
   border-radius: 8px;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-color: white;
+  outline: none;
+  color: grey;
 }
-.DropDownWrapper .options .option {
+.FormProcessorWrapper .DropDownWrapper select option {
   padding: 8px;
+  border: 1px red solid;
+}
+.FormProcessorWrapper .InputWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 16px 0px;
+}
+.FormProcessorWrapper .InputWrapper input {
+  outline: none;
+  padding: 8px 8px;
+  border: 1px solid black;
+  border-radius: 8px;
 }
 
-.Dropdown-wrapper {
-  position: relative;
+.DropDownWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 16px 0px;
 }
-.Dropdown-wrapper .dropdown-list {
-  background-color: #ffffff;
-  box-shadow: 0 0 10px #d7d5d5;
-  width: fit-content;
+.DropDownWrapper select {
+  padding: 8px 8px;
+  border: 1px solid black;
   border-radius: 8px;
-  width: 260px;
-  position: absolute;
-  top: 50px;
-  right: 0;
+  background-color: white;
+  outline: none;
+  color: grey;
 }
-.Dropdown-wrapper ul li {
-  padding: 16px 24px;
-  border-bottom: 1px solid #dfdfdf;
-}
-.Dropdown-wrapper ul li .icon {
-  height: 35px;
-  width: 35px;
+.DropDownWrapper select option {
   padding: 8px;
-  border-radius: 50px;
-  box-shadow: 0 0 5px rgba(17, 17, 17, 0.4117647059);
-  background-color: #ffffff;
-}
-.Dropdown-wrapper ul li:last-child {
-  border-bottom: 0;
+  border: 1px red solid;
 }
 
 .tabs-wrapper .nav-pills {
@@ -702,6 +1178,10 @@ button,
   color: #2CB99A;
 }
 
+*, body {
+  font-family: "Comfortaa";
+}
+
 .LeaveWrapper .NumCardsWrapper {
   display: flex;
 }
@@ -718,7 +1198,7 @@ button,
   font-size: 24px;
 }
 
-.defaultButton {
+.defaultButtonPrimary {
   border: 1px solid #777777;
   border-radius: 8px;
   padding: 16px 16px;
@@ -727,6 +1207,15 @@ button,
   align-items: center;
   background-color: #05454E;
   color: white;
+}
+
+.defaultButtonWhite {
+  border: 1px solid #777777;
+  border-radius: 8px;
+  padding: 16px 16px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
 }
 
 h1,
@@ -795,6 +1284,14 @@ button,
   background-image: url("../../assets/images/searchBlack.svg");
 }
 
+.iconBlackBack {
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
+  margin: 0px 8px;
+  background-image: url("../../assets/images/arrow_back_black.svg");
+}
+
 .MonthWiseAttendanceWrapper {
   margin-top: 16px;
   margin-left: 16px;
@@ -804,36 +1301,26 @@ button,
   padding: 8px 0px;
   align-items: center;
 }
+.MonthWiseAttendanceWrapper .filtersRow div {
+  margin-right: 24px;
+}
 .MonthWiseAttendanceWrapper .calendarSelect {
   display: flex;
   flex-direction: column;
 }
 .MonthWiseAttendanceWrapper .calendarSelect .head {
   display: flex;
-  border: 1px solid #777777;
-  border-radius: 8px;
-  padding: 16px 16px;
-  display: flex;
-  cursor: pointer;
-  align-items: center;
-  background-color: #05454E;
-  color: white;
+  position: relative;
 }
 .MonthWiseAttendanceWrapper .calendarSelect .head .year {
   padding: 0px 8px;
 }
 .MonthWiseAttendanceWrapper .calendarSelect .months {
-  border: 1px solid #777777;
-  border-radius: 8px;
-  padding: 16px 16px;
-  display: flex;
-  cursor: pointer;
-  align-items: center;
-  background-color: #05454E;
-  color: white;
   flex-wrap: wrap;
   max-width: 250px;
   padding: 4px;
+  position: absolute;
+  background-color: white;
 }
 .MonthWiseAttendanceWrapper .calendarSelect .months .month {
   border: 1px solid #777777;
@@ -860,15 +1347,7 @@ button,
 }
 .MonthWiseAttendanceWrapper table tr th.employeeHead {
   min-width: 200px;
-  background-color: unset;
-  border: 1px solid #777777;
-  border-radius: 8px;
-  padding: 16px 16px;
-  display: flex;
-  cursor: pointer;
-  align-items: center;
-  background-color: #05454E;
-  color: white;
+  background-color: white;
   text-align: left;
 }
 .MonthWiseAttendanceWrapper table tr td {
@@ -893,6 +1372,49 @@ button,
   text-align: left;
 }
 
+.EmpCard .empCard {
+  position: relative;
+  background: #ffffff;
+  padding: 40px 20px;
+  margin: 40px 0 25px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.231372549);
+}
+.EmpCard .empCard .empImage {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translate(-50%);
+}
+.EmpCard .empCard img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+  outline: 4px solid #05454E;
+  outline-offset: 4px;
+}
+.EmpCard .empCard .cardHeading {
+  font-size: 20px;
+  color: #000000;
+  margin: 16px 0 5px;
+  display: inline-block;
+}
+.EmpCard .empCard h4 {
+  font-size: 16px;
+}
+.EmpCard .empCard p {
+  font-size: 16px;
+}
+
+* {
+  transition: all 0.2s;
+}
+
+.App {
+  margin-top: 70px;
+}
+
 ul {
   margin: 0 !important;
   padding: 0 !important;
@@ -915,26 +1437,36 @@ body {
   margin: 0;
 }
 
+.SideMenuWrapper {
+  max-width: 300px;
+  width: 100%;
+}
+.SideMenuWrapper.wraped {
+  width: 70px;
+  margin-right: 20px;
+}
 .SideMenuWrapper aside {
   background-color: #EDEEEE;
   max-width: 320px;
   height: 100vh;
   transition: all 0.3s;
   overflow-x: hidden;
+  position: fixed;
+  top: 70px;
 }
 .SideMenuWrapper aside .subMenuIcon {
   position: absolute;
   right: 10px;
   top: 18px;
 }
-.SideMenuWrapper aside.collapse {
+.SideMenuWrapper aside.collapsed {
   max-width: 70px;
 }
-.SideMenuWrapper aside.collapse li span {
+.SideMenuWrapper aside.collapsed li span {
   position: relative;
   z-index: -1;
 }
-.SideMenuWrapper aside.collapse .subMenuIcon {
+.SideMenuWrapper aside.collapsed .subMenuIcon {
   display: none;
 }
 .SideMenuWrapper .toggle {
@@ -965,6 +1497,9 @@ body {
 .SideMenuWrapper .menuItems li a:hover svg {
   fill: #ffffff;
 }
+.SideMenuWrapper .menuItems li ul {
+  background-color: #ffffff;
+}
 .SideMenuWrapper .menuItems li ul.menuItems {
   margin-top: 0;
 }
@@ -977,6 +1512,26 @@ body {
   display: flex;
   color: #111111;
   column-gap: 24px;
+}
+
+.custom-scroll ::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+.custom-scroll ::-webkit-scrollbar {
+  width: 5px;
+  background-color: #F5F5F5;
+  visibility: hidden;
+}
+.custom-scroll ::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #05454E;
+  visibility: hidden;
+}
+.custom-scroll:hover ::-webkit-scrollbar-thumb, .custom-scroll:hover ::-webkit-scrollbar, .custom-scroll:hover ::-webkit-scrollbar-track {
+  visibility: visible;
 }
 
 .pageBody {

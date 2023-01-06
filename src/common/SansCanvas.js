@@ -1,49 +1,28 @@
 import React, { useState, useEffect, useMemo } from "react";
+import NumCards from "../services/employee/leave/NumCards";
 import { MonthWiseAttendance } from "../services/hradmin/attendance/MonthWiseAttendance";
 import { Calendar } from "./Calendar";
 import { CollectionList } from "./CollectionList";
 import { EventCard } from "./EventCard";
 import { FormProcessor } from "./FormFields/FormProcessor";
 import OutsideClickHandler from "./OutsideClickHandler";
+import { SearchBar } from "./SearchBar";
 
 export const SansCanvas = () => {
+	const schema = {
+		fields: ["Name", "Date applied", "Date Approved"],
+		schema: [
+			{ name: "sans", dateAp: "12/1/23", dateAr: "17/1/23" },
+			{ name: "sans2", dateAp: "12/1/234", dateAr: "17/1/24" },
+		],
+	};
 
-	const customRenderList = () => {
-		return <></>
-	}
-
-	const collectionSchema = {
-		customRender: customRenderList(),
-		title: "modalCanvas"
-
-	}
-	const formfield = {
-		input: 'text',
-	}
-
-
-	const dropdownselect = () => {
-		return (
-			<>
-				<select>
-					<option>option 1</option>
-					<option>option 2</option>
-					<option>option 3</option>
-					<option>option 4</option>
-				</select>
-			</>
-		)
-	}
-
-	const selectSchema = {
-		customRender: dropdownselect(),
-	}
-
+	
 	return (
 		<div>
 			{/* <Calendar /> */}
 			{/* <EventCard title="UpcomingEvents" renderBody={renderBody}/> */}
-			<FormProcessor schema={formfield} nameone={selectSchema} submitEnable={true} submitText="Submit" />
+			{/* <FormProcessor schema={formfield} nameone={selectSchema} submitEnable={true} submitText="Submit" /> */}
 			{/* <MonthWiseAttendance /> */}
 			{/* <OutsideClickHandler
 				callbackFunction={() => {
@@ -53,12 +32,14 @@ export const SansCanvas = () => {
 					SansCanvas
 				</div>
 			</OutsideClickHandler> */}
-			{/* <CollectionList schema={collectionSchema}/> */}
+			{/* <CollectionList /> */}
 			{/* <FormProcessor /> */}
-			{/* <CollectionList fields={["name", "place", "animal", "thing"]} /> */}
+			{/* <SearchBar schema={searchSchema}/> */}
+			{/* <CollectionList schema={schema} /> */}
 			{/* <Calendar /> */}
-            {/* <EventCard title="UpcomingEvents" renderBody={renderBody}/> */}
-            {/* <FormProcessor submitEnable={true} submitText="Submit"/> */}
+			{/* <EventCard title="UpcomingEvents" renderBody={renderBody}/> */}
+			{/* <FormProcessor submitEnable={true} submitText="Submit"/> */}
+
 		</div>
 	);
 };

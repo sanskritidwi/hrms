@@ -1,86 +1,102 @@
-import React, { useState , useRef} from "react";
-import { Input } from "./Input";
-
-const fromSchema = {
+/**
+const formSchema = {
 	submitEnable: "true",
 	schema: [
 		{
-			component: "input",
-			placeholder: "YOur Name",
-			required: "true",
+			type: "input",
+			schema: {
+				placeHolder: "input",
+				name: "ip",
+				id: "planet",
+				type: "date",
+				label: "Reason",
+			},
+		},
+		{
+			type: "input",
+			schema: {
+				placeHolder: "input",
+				name: "ip",
+				id: "planet",
+				type: "date",
+				label: "Reason",
+			},
+		},
+		{
+			type: "dropdown",
+			schema: {
+				header: "kjhkj",
+				options: ["1", "2"],
+				label: "selecet",
+			},
 		},
 	],
+}; */
+
+
+import React, { useState, useRef } from "react";
+import { DropDown } from "./DropDown";
+import { Input } from "./Input";
+
+const dropSchema = {
+	header: "kjhkj",
+	iconClass: "DFSF",
+	options: ["1", "2"],
+	label: "selecet",
 };
 
-export const FormProcessor = ({ schema, formfield, submitEnable, submitText }) => {
-    const inputvalue = '';
-    const [userInput, setUserInput] = useState("");
-    // const [getValue, setgetValue] = useState("");
-    // const getinput = (string) => {
-    //     setgetValue(string);
-    //     console.log(`value: ${getValue}`)
-    // }
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log("form Submitted")
-        console.log(userInput)
-    }
+const inputSchema = {
+	placeHolder: "input",
+	name: "ip",
+	id: "planet",
+	type: "date",
+	label: "Reason",
+};
 
 
-    const changeHandler = (e) => {
-        // userInput(e.target.value)
-        setUserInput(e.target.value)
-    }
-    const send = () => {
-        // setUserInput(inputvalue)
-        inputvalue({setUserInput})
-    }
-    console.log(userInput)
-    const renderSubmit = () => {
-        if (!submitEnable) return null;
-        return (
-            <button type='submit' onClick={send}>{submitText}</button>
-        );
-    }
-    
-    return (
-        <div>
-            <form onSubmit={(e) => handleSubmit(e)} >
-                <Input changeHandler={changeHandler} send={send} />
-                {renderSubmit()}
-                {/* <button onClick={send}>send</button> */}
-                {/* {getValue} */}
-            </form>
-        </div>
-    );
-    }
-// export const FormProcessor = ({ schema, formfield }) => {
-// 	// const inputvalue = "";
-// 	// const [userInput, setUserInput] = useState("");
+export const FormProcessor = ({schema}) => {
+	const [form, setForm] = useState({});
+
+	const handleFormChange = (event) => {
+		const { name, value } = event.target;
+		const updatedForm = {
+			...form,
+			[name]: value,
+		};
+		setForm(updatedForm);
+	};
+
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		console.log("from submited : ", form);
+	};
 
 
-//     const dataRef = useRef();
-//     console.log(dataRef.current)
+	const renderItem = (item)=>{
+		switch(item.type){
+			case "input" : return<Input schema={item.schema}/>
+			case "dropdown" : return<DropDown schema={item.schema}/>
 
-// 	// const handleSubmit = (e) => {
-// 	// 	e.preventDefault();
-// 	// 	console.log("form Submitted");
-// 	// 	console.log(userInput);
-// 	// };
+		}
+	}
 
-// 	// const changeHandler = (e) => {
-// 	// 	setUserInput(e.target.value);
-// 	// };
-// 	// const send = () => {
-// 	// 	inputvalue({ setUserInput });
-// 	// };
+	return (
+		<div className="FormProcessorWrapper">
+			<form
+				onChange={(e) => {
+					handleFormChange(e);
+				}}
+				onSubmit={(e) => {
+					handleSubmit(e);
+				}}>
+				{schema.schema.map((item, index)=>{
+					return (<>{renderItem(item)}</>)
+				})}
 
-// 	return (
-// 		<div>
-// 			{/* <form onSubmit={(e) => handleSubmit(e)}> */}
-// 				{/* <Input changeHandler={changeHandler} send={send} /> */}
-// 				<button onClick={send}>send</button>{" "}
-// 			{/* </form> */}
-// 		</div>
-// 	);
-// };
+				<button type="submit" className="defaultButtonPrimary">
+					{schema.submitText}
+				</button>
+			</form>
+		</div>
+	);
+};

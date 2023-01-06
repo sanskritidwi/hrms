@@ -1,24 +1,18 @@
 import React, { useState } from 'react'
 
-export const Input = ({placeholder, maxLength, minLength, isRequired, changeHandler}) => {
-    // const [userInput, setUserInput] = useState("");
-// export const Input = ({changeHandler}) => {
-//     const [error, setError] = useState("");
+export const Input = ({schema}) => {
+  const {name, placeHolder, type,label} = schema;
+    const [ipVal, setIpVal] = useState("");
 
-
-    // const renderError=()=>{
-    //     if(error==="") return null;
-    //     return(
-    //         <div>{error}</div>
-    //     )
-    // }
-
+    const handleChange = (e)=>{
+      setIpVal(e.target.value);
+    }
   
 
   return (
-    <div>
-        <input type="text"  onChange={changeHandler}/>
-        {/* {renderError()} */}
+    <div className='InputWrapper'>
+      <label>{label}</label>
+        <input type={type}  onBlur={(e)=>{handleChange(e)}} name={name} placeholder={placeHolder}/>
     </div>
   );
 }

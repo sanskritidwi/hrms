@@ -1,3 +1,9 @@
+*{
+    transition: all 0.2s;
+}
+.App{
+    margin-top: 70px;
+}
 ul{
     margin:0 !important;
     padding: 0 !important;
@@ -17,18 +23,26 @@ ul{
     margin: 0;
   }
 .SideMenuWrapper{
+    max-width: 300px;
+    width: 100%;
+    &.wraped{
+        width: 70px;
+        margin-right: 20px;
+    }
     aside{
         background-color: #EDEEEE;
         max-width: 320px;
         height: 100vh;
         transition: all 0.3s;
         overflow-x: hidden;
+        position: fixed;
+        top: 70px;
         .subMenuIcon{
             position: absolute;
             right: 10px;
             top: 18px;
         }
-        &.collapse{
+        &.collapsed{
             max-width: 70px;
             li{
                 span{
@@ -68,6 +82,7 @@ ul{
                 }
             }
             ul{
+                background-color: $white-color;
                 &.menuItems{
                     margin-top: 0;
                     &.animated{
@@ -92,3 +107,32 @@ ul{
         }
     }
 }
+
+.custom-scroll{
+   ::-webkit-scrollbar-track
+    {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        border-radius: 10px;
+        background-color: #F5F5F5;
+        // visibility: hidden;
+    }
+    ::-webkit-scrollbar
+    {
+        width: 5px;
+        background-color: #F5F5F5;
+        visibility: hidden;
+    }
+    ::-webkit-scrollbar-thumb
+    {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: $main-color;
+        visibility: hidden;
+    }
+    &:hover{
+        ::-webkit-scrollbar-thumb,::-webkit-scrollbar, ::-webkit-scrollbar-track{
+            visibility: visible;
+        }
+    }
+}
+

@@ -1,9 +1,10 @@
-// import emp from '../assets/images/emp'
+import React from "react";
 import employee from '../assets/images/emp.png'
 import right from '../assets/images/right-circle.svg'
 import wrong from '../assets/images/cross-circle.svg'
 import arrowright from '../assets/images/arrow-right-solid.svg'
-export const Currentemp = ({ empschema, prsnlemp }) => {
+
+const EmployeeDetailPage = ({ empschema, prsnlemp }) => {
 
     const {
         currentheading,
@@ -18,7 +19,6 @@ export const Currentemp = ({ empschema, prsnlemp }) => {
         empteam,
         empdate,
     } = prsnlemp
-
     const renderHeading = () => {
         return (
             <>
@@ -81,3 +81,6 @@ export const Currentemp = ({ empschema, prsnlemp }) => {
         </>
     );
 }
+
+
+export default EmployeeDetailPage;

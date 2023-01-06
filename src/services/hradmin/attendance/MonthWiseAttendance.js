@@ -42,7 +42,7 @@ export const MonthWiseAttendance = () => {
 							callbackFunction={() => {
 								setMonthSelect(false);
 							}}>
-							<div className="months">
+							<div className="months defaultButtonWhite">
 								{item.schema.map((month, index) => {
 									return (
 										<>
@@ -65,7 +65,7 @@ export const MonthWiseAttendance = () => {
 			const renderHead = (item, index) => {
 				return (
 					<>
-						<div className="head">
+						<div className="head defaultButtonWhite">
 							<div className="iconBlackArrowLeft"></div>
 							<div
 								key={index}

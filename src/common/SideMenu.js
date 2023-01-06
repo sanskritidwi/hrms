@@ -2,6 +2,7 @@ import React from 'react'
 import icon from '../assets/images/item.svg'
 import arrow from '../assets/images/arrow.svg'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 // use like this
 // sideItem is api data or props value
@@ -203,13 +204,13 @@ const MenuIteams = ({ data, index}) => {
     return (
         <>
             <li key={index} >
-                <a href="#" onClick={()=> {
+                <Link to={data.path} onClick={()=> {
                 setOpenSubMenu(!openSubMenu)
                 setIcon(!icon)
                  }}>
                     <img src={!icon ? data.activeicon : data.defaulticon} />
                     <span>{data.title}</span>
-                </a>
+                </Link>
                 {data.child && <>
                     <img className='subMenuIcon' src={arrow} />
                     {openSubMenu && <MenuList classVal={openSubMenu}  menuList={data.child} />}
@@ -253,8 +254,8 @@ const SideMenu =({listMenu}) => {
 
     return (
         <>
-            <div className='SideMenuWrapper'>
-                <aside className={sideMenu ? 'collapse' : ''}>
+            <div className={sideMenu ? 'SideMenuWrapper custom-scroll wraped' : 'SideMenuWrapper custom-scroll'}>
+                <aside className={sideMenu ? 'collapsed' : ''}>
                     {renderMenuIcon()}
                     {<MenuList menuList={listMenu} />}
                 </aside>

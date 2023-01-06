@@ -11,7 +11,7 @@ const sideItem = [
         title: 'Dashboard',
         activeicon: arrow,
         defaulticon: icon,
-        path: '',
+        path: 'employee',
         child: [
             {
                 title: 'Dashboard1',
@@ -31,37 +31,37 @@ const sideItem = [
         title: 'Attendance',
         activeicon: arrow,
         defaulticon: icon,
-        path: ''
+        path: 'employee/attendance'
     },
     {
         title: 'Leaves',
         activeicon: arrow,
         defaulticon: icon,
-        path: ''
+        path: 'employee/leave'
     },
     {
         title: 'Team Tree',
         activeicon: arrow,
         defaulticon: icon,
-        path: ''
+        path: 'employee/teamtree'
     },
     {
         title: 'Payslips',
         activeicon: arrow,
         defaulticon: icon,
-        path: ''
+        path: 'employee/payslips'
     },
     {
         title: 'Reimbursements',
         activeicon: arrow,
         defaulticon: icon,
-        path: ''
+        path: 'employee/reimbursements'
     },
     {
         title: 'Rewards ',
         activeicon: arrow,
         defaulticon: icon,
-        path: ''
+        path: 'employee/rewards'
     },
     {
         title: 'HR Help Desk',
@@ -73,30 +73,32 @@ const sideItem = [
         title: 'Organisation Calendar',
         activeicon: arrow,
         defaulticon: icon,
-        path: ''
+        path: 'employee/calendar'
     },
     {
         title: 'My Details',
         activeicon: arrow,
         defaulticon: icon,
-        path: ''
+        path: 'employee/details'
     },
     {
         title: 'Company Policies',
         activeicon: arrow,
         defaulticon: icon,
-        path: ''
+        path: 'employee/policies'
     },
   ]
 
 const Layout = () => {
   return (
     <>
-      
-         {/* <SideMenu listMenu={sideItem}/> */}
-         <Navbar/>
-          
-      <Outlet />
+          <Navbar/>
+            <div className='d-flex '>
+             <SideMenu listMenu={sideItem}/>
+             <div>
+                <Outlet />
+             </div>
+         </div>
     </>
   )
 };

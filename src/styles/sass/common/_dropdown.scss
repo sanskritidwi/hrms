@@ -1,31 +1,18 @@
-.Dropdown-wrapper{
-    position: relative;
-    .dropdown-list{
-        background-color: $white-color;
-        box-shadow: 0 0 10px #d7d5d5;
-        width: fit-content;
+.DropDownWrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 16px 0px;
+    select {
+        padding: 8px 8px;
+        border: 1px solid black;
         border-radius: 8px;
-        width: 260px;
-        position: absolute;
-        top: 50px;
-        right: 0;
-    }
-    ul{
-        li{
-            padding: 16px 24px;
-            border-bottom: 1px solid #dfdfdf;
-            .icon{
-                height: 35px;
-                width: 35px;
-                padding: 8px;
-                border-radius: 50px;
-                box-shadow: 0 0 5px #11111169;
-                background-color: $white-color;
-            }
-            &:last-child{
-                border-bottom: 0;
-            }
+        background-color: white;
+        outline: none;
+        color: grey;
+
+        option {
+            padding: 8px;
+            border: 1px red solid;
         }
     }
 }
-

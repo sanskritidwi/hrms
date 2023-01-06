@@ -47,19 +47,21 @@ const Popup = ({ schema, show, onClose }) => {
     const renderItem = (key, value) => {
         switch (key) {
             case "customBody":
-                return <>{value}</>;
-                break;
-            case "buttons":
-                return <>{renderButton(value)}</>;
-                break;
-            case "titleModal":
-                return <>{renderHeader(value)}</>;
-                break;
+				return <>{value}</> ;
+				break;
+                case "buttons":
+				return <>{renderButton(value)}</>;
+				break;
+			case "titleModal":
+				return <>{renderHeader(value)}</>;
+				break;
+			
+			
+		}
+	};
 
 
-        }
-    };
-
+   
     if (!show) return null;
     return (
         <>
