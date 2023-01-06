@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react"
-import { PageHeader } from "./PageHeader"
-import ProgressBar from "./progressBar";
+import { PageHeader } from "../../../common/PageHeader"
+import ProgressBar from "../../../common/progressBar";
 
-    export const AttendanceEmployee = () => {
+    const AttendanceEmployee = () => {
         let date = new Date()
         const [timein, setTimein] = useState(0)
         const [time , setTime] = useState("00:00:00")
@@ -71,3 +71,5 @@ import ProgressBar from "./progressBar";
     )
 }
 // completed={percent}handelDate min={timeData}
+
+export default AttendanceEmployee;

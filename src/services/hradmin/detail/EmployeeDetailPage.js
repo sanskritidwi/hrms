@@ -1,5 +1,8 @@
 // import emp from '../assets/images/emp'
-export const Currentemp = ({ schema }) => {
+
+import React from "react";
+
+const EmployeeDetailPage = ({ schema }) => {
 
     const {
         currentheading,
@@ -16,8 +19,7 @@ export const Currentemp = ({ schema }) => {
         wrongmark,
         threedot,
         rightarrow
-    } = schema
-
+    } = schema;
     const renderHeading = () => {
         return (
             <>
@@ -84,3 +86,6 @@ export const Currentemp = ({ schema }) => {
         </>
     );
 }
+
+
+export default EmployeeDetailPage;

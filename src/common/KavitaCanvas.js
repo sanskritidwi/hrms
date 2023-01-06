@@ -8,12 +8,12 @@ import Dropdown from './Dropdown';
 import { Navbar } from './Navbar';
 import { EventCard } from './EventCard';
 import Input from './FormFields/Input';
-import { AttendanceEmployee } from './AttendanceEmployee';
 import ProgressBar from './progressBar';
 import Employee1 from '../assets/images/em1.png'
 import Employee2 from '../assets/images/em2.png'
 import { EmpCard } from '../services/hradmin/detail/EmployeeCard';
-import { CurrentEmp } from '../services/hradmin/detail/CurrentEmployee';
+import { AttendanceEmployee } from '../services/employee/attendance/AttendanceEmployee';
+import CurrentEmployee from '../services/hradmin/detail/CurrentEmployee';
 
 
 const KavitaCanvas = () => {
@@ -35,7 +35,7 @@ return (
    {/* <input id="start" value="10:00" />
     <input id="end" value="06:30" /> */}
     {/* <input id="diff" /> */}
-    <CurrentEmp />
+    <CurrentEmployee/>
 </>
 );
 }

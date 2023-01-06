@@ -17,19 +17,7 @@ export const SansCanvas = () => {
 		],
 	};
 
-	const customRenderList = () => {
-		return <></>;
-	};
-	const searchSchema = {
-		placeHolder: "searchh",
-	};
-	const collectionSchema = {
-		customRender: customRenderList(),
-		title: "modalCanvas",
-	};
-	const formfield = {
-		input: "text",
-	};
+	
 	return (
 		<div>
 			{/* <Calendar /> */}
@@ -51,6 +39,7 @@ export const SansCanvas = () => {
 			{/* <Calendar /> */}
 			{/* <EventCard title="UpcomingEvents" renderBody={renderBody}/> */}
 			{/* <FormProcessor submitEnable={true} submitText="Submit"/> */}
+
 		</div>
 	);
 };

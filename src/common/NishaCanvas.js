@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Currentemp } from './current-emp';
+import EmployeeDetailPage from '../services/hradmin/detail/EmployeeDetailPage';
 import { Dateform } from './Date';
 import Popup from './Popup';
 import { Textarea } from './textarea';
@@ -66,7 +66,7 @@ export const NishaCanvas = () => {
       <button onClick={(e) => setShow(true)}>Show Modal</button>
       <Popup schema={modalschema} show={show} />
 
-      <Currentemp schema={empschema} />
+      <EmployeeDetailPage schema={empschema} />
       <Tabcustom />
     </div>
   );

@@ -573,33 +573,22 @@ button:focus-visible {
   column-gap: 20px;
 }
 
-.Dropdown-wrapper {
-  position: relative;
+.DropDownWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 16px 0px;
 }
-.Dropdown-wrapper .dropdown-list {
-  background-color: #ffffff;
-  box-shadow: 0 0 10px #d7d5d5;
-  width: fit-content;
+.DropDownWrapper select {
+  padding: 8px 8px;
+  border: 1px solid black;
   border-radius: 8px;
-  width: 260px;
-  position: absolute;
-  top: 50px;
-  right: 0;
+  background-color: white;
+  outline: none;
+  color: grey;
 }
-.Dropdown-wrapper ul li {
-  padding: 16px 24px;
-  border-bottom: 1px solid #dfdfdf;
-}
-.Dropdown-wrapper ul li .icon {
-  height: 35px;
-  width: 35px;
+.DropDownWrapper select option {
   padding: 8px;
-  border-radius: 50px;
-  box-shadow: 0 0 5px rgba(17, 17, 17, 0.4117647059);
-  background-color: #ffffff;
-}
-.Dropdown-wrapper ul li:last-child {
-  border-bottom: 0;
+  border: 1px red solid;
 }
 
 header {
@@ -738,6 +727,7 @@ button,
   border-radius: 8px;
   background-color: white;
   outline: none;
+  color: grey;
 }
 .FormProcessorWrapper .DropDownWrapper select option {
   padding: 8px;
@@ -896,6 +886,7 @@ button,
   border-radius: 8px;
   background-color: white;
   outline: none;
+  color: grey;
 }
 .FormProcessorWrapper .DropDownWrapper select option {
   padding: 8px;
@@ -913,33 +904,22 @@ button,
   border-radius: 8px;
 }
 
-.Dropdown-wrapper {
-  position: relative;
+.DropDownWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 16px 0px;
 }
-.Dropdown-wrapper .dropdown-list {
-  background-color: #ffffff;
-  box-shadow: 0 0 10px #d7d5d5;
-  width: fit-content;
+.DropDownWrapper select {
+  padding: 8px 8px;
+  border: 1px solid black;
   border-radius: 8px;
-  width: 260px;
-  position: absolute;
-  top: 50px;
-  right: 0;
+  background-color: white;
+  outline: none;
+  color: grey;
 }
-.Dropdown-wrapper ul li {
-  padding: 16px 24px;
-  border-bottom: 1px solid #dfdfdf;
-}
-.Dropdown-wrapper ul li .icon {
-  height: 35px;
-  width: 35px;
+.DropDownWrapper select option {
   padding: 8px;
-  border-radius: 50px;
-  box-shadow: 0 0 5px rgba(17, 17, 17, 0.4117647059);
-  background-color: #ffffff;
-}
-.Dropdown-wrapper ul li:last-child {
-  border-bottom: 0;
+  border: 1px red solid;
 }
 
 header {
@@ -1129,6 +1109,7 @@ button,
   border-radius: 8px;
   background-color: white;
   outline: none;
+  color: grey;
 }
 .FormProcessorWrapper .DropDownWrapper select option {
   padding: 8px;
@@ -1146,33 +1127,22 @@ button,
   border-radius: 8px;
 }
 
-.Dropdown-wrapper {
-  position: relative;
+.DropDownWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 16px 0px;
 }
-.Dropdown-wrapper .dropdown-list {
-  background-color: #ffffff;
-  box-shadow: 0 0 10px #d7d5d5;
-  width: fit-content;
+.DropDownWrapper select {
+  padding: 8px 8px;
+  border: 1px solid black;
   border-radius: 8px;
-  width: 260px;
-  position: absolute;
-  top: 50px;
-  right: 0;
+  background-color: white;
+  outline: none;
+  color: grey;
 }
-.Dropdown-wrapper ul li {
-  padding: 16px 24px;
-  border-bottom: 1px solid #dfdfdf;
-}
-.Dropdown-wrapper ul li .icon {
-  height: 35px;
-  width: 35px;
+.DropDownWrapper select option {
   padding: 8px;
-  border-radius: 50px;
-  box-shadow: 0 0 5px rgba(17, 17, 17, 0.4117647059);
-  background-color: #ffffff;
-}
-.Dropdown-wrapper ul li:last-child {
-  border-bottom: 0;
+  border: 1px red solid;
 }
 
 .tabs-wrapper .nav-tabs {
@@ -1321,36 +1291,26 @@ button,
   padding: 8px 0px;
   align-items: center;
 }
+.MonthWiseAttendanceWrapper .filtersRow div {
+  margin-right: 24px;
+}
 .MonthWiseAttendanceWrapper .calendarSelect {
   display: flex;
   flex-direction: column;
 }
 .MonthWiseAttendanceWrapper .calendarSelect .head {
   display: flex;
-  border: 1px solid #777777;
-  border-radius: 8px;
-  padding: 16px 16px;
-  display: flex;
-  cursor: pointer;
-  align-items: center;
-  background-color: #05454E;
-  color: white;
+  position: relative;
 }
 .MonthWiseAttendanceWrapper .calendarSelect .head .year {
   padding: 0px 8px;
 }
 .MonthWiseAttendanceWrapper .calendarSelect .months {
-  border: 1px solid #777777;
-  border-radius: 8px;
-  padding: 16px 16px;
-  display: flex;
-  cursor: pointer;
-  align-items: center;
-  background-color: #05454E;
-  color: white;
   flex-wrap: wrap;
   max-width: 250px;
   padding: 4px;
+  position: absolute;
+  background-color: white;
 }
 .MonthWiseAttendanceWrapper .calendarSelect .months .month {
   border: 1px solid #777777;
@@ -1377,15 +1337,7 @@ button,
 }
 .MonthWiseAttendanceWrapper table tr th.employeeHead {
   min-width: 200px;
-  background-color: unset;
-  border: 1px solid #777777;
-  border-radius: 8px;
-  padding: 16px 16px;
-  display: flex;
-  cursor: pointer;
-  align-items: center;
-  background-color: #05454E;
-  color: white;
+  background-color: white;
   text-align: left;
 }
 .MonthWiseAttendanceWrapper table tr td {

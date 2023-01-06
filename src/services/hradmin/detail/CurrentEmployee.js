@@ -4,7 +4,7 @@ import { EmpCard } from "./EmployeeCard"
 import { EventCard } from "../../../common/EventCard"
 import Employee1 from '../../../assets/images/em1.png'
 import Employee2 from '../../../assets/images/em2.png'
-export const CurrentEmp = () => {
+const CurrentEmployee = () => {
     const searchSchema = {
         placeholder :"searchh"
     }
@@ -90,3 +90,5 @@ export const CurrentEmp = () => {
         </>
     )
 }
+
+export default CurrentEmployee;

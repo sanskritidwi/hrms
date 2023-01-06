@@ -61,7 +61,7 @@ const Popup = ({ schema, show, onClose }) => {
 	};
 
 
-    
+   
     if (!show) return null;
     return (
         <>
