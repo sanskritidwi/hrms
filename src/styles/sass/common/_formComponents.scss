@@ -1,15 +1,40 @@
-.DropDownWrapper{
-    .dropHeader{
-        position: relative;
+.FormProcessorWrapper{
+    min-width: 300px;
+    label{
+        margin: 8px 0px;
     }
-    .options{
-        position: absolute;
-        border: 1px solid #777777;
-        padding: 8px;
-        border-radius: 8px;
-        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-        .option{
-            padding: 8px;
+    .DropDownWrapper{
+        display: flex;
+        flex-direction: column;
+        margin: 16px 0px;
+        select{
+            padding: 8px 8px;
+            border: 1px solid black;
+            border-radius: 8px;
+            background-color: white;
+            outline: none;
+
+            option{
+                padding: 8px;
+                border: 1px red solid;
+            }
         }
+        
+   
+    
+}
+
+.InputWrapper{
+    display: flex;
+    flex-direction: column;
+    margin: 16px 0px;
+
+    
+    input{
+        outline: none;
+        padding: 8px 8px;
+        border: 1px solid black;
+        border-radius: 8px;
     }
+}
 }

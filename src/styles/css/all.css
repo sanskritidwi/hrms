@@ -109,6 +109,14 @@ button, .btn-close:focus {
   background-image: url("../../assets/images/searchBlack.svg");
 }
 
+.iconBlackBack {
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
+  margin: 0px 8px;
+  background-image: url("../../assets/images/arrow_back_black.svg");
+}
+
 .CollectionListWrapper table {
   border: 1px solid black;
 }
@@ -362,6 +370,14 @@ button, .btn-close:focus {
   background-image: url("../../assets/images/searchBlack.svg");
 }
 
+.iconBlackBack {
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
+  margin: 0px 8px;
+  background-image: url("../../assets/images/arrow_back_black.svg");
+}
+
 /* modal-start */
 .modal-wrapper {
   position: fixed;
@@ -602,6 +618,14 @@ button, .btn-close:focus {
   background-image: url("../../assets/images/searchBlack.svg");
 }
 
+.iconBlackBack {
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
+  margin: 0px 8px;
+  background-image: url("../../assets/images/arrow_back_black.svg");
+}
+
 .SearchBarWrapper {
   max-width: 495px;
 }
@@ -611,18 +635,38 @@ button, .btn-close:focus {
   min-width: 420px;
 }
 
-.DropDownWrapper .dropHeader {
-  position: relative;
+.FormProcessorWrapper {
+  min-width: 300px;
 }
-.DropDownWrapper .options {
-  position: absolute;
-  border: 1px solid #777777;
-  padding: 8px;
+.FormProcessorWrapper label {
+  margin: 8px 0px;
+}
+.FormProcessorWrapper .DropDownWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 16px 0px;
+}
+.FormProcessorWrapper .DropDownWrapper select {
+  padding: 8px 8px;
+  border: 1px solid black;
   border-radius: 8px;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-color: white;
+  outline: none;
 }
-.DropDownWrapper .options .option {
+.FormProcessorWrapper .DropDownWrapper select option {
   padding: 8px;
+  border: 1px red solid;
+}
+.FormProcessorWrapper .InputWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 16px 0px;
+}
+.FormProcessorWrapper .InputWrapper input {
+  outline: none;
+  padding: 8px 8px;
+  border: 1px solid black;
+  border-radius: 8px;
 }
 
 .AttendanceEmployee span {
@@ -714,6 +758,14 @@ button, .btn-close:focus {
   background-image: url("../../assets/images/searchBlack.svg");
 }
 
+.iconBlackBack {
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
+  margin: 0px 8px;
+  background-image: url("../../assets/images/arrow_back_black.svg");
+}
+
 .SearchBarWrapper {
   max-width: 495px;
 }
@@ -723,18 +775,38 @@ button, .btn-close:focus {
   min-width: 420px;
 }
 
-.DropDownWrapper .dropHeader {
-  position: relative;
+.FormProcessorWrapper {
+  min-width: 300px;
 }
-.DropDownWrapper .options {
-  position: absolute;
-  border: 1px solid #777777;
-  padding: 8px;
+.FormProcessorWrapper label {
+  margin: 8px 0px;
+}
+.FormProcessorWrapper .DropDownWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 16px 0px;
+}
+.FormProcessorWrapper .DropDownWrapper select {
+  padding: 8px 8px;
+  border: 1px solid black;
   border-radius: 8px;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-color: white;
+  outline: none;
 }
-.DropDownWrapper .options .option {
+.FormProcessorWrapper .DropDownWrapper select option {
   padding: 8px;
+  border: 1px red solid;
+}
+.FormProcessorWrapper .InputWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 16px 0px;
+}
+.FormProcessorWrapper .InputWrapper input {
+  outline: none;
+  padding: 8px 8px;
+  border: 1px solid black;
+  border-radius: 8px;
 }
 
 .Dropdown-wrapper {
@@ -868,6 +940,14 @@ button, .btn-close:focus {
   width: 24px;
   margin: 0px 8px;
   background-image: url("../../assets/images/searchBlack.svg");
+}
+
+.iconBlackBack {
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
+  margin: 0px 8px;
+  background-image: url("../../assets/images/arrow_back_black.svg");
 }
 
 .MonthWiseAttendanceWrapper {

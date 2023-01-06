@@ -17,6 +17,7 @@ import Layout from "./common/Layout";
 import  KavitaCanvas  from "./common/KavitaCanvas";
 import  NishaCanvas  from "./common/NishaCanvas";
 import  Leave  from "./services/employee/leave/Leave";
+import { MonthWiseAttendance } from './services/hradmin/attendance/MonthWiseAttendance';
 
 function App() {
 	return (
@@ -28,7 +29,7 @@ function App() {
 						<Route path='/' element={<Layout />}>
 							<Route path="/" element={<SansCanvas />} />
 							<Route path="employee">
-								<Route path="attendance" element={<SansCanvas />} />
+								<Route path="attendance" element={<MonthWiseAttendance />} />
 								<Route path="leave" element={<Leave />} />
 							</Route>
 							<Route path="admin">

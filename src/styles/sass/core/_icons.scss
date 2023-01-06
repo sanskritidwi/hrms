@@ -25,3 +25,11 @@
     @include icon24;
     background-image: url("../../assets/images/searchBlack.svg");
 }
+
+.iconBlackBack{
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 40px;
+    margin: 0px 8px;
+    background-image: url("../../assets/images/arrow_back_black.svg");
+}

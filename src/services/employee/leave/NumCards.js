@@ -1,13 +1,13 @@
-import React from 'react'
+import React , {useState}from 'react'
 
-export const NumCards = ({numArr}) => {
+const NumCards = ({numArr}) => {
   return (
     <div className='NumCardsWrapper'>
         
         {
             numArr.map((item, index)=>{
                 return (
-                    <div className='card'>
+                    <div className='card' key={index}>
                         <div className='num'> {item.num}</div>
                         <div className='text'>{item.name}</div>
                        </div>
@@ -18,3 +18,7 @@ export const NumCards = ({numArr}) => {
        </div>
   )
 }
+
+
+
+  export default NumCards;

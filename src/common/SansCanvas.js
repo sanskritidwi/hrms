@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo } from "react";
+import NumCards from "../services/employee/leave/NumCards";
 import { MonthWiseAttendance } from "../services/hradmin/attendance/MonthWiseAttendance";
 import { Calendar } from "./Calendar";
 import { CollectionList } from "./CollectionList";
@@ -20,8 +21,8 @@ export const SansCanvas = () => {
 		return <></>;
 	};
 	const searchSchema = {
-		placeHolder :"searchh"
-	  }
+		placeHolder: "searchh",
+	};
 	const collectionSchema = {
 		customRender: customRenderList(),
 		title: "modalCanvas",
@@ -44,7 +45,7 @@ export const SansCanvas = () => {
 			</OutsideClickHandler> */}
 			{/* <CollectionList /> */}
 			<FormProcessor />
-{/* <SearchBar schema={searchSchema}/> */}
+			{/* <SearchBar schema={searchSchema}/> */}
 			{/* <CollectionList schema={schema} /> */}
 			{/* <Calendar /> */}
 			{/* <EventCard title="UpcomingEvents" renderBody={renderBody}/> */}

@@ -1,38 +1,22 @@
 import React, { useState } from "react";
-import OutsideClickHandler from "../OutsideClickHandler";
 
 export const DropDown = ({ schema }) => {
-	const [showOptions, setShowOptions] = useState(false);
-	const { header, iconClass, options } = schema;
+	const {label, header, options } = schema;
 
-	const renderOptions = () => {
-		if (!showOptions) return null;
-		return (
-			<>
-				<OutsideClickHandler
-					callbackFunction={() => {
-						setShowOptions(false);
-					}}>
-					<div className="options">
-						{options.map((item, index) => {
-							return <div className="option">{item}</div>;
-						})}
-					</div>
-				</OutsideClickHandler>
-			</>
-		);
-	};
+	const handleChange = (e)=>{
+		console.log(e.target.value)
+	}
+
+	
 	return (
 		<div className="DropDownWrapper">
-			<div className="dropHeader defaultButtonWhite">
-				{header}
-				<div
-					className={iconClass}
-					onClick={() => {
-						setShowOptions(!showOptions);
-					}}></div>
-			</div>
-			{renderOptions()}
+			<label>{label}</label>
+			<select className="dropHeader " name="select" onChange={(e)=>{handleChange(e)}} >
+				<option selected disabled hidden>-- {header} --</option>
+						{options.map((item, index) => {
+							return <option className="option" key={index}>{item}</option>;
+						})}
+			</select>
 		</div>
 	);
 };

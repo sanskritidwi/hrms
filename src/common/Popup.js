@@ -45,7 +45,7 @@ const Popup = ({ schema , show }) => {
 	const renderItem = (key, value) => {
 		switch (key) {
             case "customBody":
-				return <>{value}</>;
+				return <>{value}</> ;
 				break;
                 case "buttons":
 				return <>{renderButton(value)}</>;

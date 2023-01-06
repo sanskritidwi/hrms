@@ -1,14 +1,60 @@
+/**
+const formSchema = {
+	submitEnable: "true",
+	schema: [
+		{
+			type: "input",
+			schema: {
+				placeHolder: "input",
+				name: "ip",
+				id: "planet",
+				type: "date",
+				label: "Reason",
+			},
+		},
+		{
+			type: "input",
+			schema: {
+				placeHolder: "input",
+				name: "ip",
+				id: "planet",
+				type: "date",
+				label: "Reason",
+			},
+		},
+		{
+			type: "dropdown",
+			schema: {
+				header: "kjhkj",
+				options: ["1", "2"],
+				label: "selecet",
+			},
+		},
+	],
+}; */
+
+
 import React, { useState, useRef } from "react";
 import { DropDown } from "./DropDown";
 import { Input } from "./Input";
 
 const dropSchema = {
-	header : "kjhkj",
+	header: "kjhkj",
 	iconClass: "DFSF",
-	options:["1","2"]
-}
+	options: ["1", "2"],
+	label: "selecet",
+};
 
-export const FormProcessor = () => {
+const inputSchema = {
+	placeHolder: "input",
+	name: "ip",
+	id: "planet",
+	type: "date",
+	label: "Reason",
+};
+
+
+export const FormProcessor = ({schema}) => {
 	const [form, setForm] = useState({});
 
 	const handleFormChange = (event) => {
@@ -26,9 +72,16 @@ export const FormProcessor = () => {
 	};
 
 
+	const renderItem = (item)=>{
+		switch(item.type){
+			case "input" : return<Input schema={item.schema}/>
+			case "dropdown" : return<DropDown schema={item.schema}/>
+
+		}
+	}
 
 	return (
-		<div>
+		<div className="FormProcessorWrapper">
 			<form
 				onChange={(e) => {
 					handleFormChange(e);
@@ -36,12 +89,13 @@ export const FormProcessor = () => {
 				onSubmit={(e) => {
 					handleSubmit(e);
 				}}>
-				{/* <Input name="username" />
-				<Input name="email" />
-				<Input name="pw" /> */}
-				<DropDown schema={dropSchema}/>
+				{schema.schema.map((item, index)=>{
+					return (<>{renderItem(item)}</>)
+				})}
 
-				<button type="submit">Submit</button>
+				<button type="submit" className="defaultButtonPrimary">
+					{schema.submitText}
+				</button>
 			</form>
 		</div>
 	);

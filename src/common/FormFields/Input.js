@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 
-export const Input = ({sendData, name}) => {
+export const Input = ({schema}) => {
+  const {name, placeHolder, type,label} = schema;
     const [ipVal, setIpVal] = useState("");
 
     const handleChange = (e)=>{
@@ -9,8 +10,9 @@ export const Input = ({sendData, name}) => {
   
 
   return (
-    <div>
-        <input type="text"  onBlur={(e)=>{handleChange(e)}} name={name}/>
+    <div className='InputWrapper'>
+      <label>{label}</label>
+        <input type={type}  onBlur={(e)=>{handleChange(e)}} name={name} placeholder={placeHolder}/>
     </div>
   )
 }
