@@ -392,6 +392,9 @@ button:focus-visible {
   color: #000000 !important;
   padding: 5px !important;
 }
+.modal-wrapper .btn-close:focus {
+  box-shadow: none;
+}
 .modal-wrapper .popup-label .row {
   row-gap: 30px;
 }
@@ -669,10 +672,10 @@ button,
   border-bottom: 0;
 }
 
-.tabs-wrapper .nav-tabs {
+.tabs-wrapper .nav-pills {
   justify-content: center;
 }
-.tabs-wrapper .nav-tabs .nav-item .nav-link {
+.tabs-wrapper .nav-pills .nav-item .nav-link {
   min-width: 250px;
   border-bottom: 4px solid transparent;
   border-top: 0;
@@ -682,12 +685,19 @@ button,
   font-size: 16px;
   transition: all 0.5s;
   font-weight: 500;
+  background-color: transparent;
+  border-radius: 0;
+  text-align: center;
 }
-.tabs-wrapper .nav-tabs .nav-item .nav-link.active {
+.tabs-wrapper .nav-pills .nav-item .nav-link:focus-visible {
+  outline: none;
+}
+.tabs-wrapper .nav-pills .nav-item .nav-link.active {
   border-color: #2CB99A;
   color: #2CB99A;
+  background-color: transparent;
 }
-.tabs-wrapper .nav-tabs .nav-item:hover .nav-link {
+.tabs-wrapper .nav-pills .nav-item:hover .nav-link {
   border-color: #2CB99A;
   color: #2CB99A;
 }

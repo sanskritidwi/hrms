@@ -3,11 +3,6 @@ import { Currentemp } from './current-emp';
 import { Dateform } from './Date';
 import Popup from './Popup';
 import { Textarea } from './textarea';
-import employee from '../assets/images/emp.png'
-import right from '../assets/images/right-circle.svg'
-import wrong from '../assets/images/cross-circle.svg'
-import dot from '../assets/images/side-dot.svg'
-import arrowright from '../assets/images/arrow-right-solid.svg'
 import { Tabcustom } from './tabs';
 
 export const NishaCanvas = () => {
@@ -45,28 +40,27 @@ export const NishaCanvas = () => {
     buttons: ["cancel", "submit"],
   }
   const empschema = {
-    currentheading: "Current Emplay",
-    empheading: "Meaghan Cpmpigotto",
-    empprofile: "Software Engineer",
-    empteam: "React JS Team",
-    empdate: "Since 21 November 2022",
+    currentheading: "Current Employee",
     empprsnldetail: "Personal Details",
     empdocument: "Documents",
     emppostdetail: "Post Employment Details",
     emprequest: "Request",
-    empimage: employee,
-    rightmark: right,
-    wrongmark: wrong,
-    threedot: dot,
-    rightarrow: arrowright
   }
+
+  const prsnlemp = {
+    empheading: "Meaghan Cpmpigotto",
+    empprofile: "Software Engineer",
+    empteam: "React JS Team",
+    empdate: "Since 21 November 2022",
+  }
+
 
   return (
     <div className="App">
       <button onClick={(e) => setShow(true)}>Show Modal</button>
-      <Popup schema={modalschema} show={show} />
+      <Popup schema={modalschema} show={show} onClose={()=> setShow(false)} />
 
-      <Currentemp schema={empschema} />
+      <Currentemp empschema={empschema} prsnlemp={prsnlemp} />
       <Tabcustom />
     </div>
   );

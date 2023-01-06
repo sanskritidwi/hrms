@@ -57,6 +57,10 @@ button {
     border-radius: 50px;
     color: $black-color !important;
     padding: 5px !important;
+
+    &:focus {
+      box-shadow: none;
+    }
   }
 
   .popup-label {

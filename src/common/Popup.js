@@ -74,6 +74,7 @@ const Popup = ({ schema, show, onClose }) => {
                 </div>
 
             </OutsideClickHandler>
+            <button>jkxfhjkdj</button>
         </>
     );
 };

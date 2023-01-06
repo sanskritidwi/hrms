@@ -1,6 +1,12 @@
-import { Tab, Tabs } from "react-bootstrap";
+import { tab } from "@testing-library/user-event/dist/tab";
+import { useState } from "react";
+import { Nav, Tab, Tabs } from "react-bootstrap";
+// import { NishaCanvas } from "./NishaCanvas";
+import Popup from "./Popup";
 
 export const Tabcustom = () => {
+
+    const [activeTab, setActiveTab] = useState(1);
 
     const renderbodytab = () => {
         return (
@@ -13,56 +19,56 @@ export const Tabcustom = () => {
         {
             id: "pd",
             title: "Personal Details",
-            target: "#pd",
-            body: "sdfzhdjh,d",
+            keyevent: "pd",
+            body: ()=><Popup />,
         },
         {
             id: "document",
             title: "Documents",
-            body: "sdfzhdjh,d"
+            keyevent: "document",
+            body: ()=><Popup />
         },
         {
             id: "ped",
             title: "Past Employment Details",
-            body: "sdfzhdjh,d"
+            keyevent: "ped",
+            body: ()=><Popup />
         }
-    ]
+    ];
+
     return (
         <>
-            <div className="tabs-wrapper">
-                <div className="container">
-                    <div className="row">
-                        <ul class="nav nav-tabs" id="myTab" role="tablist">
-                            {
-                                tabData.map((data) => {
-                                    return (
-                                        <>
-                                            <li class="nav-item">
-                                                <button class="nav-link" id={data.id} data-bs-toggle="tab" data-bs-target={data.target} aria-selected="true">{data.title}</button>
-                                            </li>
-                                        </>
-                                    )
-                                })
-                            }
-                        </ul>
-                        <div class="tab-content" id="myTabContent">
-                            {
-                                tabData.map((data) => {
-                                    return (
-                                        <>
-                                            <div class="tab-pane fade show" id={data.id} >{data.body}</div>
-                                        </>
-                                    )
-                                })
-                            }
-                            {/* <div class="tab-pane fade show active" id="pd" role="tabpanel" aria-labelledby="home-tab">dtfgdfg</div>
-                            <div class="tab-pane fade" id="document" role="tabpanel" aria-labelledby="profile-tab">serfsetf</div>
-                            <div class="tab-pane fade" id="ped" role="tabpanel" aria-labelledby="contact-tab">rdtgdrsgv</div> */}
-                        </div>
-                    </div>
-                </div>
+            <div className="tabs-wrapper pageBody">
+                <Tab.Container id="left-tabs-example" defaultActiveKey="pd">
+                    <Nav variant="pills">
+                        {
+                            tabData.map((data) => {
+                                return (
+                                    <>
+                                        <Nav.Item>
+                                            <Nav.Link eventKey={data.keyevent}>{data.title}</Nav.Link>
+                                        </Nav.Item>
+                                    </>
+                                )
+                            })
+                        }
+                    </Nav>
+                    <Tab.Content>
+                        {
+                            tabData.map((data) => {
+                                return (
+                                    <>
+                                        <Tab.Pane eventKey={data.keyevent}>
+                                            {data.body()}
+                                        </Tab.Pane>
+                                    </>
+                                )
+                            })
+                        }
+                    </Tab.Content>
+                </Tab.Container>
             </div>
         </>
-    );
-}
+    )
 
+}

@@ -1,31 +1,32 @@
 // import emp from '../assets/images/emp'
-export const Currentemp = ({ schema }) => {
+import employee from '../assets/images/emp.png'
+import right from '../assets/images/right-circle.svg'
+import wrong from '../assets/images/cross-circle.svg'
+import arrowright from '../assets/images/arrow-right-solid.svg'
+export const Currentemp = ({ empschema, prsnlemp }) => {
 
     const {
         currentheading,
-        empheading,
-        empprofile,
-        empteam,
-        empdate,
         empprsnldetail,
         empdocument,
         emppostdetail,
         emprequest,
-        empimage,
-        rightmark,
-        wrongmark,
-        threedot,
-        rightarrow
-    } = schema
+    } = empschema
+    const {
+        empheading,
+        empprofile,
+        empteam,
+        empdate,
+    } = prsnlemp
 
     const renderHeading = () => {
         return (
             <>
                 <div className='emp-head'>
                     <h4>{currentheading}
-                        <img src={rightarrow} />
+                        {/* <img src={arrowright} /> */}
                     </h4>
-                    <img src={threedot} />
+                    {/* <img src={employee} /> */}
                 </div>
             </>
         );
@@ -36,7 +37,7 @@ export const Currentemp = ({ schema }) => {
             <>
                 <div className="emp-detail">
                     <div>
-                        <img src={empimage} />
+                        <img src={employee} />
                     </div>
                     <div className="emp-content">
                         <h5>{empheading}</h5>
@@ -55,14 +56,14 @@ export const Currentemp = ({ schema }) => {
                 <div className='emp-document'>
                     <ul>
                         <li>
-                            <span> <img src={rightmark} /> </span>
+                            <span> <img src={right} /> </span>
                             {empprsnldetail}</li>
                         <li>
-                            <span> <img src={rightmark} /> </span>
+                            <span> <img src={right} /> </span>
                             {empdocument}</li>
                         <li>
-                            <span> <img src={wrongmark} /> </span>
-                            {emppostdetail} <a href="javascript:;">{emprequest}</a> </li>
+                            <span> <img src={wrong} /> </span>
+                            {emppostdetail} <a href="#">{emprequest}</a> </li>
                     </ul>
                 </div>
             </>
@@ -70,15 +71,11 @@ export const Currentemp = ({ schema }) => {
     }
     return (
         <>
-            <div className="container">
-                <div className="row">
-                    <div className="emp-wrapper">
-                        {renderHeading()}
-                        <div className="emp-detail-wrap">
-                            {renderDetail()}
-                            {renderDocument()}
-                        </div>
-                    </div>
+            <div className="emp-wrapper pageBody">
+                {renderHeading()}
+                <div className="emp-detail-wrap">
+                    {renderDetail()}
+                    {renderDocument()}
                 </div>
             </div>
         </>
