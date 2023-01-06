@@ -1,0 +1,66 @@
+.emp-wrapper {
+    background-color: $silver-color;
+    padding: 20px 20px 30px 20px;
+    border-radius: 8px;
+
+    .emp-head {
+        display: flex;
+        justify-content: space-between;
+
+        h4 {
+            img {
+                width: 20px;
+                margin-left: 15px;
+            }
+        }
+
+        img {
+            cursor: pointer;
+        }
+    }
+
+    .emp-detail-wrap {
+        display: flex;
+        align-items: center;
+        column-gap: 200px;
+
+        .emp-detail {
+            display: flex;
+            column-gap: 20px;
+            align-items: center;
+            padding: 40px 0 40px 0;
+
+            .emp-content {
+                p {
+                    color: $gray-color;
+                }
+            }
+        }
+
+        .emp-document {
+            background-color: $white-color;
+            width: 450px;
+            padding: 20px;
+            height: 100%;
+
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                row-gap: 15px;
+
+                li {
+                    color: $gray-color;
+
+                    span {
+                        padding-right: 20px;
+                    }
+
+                    a {
+                        text-decoration: underline !important;
+                    }
+                }
+            }
+        }
+    }
+}

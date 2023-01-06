@@ -34,6 +34,7 @@ export const SansCanvas = () => {
 		<div>
 			{/* <Calendar /> */}
 			{/* <EventCard title="UpcomingEvents" renderBody={renderBody}/> */}
+			{/* <FormProcessor schema={formfield} nameone={selectSchema} submitEnable={true} submitText="Submit" /> */}
 			{/* <MonthWiseAttendance /> */}
 			{/* <OutsideClickHandler
 				callbackFunction={() => {
@@ -44,7 +45,7 @@ export const SansCanvas = () => {
 				</div>
 			</OutsideClickHandler> */}
 			{/* <CollectionList /> */}
-			<FormProcessor />
+			{/* <FormProcessor /> */}
 			{/* <SearchBar schema={searchSchema}/> */}
 			{/* <CollectionList schema={schema} /> */}
 			{/* <Calendar /> */}

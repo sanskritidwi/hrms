@@ -1,0 +1,31 @@
+.tabs-wrapper {
+    .nav-tabs {
+        justify-content: center;
+
+        .nav-item {
+            .nav-link {
+                min-width: 250px;
+                border-bottom: 4px solid transparent;
+                border-top: 0;
+                border-left: 0;
+                border-right: 0;
+                color: $black-color;
+                font-size: $small-heading;
+                transition: all 0.5s;
+                font-weight: 500;
+
+                &.active {
+                    border-color: $secondary-color;
+                    color: $secondary-color;
+                }
+            }
+
+            &:hover {
+                .nav-link {
+                    border-color: $secondary-color;
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
+}

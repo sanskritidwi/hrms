@@ -1,35 +1,37 @@
-import React , {useState} from "react";
+import React, { useState } from "react";
 import OutsideClickHandler from "./OutsideClickHandler";
 
-const Popup = ({ schema , show }) => {
+const Popup = ({ schema, show, onClose }) => {
 
-    const [popupOpen , setPopupOpen] = useState(false)
+    const [popupOpen, setPopupOpen] = useState(false)
 
-	const renderHeader = (value) => {
-		return (
-			<>
-				<div className="modal-header">
-					<h4 className="modal-title">{value}</h4>
-					{/* <button onClick={onClose} className="btn-close"></button> */}
-				</div>
-			</>
-		);
-	};
+    const renderHeader = (value) => {
+        return (
+            <>
+                <div className="modal-header">
+                    <h4 className="modal-title">{value}</h4>
+                    <button onClick={onClose} className="btn-close"></button>
+                </div>
+            </>
+        );
+    };
 
-	const renderButton = (btnArr) => {
-		return (
-			<>
-				{btnArr.map((item, index) => {
-					return (
-						<>
-							{" "}
-							<button href="" className="main-btn">
-								{item}
-							</button>
-						</>
-					);
-				})}
-				{/* <div className='container'>
+    const renderButton = (btnArr) => {
+        return (
+            <>
+                <div className="modal-btns">
+                    {btnArr.map((item, index) => {
+                        return (
+                            <>
+                                {" "}
+                                <button href="" className="main-btn">
+                                    {item}
+                                </button>
+                            </>
+                        );
+                    })}
+                </div>
+                {/* <div className='container'>
                     <div className='row'>
                         <div className='col-lg-12'>
                             <div className='d-flex common-btn'>
@@ -38,12 +40,12 @@ const Popup = ({ schema , show }) => {
                         </div>
                     </div>
                 </div> */}
-			</>
-		);
-	};
+            </>
+        );
+    };
 
-	const renderItem = (key, value) => {
-		switch (key) {
+    const renderItem = (key, value) => {
+        switch (key) {
             case "customBody":
 				return <>{value}</> ;
 				break;
@@ -58,24 +60,24 @@ const Popup = ({ schema , show }) => {
 		}
 	};
 
-    if(!show) return null;
-	return (
-		<>
-        <OutsideClickHandler callbackFunction={()=>{setPopupOpen(false)}}>
-			{Object.entries(schema).map(([key, value]) => {
-				console.log(key, schema[key]);
-				return renderItem(key, schema[key]);
-			})}
-			{/* <div className="modal">
-                <div className="modal-content"> */}
 
-			{/* {customBody} */}
-			{/* {renderButton()} */}
-			{/* </div>
-            </div> */}
+    
+    if (!show) return null;
+    return (
+        <>
+            <OutsideClickHandler callbackFunction={() => { setPopupOpen(false) }}>
+                <div className="modal-wrapper">
+                    <div className="modal-content">
+                        {Object.entries(schema).map(([key, value]) => {
+                            console.log(key, schema[key]);
+                            return renderItem(key, schema[key]);
+                        })}
+                    </div>
+                </div>
+
             </OutsideClickHandler>
-		</>
-	);
+        </>
+    );
 };
 
 export default Popup;

@@ -14,7 +14,7 @@ export const Input = ({schema}) => {
       <label>{label}</label>
         <input type={type}  onBlur={(e)=>{handleChange(e)}} name={name} placeholder={placeHolder}/>
     </div>
-  )
+  );
 }
 
 
