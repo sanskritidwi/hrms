@@ -744,6 +744,10 @@ button,
   border: 1px solid black;
   border-radius: 8px;
 }
+.FormProcessorWrapper .FileUploadWrapper {
+  display: flex;
+  flex-direction: column;
+}
 
 .AttendanceEmployee span {
   font-size: 16px;
@@ -902,6 +906,10 @@ button,
   padding: 8px 8px;
   border: 1px solid black;
   border-radius: 8px;
+}
+.FormProcessorWrapper .FileUploadWrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .DropDownWrapper {
@@ -1125,6 +1133,10 @@ button,
   padding: 8px 8px;
   border: 1px solid black;
   border-radius: 8px;
+}
+.FormProcessorWrapper .FileUploadWrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .DropDownWrapper {

@@ -36,6 +36,7 @@ const formSchema = {
 
 import React, { useState, useRef } from "react";
 import { DropDown } from "./DropDown";
+import FileUpload from "./FileUpload";
 import { Input } from "./Input";
 
 const dropSchema = {
@@ -76,6 +77,7 @@ export const FormProcessor = ({schema}) => {
 		switch(item.type){
 			case "input" : return<Input schema={item.schema}/>
 			case "dropdown" : return<DropDown schema={item.schema}/>
+			case "uploadfile" : return <FileUpload schema={item.schema}/>
 
 		}
 	}

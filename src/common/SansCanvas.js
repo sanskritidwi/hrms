@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useMemo } from "react";
 import NumCards from "../services/employee/leave/NumCards";
 import { MonthWiseAttendance } from "../services/hradmin/attendance/MonthWiseAttendance";
-import { Calendar } from "./Calendar";
 import { CollectionList } from "./CollectionList";
 import { EventCard } from "./EventCard";
 import { FormProcessor } from "./FormFields/FormProcessor";
