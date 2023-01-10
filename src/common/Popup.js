@@ -1,3 +1,5 @@
+/* <Popup schema={modalschema} show={show} /> */
+
 import React, { useState } from "react";
 import OutsideClickHandler from "./OutsideClickHandler";
 

@@ -1,13 +1,14 @@
 import React, { useState, useEffect, useMemo } from "react";
-import NumCards from "../services/employee/leave/NumCards";
-import { MonthWiseAttendance } from "../services/hradmin/attendance/MonthWiseAttendance";
-import { CollectionList } from "./CollectionList";
-import { EventCard } from "./EventCard";
-import { FormProcessor } from "./FormFields/FormProcessor";
-import OutsideClickHandler from "./OutsideClickHandler";
-import { SearchBar } from "./SearchBar";
+import NumCards from "../../services/employee/leave/NumCards";
+import { MonthWiseAttendance } from "../../services/hradmin/attendance/MonthWiseAttendance";
+import { CollectionList } from "../CollectionList";
+import { EventCard } from "../EventCard";
+import { FormProcessor } from "../FormFields/FormProcessor";
+import OutsideClickHandler from "../OutsideClickHandler";
+import Popup from "../Popup";
+import { SearchBar } from "../SearchBar";
 
-export const SansCanvas = () => {
+const SansCanvas = () => {
 	const schema = {
 		fields: ["Name", "Date applied", "Date Approved"],
 		schema: [
@@ -15,7 +16,10 @@ export const SansCanvas = () => {
 			{ name: "sans2", dateAp: "12/1/234", dateAr: "17/1/24" },
 		],
 	};
-
+	const searchSchema = {
+		placeholder :"searchh"
+	  }
+	  
 	
 	return (
 		<div>
@@ -38,7 +42,10 @@ export const SansCanvas = () => {
 			{/* <Calendar /> */}
 			{/* <EventCard title="UpcomingEvents" renderBody={renderBody}/> */}
 			{/* <FormProcessor submitEnable={true} submitText="Submit"/> */}
-
+			<SearchBar schema={searchSchema}/>
+			
 		</div>
 	);
 };
+
+export default SansCanvas;

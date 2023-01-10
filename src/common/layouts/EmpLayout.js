@@ -1,9 +1,9 @@
 import React from 'react'
 import { Outlet, Link } from "react-router-dom";
-import SideMenu from './SideMenu';
-import icon from '../assets/images/item.svg'
-import arrow from '../assets/images/arrow.svg'
-import { Navbar } from './Navbar';
+import SideMenu from '../SideMenu';
+import icon from '../../assets/images/item.svg'
+import arrow from '../../assets/images/arrow.svg'
+import { Navbar } from '../Navbar';
 
 
 const sideItem = [
@@ -89,7 +89,7 @@ const sideItem = [
     },
   ]
 
-const Layout = () => {
+const EmpLayout = () => {
   return (
     <>
           <Navbar/>
@@ -103,4 +103,4 @@ const Layout = () => {
   )
 };
 
-export default Layout;
+export default EmpLayout;
