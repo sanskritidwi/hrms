@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FormProcessor } from "../../../common/FormFields/FormProcessor";
 import { PageHeader } from "../../../common/PageHeader";
+import CollectionList from "../../../common/table/CollectionList";
 import NumCards from "./NumCards";
 
 const numArrSchema = [
@@ -18,6 +19,7 @@ const numArrSchema = [
 const formSchema = {
 	submitEnable: "true",
 	submitText:"Apply",
+	formEditable:"false",
 	schema: [
 		{
 			type: "dropdown",
@@ -61,6 +63,41 @@ const formSchema = {
 	],
 };
 
+const customRender = (status) => {
+	switch (status){
+		case 'approved' : return <div className="approved">Approved</div>;
+		case 'declined' : return <div className="declined">Declined</div>;
+		case 'pending' : return <div className="pending">Pending</div>;
+
+	}
+};
+
+const tableSchema = {
+	tHead: ["Date Time", "Date - From", "Date - To","Number of Days", "Reason", "Type of Leave",  "Status"],
+	tData: [
+		{
+			id: "1",
+			items: ["16/1/23 : 12:34 PM", "16/1/23", "18/1/23","2", "Family Function","Planned Leave",  customRender("approved")],
+		},
+		{
+			id: "2",
+			items: ["16/1/23 : 12:34 PM", "16/1/23", "18/1/23","2", "Family Function","Planned Leave",  customRender("declined")],
+		},
+		{
+			id: "3",
+			items: ["16/1/23 : 12:34 PM", "16/1/23", "18/1/23","2", "Family Function","Planned Leave",  customRender("pending")],
+		},
+		{
+			id: "2",
+			items: ["16/1/23 : 12:34 PM", "16/1/23", "18/1/23","2", "Family Function","Planned Leave",  customRender("declined")],
+		},
+		{
+			id: "3",
+			items: ["16/1/23 : 12:34 PM", "16/1/23", "18/1/23","2", "Family Function","Planned Leave",  customRender("pending")],
+		},
+	],
+};
+
 const Leave = () => {
 	const [newLeave, setNewLeave] = useState(false);
 
@@ -69,6 +106,7 @@ const Leave = () => {
 		return (<>
 		<PageHeader pageheading="Leave" />
 			<NumCards numArr={numArrSchema} />
+			<div className="floatRight">
 			<button
 				className="defaultButtonPrimary"
 				onClick={() => {
@@ -76,6 +114,9 @@ const Leave = () => {
 				}}>
 				Apply for a new Leave
 			</button>
+			</div>	
+			<CollectionList schema={tableSchema}/>
+
 		</>)
 	}
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export const DropDown = ({ schema }) => {
+export const DropDown = ({ schema ,editMode}) => {
 	const {label, header, options } = schema;
 
 	const handleChange = (e)=>{
@@ -9,10 +9,10 @@ export const DropDown = ({ schema }) => {
 
 	
 	return (
-		<div className="DropDownWrapper">
+		<div className={editMode ? "DropDownWrapper" : "DropDownWrapperDisabled"}>
 			<label>{label}</label>
-			<select className="dropHeader " name="select" onChange={(e)=>{handleChange(e)}} >
-				<option selected disabled hidden>-- {header} --</option>
+			<select className="dropHeader " name="select" onChange={(e)=>{handleChange(e)}} defaultValue={'DEFAULT'} disabled={!editMode}>
+				<option value={'DEFAULT'} disabled hidden className="default">-- {header} --</option>
 						{options.map((item, index) => {
 							return <option className="option" key={index}>{item}</option>;
 						})}

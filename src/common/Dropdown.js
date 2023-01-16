@@ -1,13 +1,3 @@
-
-import React from 'react'
-import { useState } from 'react'
-import Notification from '../assets/images/notification.svg'
-import Reminder from '../assets/images/reminder.svg'
-import Event from '../assets/images/celebration.png'
-import OutsideClickHandler from './OutsideClickHandler'
-
-// use like this
-// notificationItem is api data or props value
 // const notificationData = [
 //     {
 //       type:"reminder",
@@ -22,8 +12,14 @@ import OutsideClickHandler from './OutsideClickHandler'
 //       content: "update your settings"
 //     }
 //   ]
-{/* <Dropdown notificationItem={notificationData}/> */}
+//  <Dropdown notificationItem={notificationData}/> 
 
+import React from 'react'
+import { useState } from 'react'
+import Notification from '../assets/images/notification.svg'
+import Reminder from '../assets/images/reminder.svg'
+import Event from '../assets/images/celebration.png'
+import OutsideClickHandler from './OutsideClickHandler'
 
 const Dropdown = ({notificationItem}) => {
     const [notification, setNotification] = useState(false)

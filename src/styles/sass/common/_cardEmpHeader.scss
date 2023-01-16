@@ -1,7 +1,8 @@
-.emp-wrapper {
+.CardEmpHeaderWrapper {
     background-color: $silver-color;
-    padding: 20px 20px 30px 20px;
+    padding: 16px;
     border-radius: 8px;
+    width: 100%;
 
     .emp-head {
         display: flex;
@@ -22,13 +23,12 @@
     .emp-detail-wrap {
         display: flex;
         align-items: center;
-        column-gap: 200px;
+        column-gap: 300px;
 
         .emp-detail {
             display: flex;
             column-gap: 20px;
             align-items: center;
-            padding: 40px 0 40px 0;
 
             .emp-content {
                 p {

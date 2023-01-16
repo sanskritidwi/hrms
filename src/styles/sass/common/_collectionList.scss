@@ -1,13 +1,31 @@
-.CollectionListWrapper{
-    table{
-        border: 1px solid black;
-        tr{
-            border: 1px solid black;
-            padding: 2px;
-            td{
-                border: 1px solid black;
-                padding: 2px;
+.CollectionListWrapper {
+    padding: 16px;        width: 100%;
+
+font-size: 14px;
+	table {
+        width: 80vw;
+		tr {
+
+			&.tableHead {
+				padding: 2px;
+				background-color: #e7e7e7;
+				border-radius: 16px;
+                td {
+                    padding: 16px;
+                    margin-bottom: 16px;
+                }
+			}
+          
+		}
+        .tableBody{
+            background-color: #f7f7f7;
+            tr{
+                padding: 8px;
+                td {
+                    padding: 16px;
+                }
             }
         }
-    }
+
+	}
 }

@@ -1,22 +1,15 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import "./App.css";
 import "./styles/css/all.css";
-import axios from "axios";
 import {
 	BrowserRouter as Router,
-	Switch,
 	Route,
 	Routes,
-	Link,
-	Outlet,
-	useLocation,
 } from "react-router-dom";
-import Layout from "./common/layouts/EmpLayout";
 import Leave from "./services/employee/leave/Leave";
 import { MonthWiseAttendance } from "./services/hradmin/attendance/MonthWiseAttendance";
 import AttendanceEmployee from "./services/employee/attendance/AttendanceEmployee";
-import CurrentEmployee from "./services/hradmin/detail/CurrentEmployee";
+import PgCurrentEmployeeList from "./services/hradmin/detail/PgCurrentEmpList";
 import Payslips from "./services/employee/Payslips";
 import TeamTree from "./services/employee/TeamTree";
 import Reimbursements from "./services/employee/Reimbursements";
@@ -26,6 +19,8 @@ import KavitaCanvas from "./common/canvas/KavitaCanvas";
 import NishaCanvas from "./common/canvas/NishaCanvas";
 import EmpLayout from "./common/layouts/EmpLayout";
 import HrLayout from "./common/layouts/HrLayout";
+import EmployeeDetailPage from "./services/hradmin/detail/CardEmpHeader";
+import  PgProfileDetail  from "./services/hradmin/detail/PgProfileDetail";
 
 function App() {
 	return (
@@ -47,11 +42,11 @@ function App() {
 						<Route path="/" element={<HrLayout />}>
 							<Route path="admin">
 								<Route path="people">
-									<Route path="current" element={<CurrentEmployee />} />
-									<Route path="current/:id" element={<CurrentEmployee />} />
-									<Route path="new" element={<CurrentEmployee />} />
-									<Route path="teamtree" element={<CurrentEmployee />} />
-									<Route path="archieved" element={<CurrentEmployee />} />
+									<Route path="current" element={<PgCurrentEmployeeList />} />
+									<Route path="current/:id" element={<PgProfileDetail />} />
+									<Route path="new" element={<PgCurrentEmployeeList />} />
+									<Route path="teamtree" element={<PgCurrentEmployeeList />} />
+									<Route path="archieved" element={<PgCurrentEmployeeList />} />
 								</Route>
 								<Route path="attendance">
 									<Route path="attendance" element={<MonthWiseAttendance />} />

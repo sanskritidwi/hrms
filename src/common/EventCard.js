@@ -17,10 +17,9 @@ import React from 'react'
 
 export const EventCard = ({title, renderBody}) => {
   return (
-    <div className='EventCardWrapper'>
-
+    <div className='EventCardWrapper custom-scroll wraped' >
         <div className='heading'>{title}</div>
-        {renderBody()}
+        <div className='body'>{renderBody()}</div>
     </div>
   )
 }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
-export const Input = ({schema}) => {
-  const {name, placeHolder, type,label} = schema;
+export const Input = ({schema, editMode}) => {
+  const {name, placeHolder, type,label, minlength, maxlength} = schema;
     const [ipVal, setIpVal] = useState("");
 
     const handleChange = (e)=>{
@@ -10,9 +10,9 @@ export const Input = ({schema}) => {
   
 
   return (
-    <div className='InputWrapper'>
+    <div className={editMode ? "InputWrapper" : "InputWrapperDisabled"}>
       <label>{label}</label>
-        <input type={type}  onBlur={(e)=>{handleChange(e)}} name={name} placeholder={placeHolder}/>
+        <input type={type}  onBlur={(e)=>{handleChange(e)}} name={name} placeholder={placeHolder} minLength={minlength} maxLength={maxlength} disabled={!editMode}/>
     </div>
   );
 }

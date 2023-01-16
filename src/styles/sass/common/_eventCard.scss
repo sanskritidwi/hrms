@@ -4,6 +4,9 @@
 	min-width: 320px;
 	max-width: 320px;
 	min-height: 240px;
+	max-height: 320px;
+	overflow-y: scroll;
+	
 	.heading {
 		color: white;
 		background-color: #05454e;
@@ -11,4 +14,6 @@
 		border-radius: 16px 16px 0px 0px;
 		text-align: center;
 	}
+
+	.body{padding: 16px;}
 }

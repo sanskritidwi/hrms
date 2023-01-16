@@ -1,5 +1,5 @@
 .tabs-wrapper {
-    .nav-tabs {
+    .nav-pills {
         justify-content: center;
 
         .nav-item {
@@ -13,10 +13,18 @@
                 font-size: $small-heading;
                 transition: all 0.5s;
                 font-weight: 500;
+                background-color: transparent;
+                border-radius: 0;
+                text-align: center;
+
+                &:focus-visible {
+                    outline: none;
+                }
 
                 &.active {
                     border-color: $secondary-color;
                     color: $secondary-color;
+                    background-color: transparent;
                 }
             }
 

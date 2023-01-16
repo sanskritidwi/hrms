@@ -1,41 +1,82 @@
 .FormProcessorWrapper {
 	min-width: 300px;
 	label {
-		margin: 8px 0px;
+		margin: 4px 0px;
+		font-size: 14px;
+	}
+	.nestedFlex {
+		display: flex;
+		div {
+			margin-right: 64px;
+		}
 	}
 	.DropDownWrapper {
 		display: flex;
 		flex-direction: column;
-		margin: 16px 0px;
+		margin: 4px 0px;
 		select {
 			padding: 8px 8px;
 			border: 1px solid black;
 			border-radius: 8px;
 			background-color: white;
 			outline: none;
-            color: grey;
-
-			option {
-				padding: 8px;
-				border: 1px red solid;
-			}
+			min-width: 320px;
+			font-size: 14px;
+			color: black;
+		}
+	}
+	.DropDownWrapperDisabled {
+		display: flex;
+		flex-direction: column;
+		margin: 4px 0px;
+		select {
+			padding: 8px 8px;
+			// border: 1px solid rgb(173, 173, 173);
+			border-style: none;
+			border-radius: 8px;
+			background-color:#fafafa;
+			outline: none;
+			min-width: 320px;
+			font-size: 14px;
+			color: black;
 		}
 	}
 
 	.InputWrapper {
 		display: flex;
 		flex-direction: column;
-		margin: 16px 0px;
-
+		margin: 4px 0px;
+		min-width: 320px;
 		input {
 			outline: none;
 			padding: 8px 8px;
 			border: 1px solid black;
 			border-radius: 8px;
+			font-size: 14px;
+			&::placeholder {
+				color: rgb(218, 218, 218);
+			}
+		}
+	}
+	.InputWrapperDisabled {
+		display: flex;
+		flex-direction: column;
+		margin: 4px 0px;
+		min-width: 320px;
+		input {
+			outline: none;
+			padding: 8px 8px;
+			// border: 1px solid rgb(119, 119, 119);
+			border-radius: 8px;
+			font-size: 14px;
+			border-style: unset;
+			&::placeholder {
+				color: rgb(3, 3, 3);
+			}
 		}
 	}
 
-	.FileUploadWrapper{
+	.FileUploadWrapper {
 		display: flex;
 		flex-direction: column;
 	}

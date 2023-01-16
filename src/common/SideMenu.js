@@ -229,6 +229,7 @@ const MenuList = ({ menuList ,classVal}) => {
                         <MenuIteams
                             data={data}
                             index={index}
+                            key={index}
                         />
                     )
                 })

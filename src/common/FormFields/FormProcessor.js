@@ -1,17 +1,8 @@
 /**
 const formSchema = {
 	submitEnable: "true",
+	formEditable:"true",
 	schema: [
-		{
-			type: "input",
-			schema: {
-				placeHolder: "input",
-				name: "ip",
-				id: "planet",
-				type: "date",
-				label: "Reason",
-			},
-		},
 		{
 			type: "input",
 			schema: {
@@ -33,31 +24,17 @@ const formSchema = {
 	],
 }; */
 
-
 import React, { useState, useRef } from "react";
 import { DropDown } from "./DropDown";
 import FileUpload from "./FileUpload";
 import { Input } from "./Input";
 
-const dropSchema = {
-	header: "kjhkj",
-	iconClass: "DFSF",
-	options: ["1", "2"],
-	label: "selecet",
-};
-
-const inputSchema = {
-	placeHolder: "input",
-	name: "ip",
-	id: "planet",
-	type: "date",
-	label: "Reason",
-};
-
-
-export const FormProcessor = ({schema}) => {
+export const FormProcessor = ({ schema }) => {
+	/*Hooks */
 	const [form, setForm] = useState({});
+	const [editMode, setEditMode] = useState(false);
 
+	/*Handler Functions */
 	const handleFormChange = (event) => {
 		const { name, value } = event.target;
 		const updatedForm = {
@@ -69,18 +46,37 @@ export const FormProcessor = ({schema}) => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		console.log("from submited : ", form);
+		console.log("form submitted : ", form);
+		setEditMode(false);
 	};
 
-
-	const renderItem = (item)=>{
-		switch(item.type){
-			case "input" : return<Input schema={item.schema}/>
-			case "dropdown" : return<DropDown schema={item.schema}/>
-			case "uploadfile" : return <FileUpload schema={item.schema}/>
-
+	/*Render Functions */
+	const renderItem = (item, editMode) => {
+		console.log(item.schema.placeHolder);
+		switch (item.type) {
+			case "input":
+				return <Input schema={item.schema} editMode={editMode} />;
+			case "dropdown":
+				return <DropDown schema={item.schema} editMode={editMode} />;
+			case "uploadfile":
+				return <FileUpload schema={item.schema} editMode={editMode} />;
 		}
-	}
+	};
+
+	const renderEdit = () => {
+		if(schema.formEditable) {
+			setEditMode(true);
+			return null;}
+		return (
+			<button
+				className="defaultButtonPrimary"
+				onClick={() => {
+					setEditMode(true);
+				}}>
+				Edit
+			</button>
+		);
+	};
 
 	return (
 		<div className="FormProcessorWrapper">
@@ -91,13 +87,27 @@ export const FormProcessor = ({schema}) => {
 				onSubmit={(e) => {
 					handleSubmit(e);
 				}}>
-				{schema.schema.map((item, index)=>{
-					return (<>{renderItem(item)}</>)
+				{!editMode && renderEdit()}
+				{editMode && (
+					<button type="submit" className="defaultButtonPrimary">
+						{schema.submitText}
+					</button>
+				)}
+				{schema.schema.map((item, index) => {
+					return (
+						<div key={index}>
+							{item.nested ? (
+								<div className="nestedFlex">
+									{item.schema.map((item, index) => {
+										return <>{renderItem(item, editMode)}</>;
+									})}
+								</div>
+							) : (
+								renderItem(item, editMode)
+							)}
+						</div>
+					);
 				})}
-
-				<button type="submit" className="defaultButtonPrimary">
-					{schema.submitText}
-				</button>
 			</form>
 		</div>
 	);

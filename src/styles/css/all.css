@@ -57,6 +57,47 @@ button,
   display: flex;
   cursor: pointer;
   align-items: center;
+  background-color: white;
+}
+
+.defaultButtonWhiteSm {
+  border: 1px solid #777777;
+  border-radius: 8px;
+  padding: 8px 8px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  background-color: white;
+}
+
+.approved {
+  border-radius: 16px;
+  padding: 4px 8px;
+  color: white;
+  max-width: fit-content;
+  background-color: #19b034;
+}
+
+.declined {
+  border-radius: 16px;
+  padding: 4px 8px;
+  color: white;
+  max-width: fit-content;
+  background-color: #f20f47;
+}
+
+.pending {
+  border-radius: 16px;
+  padding: 4px 8px;
+  color: white;
+  max-width: fit-content;
+  background-color: #4547b1;
+}
+
+.floatRight {
+  display: flex;
+  justify-content: flex-end;
+  margin: 16px 0px;
 }
 
 .defaultButtonPrimary {
@@ -77,6 +118,47 @@ button,
   display: flex;
   cursor: pointer;
   align-items: center;
+  background-color: white;
+}
+
+.defaultButtonWhiteSm {
+  border: 1px solid #777777;
+  border-radius: 8px;
+  padding: 8px 8px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  background-color: white;
+}
+
+.approved {
+  border-radius: 16px;
+  padding: 4px 8px;
+  color: white;
+  max-width: fit-content;
+  background-color: #19b034;
+}
+
+.declined {
+  border-radius: 16px;
+  padding: 4px 8px;
+  color: white;
+  max-width: fit-content;
+  background-color: #f20f47;
+}
+
+.pending {
+  border-radius: 16px;
+  padding: 4px 8px;
+  color: white;
+  max-width: fit-content;
+  background-color: #4547b1;
+}
+
+.floatRight {
+  display: flex;
+  justify-content: flex-end;
+  margin: 16px 0px;
 }
 
 h1,
@@ -153,16 +235,31 @@ button,
   background-image: url("../../assets/images/arrow_back_black.svg");
 }
 
+.CollectionListWrapper {
+  padding: 16px;
+  width: 100%;
+  font-size: 14px;
+}
 .CollectionListWrapper table {
-  border: 1px solid black;
+  width: 80vw;
 }
-.CollectionListWrapper table tr {
-  border: 1px solid black;
+.CollectionListWrapper table tr.tableHead {
   padding: 2px;
+  background-color: #e7e7e7;
+  border-radius: 16px;
 }
-.CollectionListWrapper table tr td {
-  border: 1px solid black;
-  padding: 2px;
+.CollectionListWrapper table tr.tableHead td {
+  padding: 16px;
+  margin-bottom: 16px;
+}
+.CollectionListWrapper table .tableBody {
+  background-color: #f7f7f7;
+}
+.CollectionListWrapper table .tableBody tr {
+  padding: 8px;
+}
+.CollectionListWrapper table .tableBody tr td {
+  padding: 16px;
 }
 
 .EventCardWrapper {
@@ -171,29 +268,49 @@ button,
   min-width: 320px;
   max-width: 320px;
   min-height: 240px;
+  max-height: 320px;
+  overflow-y: scroll;
 }
 .EventCardWrapper .heading {
   color: white;
-  background-color: #05454E;
+  background-color: #05454e;
   padding: 12px;
   border-radius: 16px 16px 0px 0px;
   text-align: center;
+}
+.EventCardWrapper .body {
+  padding: 16px;
 }
 
 .PageHeaderWrapper {
   font-size: 32px;
 }
 
+.CollectionListWrapper {
+  padding: 16px;
+  width: 100%;
+  font-size: 14px;
+}
 .CollectionListWrapper table {
-  border: 1px solid black;
+  width: 80vw;
 }
-.CollectionListWrapper table tr {
-  border: 1px solid black;
+.CollectionListWrapper table tr.tableHead {
   padding: 2px;
+  background-color: #e7e7e7;
+  border-radius: 16px;
 }
-.CollectionListWrapper table tr td {
-  border: 1px solid black;
-  padding: 2px;
+.CollectionListWrapper table tr.tableHead td {
+  padding: 16px;
+  margin-bottom: 16px;
+}
+.CollectionListWrapper table .tableBody {
+  background-color: #f7f7f7;
+}
+.CollectionListWrapper table .tableBody tr {
+  padding: 8px;
+}
+.CollectionListWrapper table .tableBody tr td {
+  padding: 16px;
 }
 
 .EventCardWrapper {
@@ -202,13 +319,18 @@ button,
   min-width: 320px;
   max-width: 320px;
   min-height: 240px;
+  max-height: 320px;
+  overflow-y: scroll;
 }
 .EventCardWrapper .heading {
   color: white;
-  background-color: #05454E;
+  background-color: #05454e;
   padding: 12px;
   border-radius: 16px 16px 0px 0px;
   text-align: center;
+}
+.EventCardWrapper .body {
+  padding: 16px;
 }
 
 * {
@@ -356,6 +478,47 @@ body {
   display: flex;
   cursor: pointer;
   align-items: center;
+  background-color: white;
+}
+
+.defaultButtonWhiteSm {
+  border: 1px solid #777777;
+  border-radius: 8px;
+  padding: 8px 8px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  background-color: white;
+}
+
+.approved {
+  border-radius: 16px;
+  padding: 4px 8px;
+  color: white;
+  max-width: fit-content;
+  background-color: #19b034;
+}
+
+.declined {
+  border-radius: 16px;
+  padding: 4px 8px;
+  color: white;
+  max-width: fit-content;
+  background-color: #f20f47;
+}
+
+.pending {
+  border-radius: 16px;
+  padding: 4px 8px;
+  color: white;
+  max-width: fit-content;
+  background-color: #4547b1;
+}
+
+.floatRight {
+  display: flex;
+  justify-content: flex-end;
+  margin: 16px 0px;
 }
 
 h1,
@@ -482,6 +645,9 @@ button:focus-visible {
   border-radius: 50px;
   color: #000000 !important;
   padding: 5px !important;
+}
+.modal-wrapper .btn-close:focus {
+  box-shadow: none;
 }
 .modal-wrapper .popup-label .row {
   row-gap: 30px;
@@ -625,6 +791,47 @@ header .col-20 {
   display: flex;
   cursor: pointer;
   align-items: center;
+  background-color: white;
+}
+
+.defaultButtonWhiteSm {
+  border: 1px solid #777777;
+  border-radius: 8px;
+  padding: 8px 8px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  background-color: white;
+}
+
+.approved {
+  border-radius: 16px;
+  padding: 4px 8px;
+  color: white;
+  max-width: fit-content;
+  background-color: #19b034;
+}
+
+.declined {
+  border-radius: 16px;
+  padding: 4px 8px;
+  color: white;
+  max-width: fit-content;
+  background-color: #f20f47;
+}
+
+.pending {
+  border-radius: 16px;
+  padding: 4px 8px;
+  color: white;
+  max-width: fit-content;
+  background-color: #4547b1;
+}
+
+.floatRight {
+  display: flex;
+  justify-content: flex-end;
+  margin: 16px 0px;
 }
 
 h1,
@@ -714,12 +921,19 @@ button,
   min-width: 300px;
 }
 .FormProcessorWrapper label {
-  margin: 8px 0px;
+  margin: 4px 0px;
+  font-size: 14px;
+}
+.FormProcessorWrapper .nestedFlex {
+  display: flex;
+}
+.FormProcessorWrapper .nestedFlex div {
+  margin-right: 64px;
 }
 .FormProcessorWrapper .DropDownWrapper {
   display: flex;
   flex-direction: column;
-  margin: 16px 0px;
+  margin: 4px 0px;
 }
 .FormProcessorWrapper .DropDownWrapper select {
   padding: 8px 8px;
@@ -727,22 +941,56 @@ button,
   border-radius: 8px;
   background-color: white;
   outline: none;
-  color: grey;
+  min-width: 320px;
+  font-size: 14px;
+  color: black;
 }
-.FormProcessorWrapper .DropDownWrapper select option {
-  padding: 8px;
-  border: 1px red solid;
+.FormProcessorWrapper .DropDownWrapperDisabled {
+  display: flex;
+  flex-direction: column;
+  margin: 4px 0px;
+}
+.FormProcessorWrapper .DropDownWrapperDisabled select {
+  padding: 8px 8px;
+  border-style: none;
+  border-radius: 8px;
+  background-color: #fafafa;
+  outline: none;
+  min-width: 320px;
+  font-size: 14px;
+  color: black;
 }
 .FormProcessorWrapper .InputWrapper {
   display: flex;
   flex-direction: column;
-  margin: 16px 0px;
+  margin: 4px 0px;
+  min-width: 320px;
 }
 .FormProcessorWrapper .InputWrapper input {
   outline: none;
   padding: 8px 8px;
   border: 1px solid black;
   border-radius: 8px;
+  font-size: 14px;
+}
+.FormProcessorWrapper .InputWrapper input::placeholder {
+  color: rgb(218, 218, 218);
+}
+.FormProcessorWrapper .InputWrapperDisabled {
+  display: flex;
+  flex-direction: column;
+  margin: 4px 0px;
+  min-width: 320px;
+}
+.FormProcessorWrapper .InputWrapperDisabled input {
+  outline: none;
+  padding: 8px 8px;
+  border-radius: 8px;
+  font-size: 14px;
+  border-style: unset;
+}
+.FormProcessorWrapper .InputWrapperDisabled input::placeholder {
+  color: rgb(3, 3, 3);
 }
 .FormProcessorWrapper .FileUploadWrapper {
   display: flex;
@@ -788,6 +1036,47 @@ button,
   display: flex;
   cursor: pointer;
   align-items: center;
+  background-color: white;
+}
+
+.defaultButtonWhiteSm {
+  border: 1px solid #777777;
+  border-radius: 8px;
+  padding: 8px 8px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  background-color: white;
+}
+
+.approved {
+  border-radius: 16px;
+  padding: 4px 8px;
+  color: white;
+  max-width: fit-content;
+  background-color: #19b034;
+}
+
+.declined {
+  border-radius: 16px;
+  padding: 4px 8px;
+  color: white;
+  max-width: fit-content;
+  background-color: #f20f47;
+}
+
+.pending {
+  border-radius: 16px;
+  padding: 4px 8px;
+  color: white;
+  max-width: fit-content;
+  background-color: #4547b1;
+}
+
+.floatRight {
+  display: flex;
+  justify-content: flex-end;
+  margin: 16px 0px;
 }
 
 h1,
@@ -877,12 +1166,19 @@ button,
   min-width: 300px;
 }
 .FormProcessorWrapper label {
-  margin: 8px 0px;
+  margin: 4px 0px;
+  font-size: 14px;
+}
+.FormProcessorWrapper .nestedFlex {
+  display: flex;
+}
+.FormProcessorWrapper .nestedFlex div {
+  margin-right: 64px;
 }
 .FormProcessorWrapper .DropDownWrapper {
   display: flex;
   flex-direction: column;
-  margin: 16px 0px;
+  margin: 4px 0px;
 }
 .FormProcessorWrapper .DropDownWrapper select {
   padding: 8px 8px;
@@ -890,22 +1186,56 @@ button,
   border-radius: 8px;
   background-color: white;
   outline: none;
-  color: grey;
+  min-width: 320px;
+  font-size: 14px;
+  color: black;
 }
-.FormProcessorWrapper .DropDownWrapper select option {
-  padding: 8px;
-  border: 1px red solid;
+.FormProcessorWrapper .DropDownWrapperDisabled {
+  display: flex;
+  flex-direction: column;
+  margin: 4px 0px;
+}
+.FormProcessorWrapper .DropDownWrapperDisabled select {
+  padding: 8px 8px;
+  border-style: none;
+  border-radius: 8px;
+  background-color: #fafafa;
+  outline: none;
+  min-width: 320px;
+  font-size: 14px;
+  color: black;
 }
 .FormProcessorWrapper .InputWrapper {
   display: flex;
   flex-direction: column;
-  margin: 16px 0px;
+  margin: 4px 0px;
+  min-width: 320px;
 }
 .FormProcessorWrapper .InputWrapper input {
   outline: none;
   padding: 8px 8px;
   border: 1px solid black;
   border-radius: 8px;
+  font-size: 14px;
+}
+.FormProcessorWrapper .InputWrapper input::placeholder {
+  color: rgb(218, 218, 218);
+}
+.FormProcessorWrapper .InputWrapperDisabled {
+  display: flex;
+  flex-direction: column;
+  margin: 4px 0px;
+  min-width: 320px;
+}
+.FormProcessorWrapper .InputWrapperDisabled input {
+  outline: none;
+  padding: 8px 8px;
+  border-radius: 8px;
+  font-size: 14px;
+  border-style: unset;
+}
+.FormProcessorWrapper .InputWrapperDisabled input::placeholder {
+  color: rgb(3, 3, 3);
 }
 .FormProcessorWrapper .FileUploadWrapper {
   display: flex;
@@ -946,57 +1276,6 @@ header .col-20 {
   column-gap: 20px;
 }
 
-.emp-wrapper {
-  background-color: #EDEEEE;
-  padding: 20px 20px 30px 20px;
-  border-radius: 8px;
-}
-.emp-wrapper .emp-head {
-  display: flex;
-  justify-content: space-between;
-}
-.emp-wrapper .emp-head h4 img {
-  width: 20px;
-  margin-left: 15px;
-}
-.emp-wrapper .emp-head img {
-  cursor: pointer;
-}
-.emp-wrapper .emp-detail-wrap {
-  display: flex;
-  align-items: center;
-  column-gap: 200px;
-}
-.emp-wrapper .emp-detail-wrap .emp-detail {
-  display: flex;
-  column-gap: 20px;
-  align-items: center;
-  padding: 40px 0 40px 0;
-}
-.emp-wrapper .emp-detail-wrap .emp-detail .emp-content p {
-  color: #777777;
-}
-.emp-wrapper .emp-detail-wrap .emp-document {
-  background-color: #ffffff;
-  width: 450px;
-  padding: 20px;
-  height: 100%;
-}
-.emp-wrapper .emp-detail-wrap .emp-document ul {
-  display: flex;
-  flex-direction: column;
-  row-gap: 15px;
-}
-.emp-wrapper .emp-detail-wrap .emp-document ul li {
-  color: #777777;
-}
-.emp-wrapper .emp-detail-wrap .emp-document ul li span {
-  padding-right: 20px;
-}
-.emp-wrapper .emp-detail-wrap .emp-document ul li a {
-  text-decoration: underline !important;
-}
-
 .defaultButtonPrimary {
   border: 1px solid #777777;
   border-radius: 8px;
@@ -1015,6 +1294,47 @@ header .col-20 {
   display: flex;
   cursor: pointer;
   align-items: center;
+  background-color: white;
+}
+
+.defaultButtonWhiteSm {
+  border: 1px solid #777777;
+  border-radius: 8px;
+  padding: 8px 8px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  background-color: white;
+}
+
+.approved {
+  border-radius: 16px;
+  padding: 4px 8px;
+  color: white;
+  max-width: fit-content;
+  background-color: #19b034;
+}
+
+.declined {
+  border-radius: 16px;
+  padding: 4px 8px;
+  color: white;
+  max-width: fit-content;
+  background-color: #f20f47;
+}
+
+.pending {
+  border-radius: 16px;
+  padding: 4px 8px;
+  color: white;
+  max-width: fit-content;
+  background-color: #4547b1;
+}
+
+.floatRight {
+  display: flex;
+  justify-content: flex-end;
+  margin: 16px 0px;
 }
 
 h1,
@@ -1104,12 +1424,19 @@ button,
   min-width: 300px;
 }
 .FormProcessorWrapper label {
-  margin: 8px 0px;
+  margin: 4px 0px;
+  font-size: 14px;
+}
+.FormProcessorWrapper .nestedFlex {
+  display: flex;
+}
+.FormProcessorWrapper .nestedFlex div {
+  margin-right: 64px;
 }
 .FormProcessorWrapper .DropDownWrapper {
   display: flex;
   flex-direction: column;
-  margin: 16px 0px;
+  margin: 4px 0px;
 }
 .FormProcessorWrapper .DropDownWrapper select {
   padding: 8px 8px;
@@ -1117,22 +1444,56 @@ button,
   border-radius: 8px;
   background-color: white;
   outline: none;
-  color: grey;
+  min-width: 320px;
+  font-size: 14px;
+  color: black;
 }
-.FormProcessorWrapper .DropDownWrapper select option {
-  padding: 8px;
-  border: 1px red solid;
+.FormProcessorWrapper .DropDownWrapperDisabled {
+  display: flex;
+  flex-direction: column;
+  margin: 4px 0px;
+}
+.FormProcessorWrapper .DropDownWrapperDisabled select {
+  padding: 8px 8px;
+  border-style: none;
+  border-radius: 8px;
+  background-color: #fafafa;
+  outline: none;
+  min-width: 320px;
+  font-size: 14px;
+  color: black;
 }
 .FormProcessorWrapper .InputWrapper {
   display: flex;
   flex-direction: column;
-  margin: 16px 0px;
+  margin: 4px 0px;
+  min-width: 320px;
 }
 .FormProcessorWrapper .InputWrapper input {
   outline: none;
   padding: 8px 8px;
   border: 1px solid black;
   border-radius: 8px;
+  font-size: 14px;
+}
+.FormProcessorWrapper .InputWrapper input::placeholder {
+  color: rgb(218, 218, 218);
+}
+.FormProcessorWrapper .InputWrapperDisabled {
+  display: flex;
+  flex-direction: column;
+  margin: 4px 0px;
+  min-width: 320px;
+}
+.FormProcessorWrapper .InputWrapperDisabled input {
+  outline: none;
+  padding: 8px 8px;
+  border-radius: 8px;
+  font-size: 14px;
+  border-style: unset;
+}
+.FormProcessorWrapper .InputWrapperDisabled input::placeholder {
+  color: rgb(3, 3, 3);
 }
 .FormProcessorWrapper .FileUploadWrapper {
   display: flex;
@@ -1157,10 +1518,10 @@ button,
   border: 1px red solid;
 }
 
-.tabs-wrapper .nav-tabs {
+.tabs-wrapper .nav-pills {
   justify-content: center;
 }
-.tabs-wrapper .nav-tabs .nav-item .nav-link {
+.tabs-wrapper .nav-pills .nav-item .nav-link {
   min-width: 250px;
   border-bottom: 4px solid transparent;
   border-top: 0;
@@ -1170,14 +1531,99 @@ button,
   font-size: 16px;
   transition: all 0.5s;
   font-weight: 500;
+  background-color: transparent;
+  border-radius: 0;
+  text-align: center;
 }
-.tabs-wrapper .nav-tabs .nav-item .nav-link.active {
+.tabs-wrapper .nav-pills .nav-item .nav-link:focus-visible {
+  outline: none;
+}
+.tabs-wrapper .nav-pills .nav-item .nav-link.active {
+  border-color: #2CB99A;
+  color: #2CB99A;
+  background-color: transparent;
+}
+.tabs-wrapper .nav-pills .nav-item:hover .nav-link {
   border-color: #2CB99A;
   color: #2CB99A;
 }
-.tabs-wrapper .nav-tabs .nav-item:hover .nav-link {
-  border-color: #2CB99A;
-  color: #2CB99A;
+
+.CardEmpHeaderWrapper {
+  background-color: #EDEEEE;
+  padding: 16px;
+  border-radius: 8px;
+  width: 100%;
+}
+.CardEmpHeaderWrapper .emp-head {
+  display: flex;
+  justify-content: space-between;
+}
+.CardEmpHeaderWrapper .emp-head h4 img {
+  width: 20px;
+  margin-left: 15px;
+}
+.CardEmpHeaderWrapper .emp-head img {
+  cursor: pointer;
+}
+.CardEmpHeaderWrapper .emp-detail-wrap {
+  display: flex;
+  align-items: center;
+  column-gap: 300px;
+}
+.CardEmpHeaderWrapper .emp-detail-wrap .emp-detail {
+  display: flex;
+  column-gap: 20px;
+  align-items: center;
+}
+.CardEmpHeaderWrapper .emp-detail-wrap .emp-detail .emp-content p {
+  color: #777777;
+}
+.CardEmpHeaderWrapper .emp-detail-wrap .emp-document {
+  background-color: #ffffff;
+  width: 450px;
+  padding: 20px;
+  height: 100%;
+}
+.CardEmpHeaderWrapper .emp-detail-wrap .emp-document ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+.CardEmpHeaderWrapper .emp-detail-wrap .emp-document ul li {
+  color: #777777;
+}
+.CardEmpHeaderWrapper .emp-detail-wrap .emp-document ul li span {
+  padding-right: 20px;
+}
+.CardEmpHeaderWrapper .emp-detail-wrap .emp-document ul li a {
+  text-decoration: underline !important;
+}
+
+.CollectionListWrapper {
+  padding: 16px;
+  width: 100%;
+  font-size: 14px;
+}
+.CollectionListWrapper table {
+  width: 80vw;
+}
+.CollectionListWrapper table tr.tableHead {
+  padding: 2px;
+  background-color: #e7e7e7;
+  border-radius: 16px;
+}
+.CollectionListWrapper table tr.tableHead td {
+  padding: 16px;
+  margin-bottom: 16px;
+}
+.CollectionListWrapper table .tableBody {
+  background-color: #f7f7f7;
+}
+.CollectionListWrapper table .tableBody tr {
+  padding: 8px;
+}
+.CollectionListWrapper table .tableBody tr td {
+  padding: 16px;
 }
 
 *, body {
@@ -1218,6 +1664,47 @@ button,
   display: flex;
   cursor: pointer;
   align-items: center;
+  background-color: white;
+}
+
+.defaultButtonWhiteSm {
+  border: 1px solid #777777;
+  border-radius: 8px;
+  padding: 8px 8px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  background-color: white;
+}
+
+.approved {
+  border-radius: 16px;
+  padding: 4px 8px;
+  color: white;
+  max-width: fit-content;
+  background-color: #19b034;
+}
+
+.declined {
+  border-radius: 16px;
+  padding: 4px 8px;
+  color: white;
+  max-width: fit-content;
+  background-color: #f20f47;
+}
+
+.pending {
+  border-radius: 16px;
+  padding: 4px 8px;
+  color: white;
+  max-width: fit-content;
+  background-color: #4547b1;
+}
+
+.floatRight {
+  display: flex;
+  justify-content: flex-end;
+  margin: 16px 0px;
 }
 
 h1,
@@ -1374,7 +1861,14 @@ button,
   text-align: left;
 }
 
-.EmpCard .empCard {
+.PageCurrentEmpList {
+  display: flex;
+}
+.PageCurrentEmpList .LoopWrapperCardCurrentEmp {
+  display: flex;
+  flex-wrap: wrap;
+}
+.PageCurrentEmpList .LoopWrapperCardCurrentEmp .CardCurrentEmpWrapper {
   position: relative;
   background: #ffffff;
   padding: 40px 20px;
@@ -1382,30 +1876,32 @@ button,
   border-radius: 8px;
   text-align: center;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.231372549);
+  min-width: 320px;
+  margin: 64px 24px 0px 0px;
 }
-.EmpCard .empCard .empImage {
+.PageCurrentEmpList .LoopWrapperCardCurrentEmp .CardCurrentEmpWrapper .empImage {
   position: absolute;
   top: -40px;
   left: 50%;
   transform: translate(-50%);
 }
-.EmpCard .empCard img {
+.PageCurrentEmpList .LoopWrapperCardCurrentEmp .CardCurrentEmpWrapper img {
   width: 80px;
   height: 80px;
   border-radius: 50px;
   outline: 4px solid #05454E;
   outline-offset: 4px;
 }
-.EmpCard .empCard .cardHeading {
+.PageCurrentEmpList .LoopWrapperCardCurrentEmp .CardCurrentEmpWrapper .cardHeading {
   font-size: 20px;
   color: #000000;
   margin: 16px 0 5px;
   display: inline-block;
 }
-.EmpCard .empCard h4 {
+.PageCurrentEmpList .LoopWrapperCardCurrentEmp .CardCurrentEmpWrapper h4 {
   font-size: 16px;
 }
-.EmpCard .empCard p {
+.PageCurrentEmpList .LoopWrapperCardCurrentEmp .CardCurrentEmpWrapper p {
   font-size: 16px;
 }
 

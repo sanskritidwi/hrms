@@ -16,11 +16,12 @@
 @import "./formComponents";
 @import 'dropdown';
 @import 'navbar';
-@import 'current-emp';
 @import "./searchBar";
 @import "./formComponents";
 @import 'dropdown';
-@import 'tab';
+@import './tab';
+@import './cardEmpHeader';
+@import './collectionList';
 
 *, body{
     font-family: 'Comfortaa';
