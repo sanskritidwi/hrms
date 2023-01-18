@@ -7,14 +7,14 @@ const TreeNode=({ node })=> {
   
     return (
       <>
-        <div className='node'>
+        {/* <div className='node'>
           <span>{label}</span>
         </div>
         <ul>
         {/* <hr/> */}
          <TeamTree treeData={childNodes} />
       
-        </ul>
+        </ul> */}
       </>
     );
   }
