@@ -12,20 +12,6 @@ const sideItem = [
         activeicon: arrow,
         defaulticon: icon,
         path: 'employee',
-        child: [
-            {
-                title: 'Dashboard1',
-                activeicon: arrow,
-                defaulticon: icon,
-                path: '',
-            },
-            {
-                title: 'Dashboard2',
-                activeicon: arrow,
-                defaulticon: icon,
-                path: '',
-            }
-        ]
     },
     {
         title: 'Attendance',
@@ -67,13 +53,13 @@ const sideItem = [
         title: 'HR Help Desk',
         activeicon: arrow,
         defaulticon: icon,
-        path: ''
+        path: 'employee/helpdesk'
     },
     {
         title: 'Organisation Calendar',
         activeicon: arrow,
         defaulticon: icon,
-        path: 'employee/calendar'
+        path: 'employee/orgcalendar'
     },
     {
         title: 'My Details',

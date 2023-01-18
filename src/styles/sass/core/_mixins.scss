@@ -81,7 +81,8 @@
 	border-radius: 16px;
 	padding: 4px 8px;
 	color: white;
-	max-width: fit-content
+	max-width: fit-content;
+	
 }
 
 .approved{
@@ -94,6 +95,28 @@ background-color: #f20f47;
 }.pending{
 	@include statusButtons;
 background-color: #4547b1;
+}
+
+
+.approvedBtn{
+	@include statusButtons;
+color: #19b034;
+border: 2px solid #19b034;
+cursor: pointer;
+&:hover{
+	background-color: #19b034;
+	color: white
+}
+}
+.declinedBtn{
+	@include statusButtons;
+color: #f20f47;
+border: 2px solid #f20f47;
+cursor: pointer;
+&:hover{
+	background-color: #f20f47;
+	color: white
+}
 }
 
 .floatRight{

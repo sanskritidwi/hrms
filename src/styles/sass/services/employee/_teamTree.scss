@@ -1,0 +1,22 @@
+
+.TeamTreeWrapper{
+display: flex;
+    .mainNode{
+        margin-left: 10px;
+        border-left: 1px solid #271b91;
+        .node{
+            border: 2px solid rgb(181, 252, 100);
+            max-width: 200px;
+            margin-bottom: 30px;
+            // background-color: rgb(252, 100, 133);
+            padding: 8px;
+        }
+    
+    }
+    // hr{
+    //     max-width: 300px;
+    // //    margin-top: -50px;
+    // margin-bottom: -20px;
+    // }
+    
+}

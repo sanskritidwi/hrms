@@ -1,4 +1,5 @@
 import React from "react";
+import { FormProcessor } from "../../common/FormFields/FormProcessor";
 import { PageHeader } from "../../common/PageHeader";
 import CollectionList from "../../common/table/CollectionList";
 
@@ -7,7 +8,7 @@ import CollectionList from "../../common/table/CollectionList";
 const customRenderDownload = () => {
 	return (
 		<div className="d-flex">
-			<button className="defaultButtonWhiteSm">Download</button>
+			<button className="defaultButtonWhiteSm me-5">Download</button>
 			<button className="defaultButtonWhiteSm">Raise Issue</button>
 		</div>
 	);
@@ -59,10 +60,29 @@ const tableSchema = {
 	],
 };
 
+const formSchema = {
+	submitEnable: "false",
+	formEditable:"false",
+	schema: [
+		{
+			type: "dropdown",
+			schema: {
+				header: "Year",
+				options: ["2023", "2022"],
+				// label: "selecet",
+			},
+		},
+	],
+}; 
+
 const Payslips = () => {
 	return (
 		<div className="PaySlipsWrapper pageBody">
 			<PageHeader pageheading="Payslips" />
+      <div className="di-flex floatRight">
+        <FormProcessor schema={formSchema} />
+        <button className="defaultButtonWhiteSm ms-5">Download All</button>
+      </div>
 			<CollectionList schema={tableSchema} />
 		</div>
 	);
