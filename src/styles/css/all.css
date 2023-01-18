@@ -94,6 +94,34 @@ button,
   background-color: #4547b1;
 }
 
+.approvedBtn {
+  border-radius: 16px;
+  padding: 4px 8px;
+  color: white;
+  max-width: fit-content;
+  color: #19b034;
+  border: 2px solid #19b034;
+  cursor: pointer;
+}
+.approvedBtn:hover {
+  background-color: #19b034;
+  color: white;
+}
+
+.declinedBtn {
+  border-radius: 16px;
+  padding: 4px 8px;
+  color: white;
+  max-width: fit-content;
+  color: #f20f47;
+  border: 2px solid #f20f47;
+  cursor: pointer;
+}
+.declinedBtn:hover {
+  background-color: #f20f47;
+  color: white;
+}
+
 .floatRight {
   display: flex;
   justify-content: flex-end;
@@ -153,6 +181,34 @@ button,
   color: white;
   max-width: fit-content;
   background-color: #4547b1;
+}
+
+.approvedBtn {
+  border-radius: 16px;
+  padding: 4px 8px;
+  color: white;
+  max-width: fit-content;
+  color: #19b034;
+  border: 2px solid #19b034;
+  cursor: pointer;
+}
+.approvedBtn:hover {
+  background-color: #19b034;
+  color: white;
+}
+
+.declinedBtn {
+  border-radius: 16px;
+  padding: 4px 8px;
+  color: white;
+  max-width: fit-content;
+  color: #f20f47;
+  border: 2px solid #f20f47;
+  cursor: pointer;
+}
+.declinedBtn:hover {
+  background-color: #f20f47;
+  color: white;
 }
 
 .floatRight {
@@ -515,6 +571,34 @@ body {
   background-color: #4547b1;
 }
 
+.approvedBtn {
+  border-radius: 16px;
+  padding: 4px 8px;
+  color: white;
+  max-width: fit-content;
+  color: #19b034;
+  border: 2px solid #19b034;
+  cursor: pointer;
+}
+.approvedBtn:hover {
+  background-color: #19b034;
+  color: white;
+}
+
+.declinedBtn {
+  border-radius: 16px;
+  padding: 4px 8px;
+  color: white;
+  max-width: fit-content;
+  color: #f20f47;
+  border: 2px solid #f20f47;
+  cursor: pointer;
+}
+.declinedBtn:hover {
+  background-color: #f20f47;
+  color: white;
+}
+
 .floatRight {
   display: flex;
   justify-content: flex-end;
@@ -828,6 +912,34 @@ header .col-20 {
   background-color: #4547b1;
 }
 
+.approvedBtn {
+  border-radius: 16px;
+  padding: 4px 8px;
+  color: white;
+  max-width: fit-content;
+  color: #19b034;
+  border: 2px solid #19b034;
+  cursor: pointer;
+}
+.approvedBtn:hover {
+  background-color: #19b034;
+  color: white;
+}
+
+.declinedBtn {
+  border-radius: 16px;
+  padding: 4px 8px;
+  color: white;
+  max-width: fit-content;
+  color: #f20f47;
+  border: 2px solid #f20f47;
+  cursor: pointer;
+}
+.declinedBtn:hover {
+  background-color: #f20f47;
+  color: white;
+}
+
 .floatRight {
   display: flex;
   justify-content: flex-end;
@@ -1071,6 +1183,34 @@ button,
   color: white;
   max-width: fit-content;
   background-color: #4547b1;
+}
+
+.approvedBtn {
+  border-radius: 16px;
+  padding: 4px 8px;
+  color: white;
+  max-width: fit-content;
+  color: #19b034;
+  border: 2px solid #19b034;
+  cursor: pointer;
+}
+.approvedBtn:hover {
+  background-color: #19b034;
+  color: white;
+}
+
+.declinedBtn {
+  border-radius: 16px;
+  padding: 4px 8px;
+  color: white;
+  max-width: fit-content;
+  color: #f20f47;
+  border: 2px solid #f20f47;
+  cursor: pointer;
+}
+.declinedBtn:hover {
+  background-color: #f20f47;
+  color: white;
 }
 
 .floatRight {
@@ -1329,6 +1469,34 @@ header .col-20 {
   color: white;
   max-width: fit-content;
   background-color: #4547b1;
+}
+
+.approvedBtn {
+  border-radius: 16px;
+  padding: 4px 8px;
+  color: white;
+  max-width: fit-content;
+  color: #19b034;
+  border: 2px solid #19b034;
+  cursor: pointer;
+}
+.approvedBtn:hover {
+  background-color: #19b034;
+  color: white;
+}
+
+.declinedBtn {
+  border-radius: 16px;
+  padding: 4px 8px;
+  color: white;
+  max-width: fit-content;
+  color: #f20f47;
+  border: 2px solid #f20f47;
+  cursor: pointer;
+}
+.declinedBtn:hover {
+  background-color: #f20f47;
+  color: white;
 }
 
 .floatRight {
@@ -1646,6 +1814,34 @@ button,
   font-size: 24px;
 }
 
+.HelpDeskWrapper .textBox {
+  border: 1px solid black;
+  border-radius: 16px;
+  display: flex;
+}
+.HelpDeskWrapper .textBox input {
+  margin: 16px;
+  padding: 16px;
+}
+.HelpDeskWrapper .textBox .optionsRow {
+  background-color: aliceblue;
+  border-radius: 0px 16px 16px 0px;
+}
+
+.TeamTreeWrapper {
+  display: flex;
+}
+.TeamTreeWrapper .mainNode {
+  margin-left: 10px;
+  border-left: 1px solid #271b91;
+}
+.TeamTreeWrapper .mainNode .node {
+  border: 2px solid rgb(181, 252, 100);
+  max-width: 200px;
+  margin-bottom: 30px;
+  padding: 8px;
+}
+
 .defaultButtonPrimary {
   border: 1px solid #777777;
   border-radius: 8px;
@@ -1699,6 +1895,34 @@ button,
   color: white;
   max-width: fit-content;
   background-color: #4547b1;
+}
+
+.approvedBtn {
+  border-radius: 16px;
+  padding: 4px 8px;
+  color: white;
+  max-width: fit-content;
+  color: #19b034;
+  border: 2px solid #19b034;
+  cursor: pointer;
+}
+.approvedBtn:hover {
+  background-color: #19b034;
+  color: white;
+}
+
+.declinedBtn {
+  border-radius: 16px;
+  padding: 4px 8px;
+  color: white;
+  max-width: fit-content;
+  color: #f20f47;
+  border: 2px solid #f20f47;
+  cursor: pointer;
+}
+.declinedBtn:hover {
+  background-color: #f20f47;
+  color: white;
 }
 
 .floatRight {

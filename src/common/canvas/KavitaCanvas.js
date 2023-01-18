@@ -11,9 +11,9 @@ import Input from '../FormFields/Input';
 import ProgressBar from '../progressBar';
 // import Employee1 from '../assets/images/em1.png';
 // import Employee2 from '../assets/images/em2.png';
-import { EmpCard } from '../../services/hradmin/detail/CardCurrentEmp';
+import { EmpCard } from '../../services/hradmin/people/CardCurrentEmp';
 import { AttendanceEmployee } from '../../services/employee/attendance/AttendanceEmployee';
-import CurrentEmployee from '../../services/hradmin/detail/PgCurrentEmpList';
+import CurrentEmployee from '../../services/hradmin/people/PgCurrentEmpList';
 
 
 const KavitaCanvas = () => {

@@ -1,0 +1,16 @@
+.HelpDeskWrapper{
+    .textBox{
+        border: 1px solid black;
+        border-radius: 16px;
+        display: flex;
+        input{
+            margin: 16px;
+            padding: 16px;
+        }
+        .optionsRow{
+            background-color: aliceblue;
+            border-radius: 0px 16px 16px 0px;
+
+        }
+    }
+}

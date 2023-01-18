@@ -1,29 +1,27 @@
 import React from 'react'
 
 /**  
-	  const tabData = [
-        {
-            id: "pd",
-            title: "Personal Details",
-            keyevent: "pd",
-            body: ()=><Popup />,
-        },
-        {
-            id: "document",
-            title: "Documents",
-            keyevent: "document",
-            body: ()=><Popup />,
-            title: "Past Employment Details",
-            keyevent: "ped",
-            body: ()=><Popup />
-        }
-		,{
-            id: "pde",
-            title: "Personal Details",
-            keyevent: "pd3",
-            body: ()=><Popup />,
-        },
-    ]; */
+	  	const tabData = [
+		{
+			id: "pd",
+			title: "Personal Details",
+			keyevent: "pd",
+			body: () => renderPersonalDetails(),
+		},
+		{
+			id: "document",
+			title: "Documents",
+			keyevent: "document",
+			body: () => renderDocuments(),
+		},
+		{
+			id: "pastemp",
+			title: "Past Employment Details",
+			keyevent: "pstemp",
+			body: () => renderPastEmploymentDetails(),
+		},
+	];
+     */
 
 
 
@@ -32,17 +30,7 @@ import { Nav, Tab, Tabs } from "react-bootstrap";
 
 const Tabcustom = ({tabData}) => {
 
-    // const [activeTab, setActiveTab] = useState(1);
-
-    // const renderbodytab = () => {
-    //     return (
-    //         <>
-
-    //         </>
-    //     );
-    // }
-   
-
+ 
     return (
         <>
             <div className="tabs-wrapper pageBody">

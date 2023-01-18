@@ -11,6 +11,7 @@ import TableHead from "../table/TableHead";
 import Tabcustom from "../Tabs";
 import Tabs from "../Tabs";
 import CollectionList from "../table/CollectionList";
+import TeamTree from "../../services/employee/teamtree/TeamTree";
 
 const SansCanvas = () => {
 	const schema = {
@@ -51,8 +52,107 @@ const SansCanvas = () => {
 		console.log(a-b)
 		return a - b});
 	console.log(arr);
+
+	const treeData = [
+		{
+		  key: "0",
+		  label: "Dvelopment Team",
+		  children: [
+			{
+			  key: "0-0",
+			  label: "React",
+			  children: [
+				{
+				  key: "0-1-1",
+				  label: "Person",
+				  children:[
+					{
+						key: "0-0",
+						label: "Person",
+					},
+					{
+						key: "0-0",
+						label: "Person",
+					},
+					{
+						key: "0-0",
+						label: "Person",
+					}
+				  ]
+				},
+				{
+				  key: "0-1-2",
+				  label: "Person",
+				},
+			  ],
+			},
+			{
+				key: "0-0",
+				label: "Python",
+				children: [
+				  {
+					key: "0-1-1",
+					label: "Person",
+				  },
+				  {
+					key: "0-1-2",
+					label: "Person",
+				  },
+				],
+			  },
+			  {
+				key: "0-0",
+				label: "Node",
+				children: [
+				  {
+					key: "0-1-1",
+					label: "Person",
+				  },
+				  {
+					key: "0-1-2",
+					label: "Person",
+				  },
+				],
+			  },
+			
+		  ],
+		},
+		{
+			key: "0-0",
+			label: "QA Team",
+			children: [
+			  {
+				key: "0-1-1",
+				label: "Document-0-1.doc",
+			  },
+			  {
+				key: "0-1-2",
+				label: "Document-0-2.doc",
+			  },
+			],
+		  },
+		{
+		  key: "1",
+		  label: "BDE Team",
+		  children: [
+			{
+			  key: "1-0",
+			  label: "document1.doc",
+			},
+			{
+			  key: "0-0",
+			  label: "documennt-2.doc",
+			},
+		  ],
+		},
+		{
+		  key: "2",
+		  label: "HR",
+		  children: [],
+		},
+	  ];
 	return (
-		<div>
+		<div className="pageBody">
 			{/* <Calendar /> */}
 			{/* <EventCard title="UpcomingEvents" renderBody={renderBody}/> */}
 			{/* <FormProcessor schema={formfield} nameone={selectSchema} submitEnable={true} submitText="Submit" /> */}
@@ -94,6 +194,7 @@ const SansCanvas = () => {
 				Droppable
 			</div> */}
 			{/* <CollectionList/> */}
+			<TeamTree treeData={treeData} />
 		</div>
 	);
 };

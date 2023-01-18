@@ -108,12 +108,20 @@ const Leave = () => {
 			<NumCards numArr={numArrSchema} />
 			<div className="floatRight">
 			<button
-				className="defaultButtonPrimary"
+				className="defaultButtonPrimary me-5"
 				onClick={() => {
 					setNewLeave(true);
 				}}>
 				Apply for a new Leave
 			</button>
+			<button
+				className="defaultButtonWhite "
+				onClick={() => {
+					setNewLeave(true);
+				}}>
+				Leave Policy
+			</button>
+		
 			</div>	
 			<CollectionList schema={tableSchema}/>
 

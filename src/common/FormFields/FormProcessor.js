@@ -88,11 +88,7 @@ export const FormProcessor = ({ schema }) => {
 					handleSubmit(e);
 				}}>
 				{!editMode && renderEdit()}
-				{editMode && (
-					<button type="submit" className="defaultButtonPrimary">
-						{schema.submitText}
-					</button>
-				)}
+				
 				{schema.schema.map((item, index) => {
 					return (
 						<div key={index}>
@@ -108,6 +104,11 @@ export const FormProcessor = ({ schema }) => {
 						</div>
 					);
 				})}
+				{(editMode&&!schema.submitEnable) && (
+					<button type="submit" className="defaultButtonPrimary">
+						{schema.submitText}
+					</button>
+				)}
 			</form>
 		</div>
 	);
