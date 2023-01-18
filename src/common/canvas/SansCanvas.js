@@ -194,7 +194,7 @@ const SansCanvas = () => {
 				Droppable
 			</div> */}
 			{/* <CollectionList/> */}
-			<TeamTree treeData={treeData} />
+			{/* <TeamTree treeData={treeData} /> */}
 		</div>
 	);
 };

@@ -111,8 +111,8 @@ const treeData = [
 const PgTeamTree = () => {
   return (
     <div className='PgTeamTreeWrapper pageBody'>
-        <PageHeader pageheading="Team Tree"/>
-			<TeamTree treeData={treeData} />
+        {/* <PageHeader pageheading="Team Tree"/>
+			<TeamTree treeData={treeData} /> */}
 
     </div>
   )
