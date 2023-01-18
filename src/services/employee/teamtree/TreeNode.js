@@ -2,7 +2,7 @@ import React from 'react'
 import TeamTree from './TeamTree';
 
 const TreeNode=({ node })=> {
-    const { children, label } = node;
+    const { childNodes, label } = node;
   
   
     return (
@@ -12,7 +12,7 @@ const TreeNode=({ node })=> {
         </div>
         <ul>
         {/* <hr/> */}
-         <TeamTree treeData={children} />
+         <TeamTree treeData={childNodes} />
       
         </ul>
       </>
