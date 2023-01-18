@@ -46,8 +46,6 @@ function App() {
 								<Route path="helpdesk" element={<HelpDesk />} />
 								<Route path="orgcalendar" element={<OrgCalendar />} />
 								<Route path="policies" element={<Policies/>} />
-
-
 							</Route>
 						</Route>
 						<Route path="/" element={<HrLayout />}>
