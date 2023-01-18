@@ -93,7 +93,7 @@ const SansCanvas = () => {
 				}}>
 				Droppable
 			</div> */}
-			<CollectionList/>
+			{/* <CollectionList/> */}
 		</div>
 	);
 };
