@@ -1,5 +1,4 @@
-import React, { Children } from "react";
-import { PageHeader } from "../../../common/PageHeader";
+import React from "react";
 import TreeNode from "./TreeNode";
 
 const TeamTree = ({ treeData }) => {
