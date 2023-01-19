@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { DropDown } from "../../../common/FormFields/DropDown";
 import OutsideClickHandler from "../../../common/OutsideClickHandler";
-import { PageHeader } from "../../../common/PageHeader";
+import PageHeader  from "../../../common/PageHeader";
 import { SearchBar } from "../../../common/SearchBar";
 
 import data from "./data";

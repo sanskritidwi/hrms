@@ -1,6 +1,6 @@
 import React from "react";
 import { FormProcessor } from "../../../common/FormFields/FormProcessor";
-import { PageHeader } from "../../../common/PageHeader";
+import  PageHeader from "../../../common/PageHeader";
 import CollectionList from "../../../common/table/CollectionList";
 import Tabcustom from "../../../common/Tabs";
 
@@ -22,6 +22,7 @@ const PgDetails = () => {
                 return <div className="declined">Declined</div>;
             case "pending":
                 return <div className="pending">Pending</div>;
+				default: return null;
         }
     }
 	/**Schemas */

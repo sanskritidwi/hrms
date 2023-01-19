@@ -2,7 +2,6 @@ import React from "react";
 import employee from '../../../assets/images/emp.png'
 import right from '../../../assets/images/right-circle.svg'
 import wrong from '../../../assets/images/cross-circle.svg'
-import arrowright from '../../../assets/images/arrow-right-solid.svg'
 import { useParams } from "react-router-dom";
 
 const CardEmpHeader = () => {

@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { PageHeader } from "../../common/PageHeader";
+import  PageHeader from "../../common/PageHeader";
 
 const HelpDesk = () => {
 

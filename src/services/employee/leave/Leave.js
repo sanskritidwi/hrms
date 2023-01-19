@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FormProcessor } from "../../../common/FormFields/FormProcessor";
-import { PageHeader } from "../../../common/PageHeader";
+import PageHeader from "../../../common/PageHeader";
 import CollectionList from "../../../common/table/CollectionList";
 import NumCards from "./NumCards";
 

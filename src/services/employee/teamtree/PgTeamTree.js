@@ -1,5 +1,5 @@
 import React from 'react';
-import { PageHeader } from '../../../common/PageHeader';
+import PageHeader  from '../../../common/PageHeader';
 import TeamTree from './TeamTree';
 
 const treeData = [

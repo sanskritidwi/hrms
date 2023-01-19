@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { PageHeader } from "../../../common/PageHeader"
+import  PageHeader  from "../../../common/PageHeader"
 import ProgressBar from "../../../common/progressBar";
 
     const AttendanceEmployee = () => {

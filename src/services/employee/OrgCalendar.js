@@ -1,5 +1,5 @@
 import React from "react";
-import { PageHeader } from "../../common/PageHeader";
+import  PageHeader from "../../common/PageHeader";
 import CollectionList from "../../common/table/CollectionList";
 
 const OrgCalendar = () => {

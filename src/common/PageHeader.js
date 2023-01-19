@@ -1,7 +1,9 @@
 import React from 'react'
 
-export const PageHeader = ({pageheading}) => {
+const PageHeader = ({pageheading}) => {
   return (
     <div className='PageHeaderWrapper'>{pageheading}</div>
   )
 }
+
+export default PageHeader;
