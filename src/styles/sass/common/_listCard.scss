@@ -1,0 +1,39 @@
+.ListCardWrapper {
+	display: flex;
+	flex-direction: column;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	border-radius: 16px;
+	padding: 16px;
+	max-width: 460px;
+	.title {
+		font-size: 24px;
+		font-weight: 600;
+		margin-bottom: 16px;
+	}
+	.section {
+		margin-bottom: 32px;
+		.subheading {
+			margin-bottom: 16px;
+			hr {
+				margin: 0.5rem;
+			}
+		}
+		.profileThumbnails {
+            display: flex;
+            padding: 8px;
+            border: 1px solid black;
+            border-radius: 32px;
+            width: min-content;
+			.profileImgDiv {
+            
+				img {
+					width: 48px;
+					cursor: pointer;
+				}
+                .tooltip{
+                
+                }
+			}
+		}
+	}
+}

@@ -12,7 +12,6 @@ import AttendanceEmployee from "./services/employee/attendance/AttendanceEmploye
 import PgCurrentEmployeeList from "./services/hradmin/people/PgCurrentEmpList";
 import Payslips from "./services/employee/Payslips";
 import Reimbursements from "./services/employee/Reimbursements";
-import Rewards from "./services/employee/Rewards";
 import SansCanvas from "./common/canvas/SansCanvas";
 import KavitaCanvas from "./common/canvas/KavitaCanvas";
 import NishaCanvas from "./common/canvas/NishaCanvas";
@@ -26,6 +25,7 @@ import OrgCalendar from "./services/employee/OrgCalendar";
 import Policies from "./services/employee/Policies";
 import PgTeamTree from "./services/employee/teamtree/PgTeamTree";
 import HrLeave from "./services/hradmin/HrLeave";
+import Dashboard from "./services/employee/Dashboard";
 
 function App() {
 	return (
@@ -36,13 +36,13 @@ function App() {
 						<Route path="/" element={<EmpLayout />}>
 							<Route path="/" element={<SansCanvas />} />
 							<Route path="employee">
+								<Route path="dashboard"  element={<Dashboard/>}/>
 								<Route path="attendance" element={<AttendanceEmployee />} />
 								<Route path="leave" element={<Leave />} />
 								<Route path="payslips" element={<Payslips />} />
 								<Route path="teamtree" element={<PgTeamTree />} />
 								<Route path="details" element={<PgDetails/>} />
 								<Route path="reimbursements" element={<Reimbursements />} />
-								<Route path="rewards" element={<Rewards />} />
 								<Route path="helpdesk" element={<HelpDesk />} />
 								<Route path="orgcalendar" element={<OrgCalendar />} />
 								<Route path="policies" element={<Policies/>} />

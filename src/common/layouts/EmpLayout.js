@@ -11,7 +11,7 @@ const sideItem = [
         title: 'Dashboard',
         activeicon: arrow,
         defaulticon: icon,
-        path: 'employee',
+        path: 'employee/dashboard',
     },
     {
         title: 'Attendance',
@@ -42,12 +42,6 @@ const sideItem = [
         activeicon: arrow,
         defaulticon: icon,
         path: 'employee/reimbursements'
-    },
-    {
-        title: 'Rewards ',
-        activeicon: arrow,
-        defaulticon: icon,
-        path: 'employee/rewards'
     },
     {
         title: 'HR Help Desk',

@@ -1,0 +1,34 @@
+.DashboardWrapper {
+	.greeting {
+		font-size: 24px;
+	}
+
+	.dashBody {
+		// display: flex;
+		.happinessIndex {
+			box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+			border-radius: 16px;
+			padding: 16px;
+			max-width: 460px;
+			.emojiDiv {
+				display: flex;
+				flex-direction: column;
+				text-align: center;
+				margin-right: 24px;
+				.emoji {
+					font-size: 48px;
+					cursor: pointer;
+				}
+				&:hover {
+					transform: scale(1.2);
+					color: rgb(2, 129, 129);
+				}
+				&.happyIndex {
+					border: 1px solid black;
+					border-radius: 50%;
+					padding: 24px;
+				}
+			}
+		}
+	}
+}

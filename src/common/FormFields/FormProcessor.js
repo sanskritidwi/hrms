@@ -60,6 +60,7 @@ export const FormProcessor = ({ schema }) => {
 				return <DropDown schema={item.schema} editMode={editMode} />;
 			case "uploadfile":
 				return <FileUpload schema={item.schema} editMode={editMode} />;
+				default: return null;
 		}
 	};
 

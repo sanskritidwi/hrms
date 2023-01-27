@@ -14,6 +14,14 @@ import CollectionList from "../table/CollectionList";
 import TeamTree from "../../services/employee/teamtree/TeamTree";
 
 const SansCanvas = () => {
+	const Schema = [
+		{ title: "Get to know us", links: ["hi", "helo"] },
+		{ title: "Get to know us1", links: ["hi", "helo"] },
+		{ title: "Get to know us2", links: ["hi", "helo"] },
+		{ title: "Get to know us3", links: ["hi", "helo"] },
+
+	];
+
 	const schema = {
 		fields: ["Name", "Date applied", "Date Approved"],
 		schema: [
@@ -47,110 +55,110 @@ const SansCanvas = () => {
 	];
 
 	let arr = [2, 3, 7, 9, 10, 12, 13, 1, 4, 6, 5];
-	arr.sort((a, b) =>{ 
-		console.log(a,b);
-		console.log(a-b)
-		return a - b});
+	arr.sort((a, b) => {
+		console.log(a, b);
+		console.log(a - b);
+		return a - b;
+	});
 	console.log(arr);
 
 	const treeData = [
 		{
-		  key: "0",
-		  label: "Dvelopment Team",
-		  children: [
-			{
-			  key: "0-0",
-			  label: "React",
-			  children: [
+			key: "0",
+			label: "Dvelopment Team",
+			children: [
 				{
-				  key: "0-1-1",
-				  label: "Person",
-				  children:[
-					{
-						key: "0-0",
-						label: "Person",
-					},
-					{
-						key: "0-0",
-						label: "Person",
-					},
-					{
-						key: "0-0",
-						label: "Person",
-					}
-				  ]
+					key: "0-0",
+					label: "React",
+					children: [
+						{
+							key: "0-1-1",
+							label: "Person",
+							children: [
+								{
+									key: "0-0",
+									label: "Person",
+								},
+								{
+									key: "0-0",
+									label: "Person",
+								},
+								{
+									key: "0-0",
+									label: "Person",
+								},
+							],
+						},
+						{
+							key: "0-1-2",
+							label: "Person",
+						},
+					],
 				},
 				{
-				  key: "0-1-2",
-				  label: "Person",
+					key: "0-0",
+					label: "Python",
+					children: [
+						{
+							key: "0-1-1",
+							label: "Person",
+						},
+						{
+							key: "0-1-2",
+							label: "Person",
+						},
+					],
 				},
-			  ],
-			},
-			{
-				key: "0-0",
-				label: "Python",
-				children: [
-				  {
-					key: "0-1-1",
-					label: "Person",
-				  },
-				  {
-					key: "0-1-2",
-					label: "Person",
-				  },
-				],
-			  },
-			  {
-				key: "0-0",
-				label: "Node",
-				children: [
-				  {
-					key: "0-1-1",
-					label: "Person",
-				  },
-				  {
-					key: "0-1-2",
-					label: "Person",
-				  },
-				],
-			  },
-			
-		  ],
+				{
+					key: "0-0",
+					label: "Node",
+					children: [
+						{
+							key: "0-1-1",
+							label: "Person",
+						},
+						{
+							key: "0-1-2",
+							label: "Person",
+						},
+					],
+				},
+			],
 		},
 		{
 			key: "0-0",
 			label: "QA Team",
 			children: [
-			  {
-				key: "0-1-1",
-				label: "Document-0-1.doc",
-			  },
-			  {
-				key: "0-1-2",
-				label: "Document-0-2.doc",
-			  },
+				{
+					key: "0-1-1",
+					label: "Document-0-1.doc",
+				},
+				{
+					key: "0-1-2",
+					label: "Document-0-2.doc",
+				},
 			],
-		  },
-		{
-		  key: "1",
-		  label: "BDE Team",
-		  children: [
-			{
-			  key: "1-0",
-			  label: "document1.doc",
-			},
-			{
-			  key: "0-0",
-			  label: "documennt-2.doc",
-			},
-		  ],
 		},
 		{
-		  key: "2",
-		  label: "HR",
-		  children: [],
+			key: "1",
+			label: "BDE Team",
+			children: [
+				{
+					key: "1-0",
+					label: "document1.doc",
+				},
+				{
+					key: "0-0",
+					label: "documennt-2.doc",
+				},
+			],
 		},
-	  ];
+		{
+			key: "2",
+			label: "HR",
+			children: [],
+		},
+	];
 	return (
 		<div className="pageBody">
 			{/* <Calendar /> */}
@@ -195,6 +203,8 @@ const SansCanvas = () => {
 			</div> */}
 			{/* <CollectionList/> */}
 			{/* <TeamTree treeData={treeData} /> */}
+
+
 		</div>
 	);
 };

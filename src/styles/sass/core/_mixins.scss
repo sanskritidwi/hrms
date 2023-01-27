@@ -1,126 +1,124 @@
 @mixin btn {
-	border: 1px solid #777777;
-	border-radius: 8px;
-	padding: 8px 16px;
-    display: flex;
-    cursor: pointer;
-    & :hover{
-        background-color: $main-color;
-        color: white;
-    }
+  border: 1px solid #777777;
+  border-radius: 8px;
+  padding: 8px 16px;
+  display: flex;
+  cursor: pointer;
+  & :hover {
+    background-color: $main-color;
+    color: white;
+  }
 }
-
-
 
 @mixin defaultButton {
-	border: 1px solid #777777;
-	border-radius: 8px;
-	padding: 16px 16px;
-    display: flex;
-    cursor: pointer;
-	align-items: center;
-	background-color: $main-color;
-	color: white
-
-
+  border: 1px solid #777777;
+  border-radius: 8px;
+  padding: 16px 16px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  background-color: $main-color;
+  color: white;
 }
-
 
 .defaultButtonPrimary {
-	border: 1px solid #777777;
-	border-radius: 8px;
-	padding: 16px 16px;
-    display: flex;
-    cursor: pointer;
-	align-items: center;
-	background-color: $main-color;
-	color: white
-
- 
+  border: 1px solid #777777;
+  border-radius: 8px;
+  padding: 16px 16px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  background-color: $main-color;
+  color: white;
 }
 
-.defaultButtonWhite{
-	border: 1px solid #777777;
-	border-radius: 8px;
-	padding: 16px 16px;
-    display: flex;
-    cursor: pointer;
-	align-items: center;
-	background-color: white;
-
+.defaultButtonWhite {
+  border: 1px solid #777777;
+  border-radius: 8px;
+  padding: 16px 16px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  background-color: white;
 }
 
-.defaultButtonWhiteSm{
-	border: 1px solid #777777;
-	border-radius: 8px;
-	padding: 8px 8px;
-    display: flex;
-    cursor: pointer;
-	align-items: center;
-	background-color: white;
+.defaultButtonWhiteSm {
+  border: 1px solid #777777;
+  border-radius: 8px;
+  padding: 8px 8px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  background-color: white;
 }
 
+.statusButtonSm {
+  border: 2px solid $main-color;
+  background-color: rgb(125, 240, 255);
+  padding: 4px 16px;
+  border-radius: 2px;
+}
 
 @mixin defaultButtonClickable {
-	@include defaultButton;
-    & :hover{
-        background-color: $main-color;
-        color: white;
-    }
+  @include defaultButton;
+  & :hover {
+    background-color: $main-color;
+    color: white;
+  }
+}
+
+@mixin tableHeader {
+  border: 1px solid #777777;
+  border-radius: 8px;
+  padding: 8px 16px;
+  background-color: rgba(25, 189, 152, 0.5);
+}
+
+@mixin statusButtons {
+  border-radius: 16px;
+  padding: 4px 8px;
+  color: white;
+  max-width: fit-content;
+}
+
+.approved {
+  @include statusButtons;
+  background-color: #19b034;
+}
+.declined {
+  @include statusButtons;
+  background-color: #f20f47;
+}
+.pending {
+  @include statusButtons;
+  background-color: #4547b1;
+}
+
+.approvedBtn {
+  @include statusButtons;
+  color: #19b034;
+  border: 2px solid #19b034;
+  cursor: pointer;
+  &:hover {
+    background-color: #19b034;
+    color: white;
+  }
+}
+.declinedBtn {
+  @include statusButtons;
+  color: #f20f47;
+  border: 2px solid #f20f47;
+  cursor: pointer;
+  &:hover {
+    background-color: #f20f47;
+    color: white;
+  }
+}
+
+.floatRight {
+  display: flex;
+  justify-content: flex-end;
+  margin: 16px 0px;
 }
 
 
-@mixin tableHeader{
-	border: 1px solid #777777;
-	border-radius: 8px;
-	padding: 8px 16px;
-	background-color:rgba(25, 189, 152, 0.5);
-}
-
-@mixin statusButtons{
-	border-radius: 16px;
-	padding: 4px 8px;
-	color: white;
-	max-width: fit-content;
-	
-}
-
-.approved{
-	@include statusButtons;
-background-color: #19b034;
-}
-.declined{
-	@include statusButtons;
-background-color: #f20f47;
-}.pending{
-	@include statusButtons;
-background-color: #4547b1;
-}
-
-
-.approvedBtn{
-	@include statusButtons;
-color: #19b034;
-border: 2px solid #19b034;
-cursor: pointer;
-&:hover{
-	background-color: #19b034;
-	color: white
-}
-}
-.declinedBtn{
-	@include statusButtons;
-color: #f20f47;
-border: 2px solid #f20f47;
-cursor: pointer;
-&:hover{
-	background-color: #f20f47;
-	color: white
-}
-}
-
-.floatRight{
-	display: flex;
-	justify-content: flex-end;
-	margin: 16px 0px;
-}

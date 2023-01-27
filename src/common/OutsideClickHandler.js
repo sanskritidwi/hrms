@@ -32,7 +32,6 @@ export const OutsideClickHandler = ({ children, callbackFunction }) => {
 	return (
 		<div ref={parentRef}>
 			{children}
-            
 		</div>
 	);
 };

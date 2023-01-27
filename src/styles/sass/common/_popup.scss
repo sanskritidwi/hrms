@@ -24,7 +24,7 @@ button {
     max-width: 680px;
     background-color: #ffffff;
     border-radius: 8px;
-    padding: 50px 55px;
+    padding: 40px;
 
     .modal-title {
       font-size: $large-heading;
@@ -32,7 +32,7 @@ button {
     }
 
     .modal-header {
-      border-bottom: 4px solid $main-color;
+      // border-bottom: 2px solid grey;
       margin: 0 55px;
       padding: 10px;
       justify-content: center;

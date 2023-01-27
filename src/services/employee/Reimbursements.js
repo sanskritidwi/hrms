@@ -12,6 +12,9 @@ const formSchema = {
 			type: "uploadfile",
 			schema: {
 				label: "Upload File",
+				buttonText:"Upload",
+				buttonClass:"defaultButtonWhite"
+
 			},
 		},
 		{

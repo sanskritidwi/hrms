@@ -70,6 +70,13 @@ button,
   background-color: white;
 }
 
+.statusButtonSm {
+  border: 2px solid #05454E;
+  background-color: rgb(125, 240, 255);
+  padding: 4px 16px;
+  border-radius: 2px;
+}
+
 .approved {
   border-radius: 16px;
   padding: 4px 8px;
@@ -157,6 +164,13 @@ button,
   cursor: pointer;
   align-items: center;
   background-color: white;
+}
+
+.statusButtonSm {
+  border: 2px solid #05454E;
+  background-color: rgb(125, 240, 255);
+  padding: 4px 16px;
+  border-radius: 2px;
 }
 
 .approved {
@@ -547,6 +561,13 @@ body {
   background-color: white;
 }
 
+.statusButtonSm {
+  border: 2px solid #05454E;
+  background-color: rgb(125, 240, 255);
+  padding: 4px 16px;
+  border-radius: 2px;
+}
+
 .approved {
   border-radius: 16px;
   padding: 4px 8px;
@@ -700,14 +721,13 @@ button:focus-visible {
   max-width: 680px;
   background-color: #ffffff;
   border-radius: 8px;
-  padding: 50px 55px;
+  padding: 40px;
 }
 .modal-wrapper .modal-content .modal-title {
   font-size: 32px;
   font-weight: 400;
 }
 .modal-wrapper .modal-content .modal-header {
-  border-bottom: 4px solid #05454E;
   margin: 0 55px;
   padding: 10px;
   justify-content: center;
@@ -886,6 +906,13 @@ header .col-20 {
   cursor: pointer;
   align-items: center;
   background-color: white;
+}
+
+.statusButtonSm {
+  border: 2px solid #05454E;
+  background-color: rgb(125, 240, 255);
+  padding: 4px 16px;
+  border-radius: 2px;
 }
 
 .approved {
@@ -1161,6 +1188,13 @@ button,
   background-color: white;
 }
 
+.statusButtonSm {
+  border: 2px solid #05454E;
+  background-color: rgb(125, 240, 255);
+  padding: 4px 16px;
+  border-radius: 2px;
+}
+
 .approved {
   border-radius: 16px;
   padding: 4px 8px;
@@ -1445,6 +1479,13 @@ header .col-20 {
   cursor: pointer;
   align-items: center;
   background-color: white;
+}
+
+.statusButtonSm {
+  border: 2px solid #05454E;
+  background-color: rgb(125, 240, 255);
+  padding: 4px 16px;
+  border-radius: 2px;
 }
 
 .approved {
@@ -1794,6 +1835,39 @@ button,
   padding: 16px;
 }
 
+.ListCardWrapper {
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 16px;
+  padding: 16px;
+  max-width: 460px;
+}
+.ListCardWrapper .title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.ListCardWrapper .section {
+  margin-bottom: 32px;
+}
+.ListCardWrapper .section .subheading {
+  margin-bottom: 16px;
+}
+.ListCardWrapper .section .subheading hr {
+  margin: 0.5rem;
+}
+.ListCardWrapper .section .profileThumbnails {
+  display: flex;
+  padding: 8px;
+  border: 1px solid black;
+  border-radius: 32px;
+  width: min-content;
+}
+.ListCardWrapper .section .profileThumbnails .profileImgDiv img {
+  width: 48px;
+  cursor: pointer;
+}
 *, body {
   font-family: "Comfortaa";
 }
@@ -1842,6 +1916,35 @@ button,
   padding: 8px;
 }
 
+.DashboardWrapper .greeting {
+  font-size: 24px;
+}
+.DashboardWrapper .dashBody .happinessIndex {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 16px;
+  padding: 16px;
+  max-width: 460px;
+}
+.DashboardWrapper .dashBody .happinessIndex .emojiDiv {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-right: 24px;
+}
+.DashboardWrapper .dashBody .happinessIndex .emojiDiv .emoji {
+  font-size: 48px;
+  cursor: pointer;
+}
+.DashboardWrapper .dashBody .happinessIndex .emojiDiv:hover {
+  transform: scale(1.2);
+  color: rgb(2, 129, 129);
+}
+.DashboardWrapper .dashBody .happinessIndex .emojiDiv.happyIndex {
+  border: 1px solid black;
+  border-radius: 50%;
+  padding: 24px;
+}
+
 .defaultButtonPrimary {
   border: 1px solid #777777;
   border-radius: 8px;
@@ -1871,6 +1974,13 @@ button,
   cursor: pointer;
   align-items: center;
   background-color: white;
+}
+
+.statusButtonSm {
+  border: 2px solid #05454E;
+  background-color: rgb(125, 240, 255);
+  padding: 4px 16px;
+  border-radius: 2px;
 }
 
 .approved {
@@ -2257,7 +2367,9 @@ body {
 }
 
 .pageBody {
-  margin: 24px;
+  margin: 8px -8px;
+  padding: 24px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 /*# sourceMappingURL=all.css.map */
